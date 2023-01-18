@@ -14,13 +14,14 @@ h1,h2{
 }
 h1{
     font-size: 50px;
+    margin-bottom: 0px;
 }
 h2{
     font-size: 25px;
 }
 a{
     text-decoration: none;
-    color: black;
+    color: rgb(116, 9, 9);
 }
 a:hover{
     color: gray;
@@ -28,4 +29,8 @@ a:hover{
 }
 .line{
     margin-bottom: 10px;
+}
+.subtitle{
+    text-align: center;
+    margin-bottom: 40px;
 }
