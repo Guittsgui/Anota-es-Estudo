@@ -1,0 +1,20 @@
+body{
+    background: rgba(232, 238, 153, 0.795);
+}
+main{
+    width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.219);
+    border-radius: 15px;
+}
+h1,h2{
+    text-align: center;
+}
+h1{
+    font-size: 50px;
+}
+h2{
+    font-size: 25px;
+}
