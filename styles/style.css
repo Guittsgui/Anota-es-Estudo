@@ -18,3 +18,14 @@ h1{
 h2{
     font-size: 25px;
 }
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: gray;
+    text-decoration: underline;
+}
+.line{
+    margin-bottom: 10px;
+}
