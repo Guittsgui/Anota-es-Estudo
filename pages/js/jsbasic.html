@@ -48,6 +48,44 @@
             <li>Object - Tipo de dado estrutural. Ele nos permite setarmos pripriedades (atributos) e funcionalidades (métodos). {} </li>
             <li>Array - Também é um tipo de dado estrutural muito utilizado na programação. Arrays, Vetores, são um grupamento de dados, as famosas Listas. [] </li>
         </ul>
+        <h2> Variáveis & Escopo</h2>
+        <p>São nomes simbólicos para receberem valores. Valores estes vistos acima como tipos de dados. Existem tres palavras reservadas para criarmos variáveis. Antes de falarmos da diferença entre as três, vale a pena entendermos o que é Escopo. Escopo determina a visibilidade de alguma variável no JS. Nem sempre as variáveis estão visíveis em toda a estrutura do JS. (Hoisting do inglês elevação). </p>
+        <ul>
+            <li>Var - Var é global e local, pode funcionar fora de um escopo de código. O JS por debaixo dos panos puxa a variavel de qualquer outro escopo e joga ela lá para cima, fazendo sua declaração. </li>
+            <li>Let - Diferente do var o let é local, só funciona dentro do escopo na qual foi criada. Aqui não existe a elevação (Hoisting). Caso dentro de um escopo criemos uma variável com o mesmo nome de uma já existente no escopo global, ela será tratada como variáveis diferentes. Agora, caso usemos dentro de um escopo, uma variável global, ela será atribuida normalmente. </li>           
+            <li>Const - Também é uma variável local, assim como o let, só funciona dentro do escopo que existe. Aqui é uma variavel imutável. </li>
+        </ul>
+        <h2> Concatenando e Interpolando</h2>
+        <p> São táticas utilizadas para misturar frases com variáveis. Por exemplo: voce tem a variavel nome e idade. E em algum momento quer digiar : Olá, me chamo nome e tenho idade anos. Para isso usamos as duas táticas: </p>
+        <ul>
+            <li>Concatenando : console.log("Olá, me chamo" + nome + "e tenho " + idade + "anos").</li>
+            <li>Interpolando: console.log(`Olá me chamo ${nome} e tenho ${idade} anos `).</li>
+        </ul>
+        <h2> Funções </h2>
+        <p> Funções são trechos de código que precisam ser declaradas, e após isso, sempre que forem chamadas elas irão executar o seu respectivo trecho de código.</p>
+        <p> Function:</p>
+        <ul>
+            <li> declarar -  function minhaFuncao(){} </li>
+            <li>chamar - minhaFuncao()</li>
+        </ul>
+        <p> FunctionExpression or Function Anonymous </p>
+        <ul>
+            <li> declarar - const sum = function(){}</li>
+            <li>executar - sum() </li>
+        </ul>
+        <p> Arrow Function:</p>
+        <ul>
+            <li>const sum = () => {}</li>
+            <li>sum()</li>
+        </ul>
+        <p> CallBack Function - Significa chamar de volta. É basicamente uma função que é passada por parâmetro para outra função.</p>
+        <p> Function Constructor.</p>
+        <p> xx </p>
+        <p> Parametros: Dentro desses parenteses nós conseguimos enviar e receber informações (variáveis & dados) para a função. Quando os dados são enviados na chamada são chamados de argumentos, e quando são recebidos na função são chamados de parâmetros.</p>
+        <p> Retorno de Valores: Funções podem ou não retornarem algo. Quando quisermos que retorne, utilizamos a palavra chave return. </p>
+        <p> Function Hoisting: Ao declararmos uma função de forma tradicional, ela pode estar em qualquer lugar do escopo global, que irá funcionar. Ao declararmos uma função anônima, ela nao irá sofrer o hoisting, logo, precisa ser declarada antes de ser chamada.</p>
+        <h2> Manipulando Dados.</h2>
+        <h3> Prototype: </h3>
 
     </main>  
 </body>
