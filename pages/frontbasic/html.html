@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5</title>
+</head>
+<body>
+    <main>
+        <h1> HTML5 - Guide </h1>
+        <h2> O que é HTML?</h2>
+        <p> Primeiramente devemos saber que HTML não é uma linguagem de programação e sim uma linguagem de marcação de texto. Basicamente é uma forma de escrita através de elementos, na qual é interpretada pelo seu navegador. Essas marcações são feitas através de TAGS. Cada tag possui sua função, suas instruções e algumas possuem seus respectivos atributos. Atributos servem como informacoes extras para colocarmos no elemento ou configuracões necessárias para que o elemento funcione corretamente como links ou imagens por exemplo. </p>
+        <h2> Anatomia do Documento</h2>
+        <p> Para escrevermos um documento em HTML é necessário saber que ele precisa ser feito dentro de uma estrutura HTML. Se voce utiliza o VisualStudio como editor de código, basta criar um arquivo qualquer com a extensão .html, e dentro dele digitar ! e dar enter. Dessa forma a estrutura será montada automátiacmente.</p>
+        <h2> Head e Body </h2>
+        <p> Ao construir sua primeira aplicação HTML, voce deve perceber que a estrutura é dividida entre head e body. 
+            <ul>
+                <li> HEAD - Tudo que for escrito dentro do head não será exibido no navegador. Ali ficam as configurações de linguagem do documento, títulos, links para arquivos externos, mecanismos de busca entre os navegadores, dentre diversas outras funções.
+                </li>
+                <ul>
+                    <li>Meta - Tag especial que dfine metadados. </li>
+                    <ul>
+                        <li>charset=UTF8 - define padrão de caracteres especiais.</li>
+                        <li> name/content - define as partes visíveis do site e sua adaptação em outros devices menores.</li>
+                    </ul>
+                    <li> Favicon - Pequenos ícones ao lado do título na aba do navegador. </li>
+                    <li> MetaSEO: optimização da página para motores de buscas.  </li>
+                    <ul>
+                        <li>author/content - define o autor e sua propriedade.</li>
+                        <li>description/content - Texto ao aparecer em sua pesquisa no google.</li>
+                        <li> robots/content - Especifica o que voce quer que o robo do google faça.</li>
+                    </ul>
+                </ul>
+                <li>BODY - Tudo que for escrito dentro do body é o que vai ser visto dentro do seu projeto. Ali começa a construção de sua aplicação em si.</li>
+            </ul> </p>    
+        <h2> Tags básicas no HTML: </h2>
+        <p> Agora que já sabemos o que é o HTML e como funciona a estrutura de seu documento, podemos começar a aprender suas tags básicas e iniciais.</p>
+        <ul>
+            <li> h1 até h6 -> títulos e suas importancias.</li>
+            <li> p - para colocar parágrafos.</li>
+            <li> br - quebra de linhas</li>
+            <li> hr - linha para cortar a página</li>
+            <li> a href - tag de ancora/Link</li>
+            <li> img - tag para colocar imagens. </li>
+        </ul> 
+        <h2> Atributos Glogais </h2> 
+        <p> Atributos globais são atributos que podem ser aplicados em qualquer elemento, porém nao necessáriamente cada atributo global fará sentido em todas as tags existentes.</p>
+        <ul>
+            <li> Class/ID - aplica uma classe a um elemento.</li>
+            <li> Contenteditable - permite editar o conteúdo na página.</li>
+            <li> data-qualquerNome - muito utilizado para lógicas no JS.</li>
+            <li> hidden - esconde uma tag.</li>
+            <li> style - forma de colocar CSS Inline.</li>
+            <li> tabindex - altera o foco ao apertar tab em cada item da página. </li>
+            <li> title - define um título ao deixar o mouse parado. </li>
+        </ul>
+        <h2> Tags para estruturação de TEXTO.</h2>
+        <p> Aqui podemos ver tags para marcações de textos:</p>
+        <ul>
+            <li> strong - negrito(html)</li>
+            <li> em - letra deitada(html) </li>
+            <li> small - menor(html) </li>
+            <li> del - cortada (html) </li>
+            <li> mark - marca texto (html) </li>
+            <li> ins - deixa o texto sublinhado</li>
+            <li> code - parte de código dentro do site</li>
+            <li> blockuote - citacoes em blocos.</li>
+            <li> abbr - abreviacoes. </li>
+            <li> pre - digita o texto exatamente da forma que digitou(tags,etc)</li>
+        </ul>    
+        <h2> Tags Semanticas no HTML </h2>
+        <p> O HTML5 é baseado em tags semanticas. Tags que atribuam significado para o conteúdo e ao navegador . Essas são de extrema importância para a construção de aplicações modernas e otimizadas.</p>
+        <p> Aqui podemos ver tags para estruturacão do site: </p>
+        <ul>
+            <li>Header - tudo que fica no cabeçalho do site</li>
+            <li>main - conteúdo principal do site</li>
+            <li>footer - conteúdo do rodapé do site</li>
+            <li>nav - conteúdo dentro de menus do site</li>
+            <li>section - conteúdo de alguma sessão do site</li>
+            <li> article - conteúdo dentro de um artigo no site.</li>
+            <li> aside - conteúdo extra em algum site.</li>
+        </ul>
+        <!-- Links/Midias/Etc -->
+        <h2> Links e Âncoras</h2>
+        <p> Através dessa tag A é que podemos navegar entre páginas e informações. Sempre que utilizamos, é obrigatório utilizar o atributo HREF, pois ele que irá nos dizer para onde esse link irá nos levar, podendo ser uma outra página, ou até mesmo para um determinado local dentro da mesma página. </p>
+        <p> Para que a navegação ocorra sem erros, é necessário saber com exatidão a URL da página desejada (em caso de páginas externas), ou o caminho entre os diretórios do seu projeto. </p>
+        <ul>
+            <li>target="_blank" - Faz com que você não saia da sua página e sim abre outra aba no navegador. (Muito utilizado para quando saimos da nossa aplicação).</li>
+            <li>title="xxxxxx" - ao passar o mouse por cima do link, aparece o título desejado.</li>
+            <li> Podemos marcar um determinado local do site com id ou classe, e através do link jogar para lá.  </li>
+            <ul>
+                <li>id="aqui" -  aheref="#aqui" - será rolado para o ponto marcado.</li>
+            </ul>
+        </ul>
+        <p> Também é possível fazer downloads via links, para isso colocamos o caminho do arquivo dentro do href e completamos com alguns atributos:</p>
+        <ul>
+            <li>download="nomedodownload.extensao"</li>
+            <li>type="application/pdf" onde cada tipo de arquivo voce pode conferir <a href="https://www.iana.org/assignments/media-types/media-types.xhtml">Clicando Aqui.</a></li>
+        </ul>
+    
+    
+    
+        <h2> Listas no HTML: </h2>
+        <p> Para abrirmos listas ordenadas colocamos OL, e desordenadas colocamos UL. LI para cada linha da lista.</p>
+        <ol>
+            <li> Lista ordenada com OL</li>
+        </ol>
+        <ul>
+            <li> Lista desordenada com UL</li>
+        </ul>
+        <p> Em listas nao ordenadas, podemos alterar o "set"da lista, colocando o atributo type = Disc , Circle , Square </p> 
+    
+    <!-- MIDIAS IMAGENS/ VIDEOS/ AUDIOS -->
+    
+        <h2>Imagens</h2>
+        <p> Provavelmente todas as aplicações da WEB que iremos desenvolver serão usadas imagens. Precisamos saber inicialmente sobre direitos de imagens. Precisamos tomar cuidado com os direitos autorais. Você não pode utilziar qualquer imagem encontrada na internet para seus projetos profissioanais. Para isso, o prórpio google possui um filtro sobre os direitos de suas imagens. Existem alguns sites próprios para imagens com os direitos autorais autorizados como o <a href="https://unsplash.com/">Unslash</a>, <a href="https://www.pexels.com/pt-br/">Pexels</a>,entre diversos outros.</p> 
+        <p> Quando trabalhamos com imagens em sites, é fundamental entendermos sobre o peso das imagens e suas respectivas dimensões, afinal, isso irá impactar diretamente na velocidade em qual sua aplicação será processada. Muitas das vezes precisaremos alterar seu formato, suas dimensões e para isso podemos contar com a ajuda de um software gratuito e de fácil manuseio chamado <a href="https://www.gimp.org/">Gimp</a>.</p>
+        <p> Aprofundando no assunto, precisamos conhecer os principais formatos de imagens utilizados na WEB, que são inúmeros, porém podemos dar foco nos dois mais utilizados que são o JPEG e o PNG.</p>
+        <ul>
+            <li>JPEG - Imagem mais compactada, fazendo com que ocupe menos espaço.</li>
+            <li>PNG - Permite transparência. </li>
+        </ul>
+        <p> Ao trabalharmos com imagens, também precisamos ficar atentos ao seu tamanho, que obviamente quanto maior for, mais lento ficará o seu site. Não existe uma regra definida para isso, mas vale destacar que uma imagem, 1.500/1200 de largura já é o ideal/máximo praticamente para se trabalhar em um site. Vale ressaltar também, que a resolução fica tranquila entre 70/50.  </p>
+        <p>Finalmente saindo da teoria e indo mais para a parte de código, veremos algumas tags importantes ao trabalharmos com imagens, mas antes disso, saiba que podemos adicionar imagens dentro do nosso próprio projeto, que irá subir junto com o servidor, ou então podemos utilizar urls de imagens hospedadas em demais servidores, tornando a nossa aplicação mais leve, porém caso o servidor onde a imagem caia, nosso site irá ficar sem a imagem também.</p>
+        <ul>
+            <li>img- tag para adicionar a imagem na qual utilizamos dois atributos no mínimo:</li>
+                <ul>
+                    <li>src - onde voce coloca o diretório/link da imagem</li>
+                    <li>alt - caso sua imagem não carregue, mostrará uma alternativa.</li>
+                </ul>
+            <li>picture - Colocamos para abraçar toda a imagem, para que possamos setar o seu tamanho máximo e mínimo.</li>
+            <li> figure - figcapture - jeito semantico de colocar texto visível a imagem. </li>
+            <li> alt - coloca uma alternativa caso a imagem nao carregue</li>
+            <li> title - informa um texto ao voce deixar o cursor parado encima da imagem. </li>
+        </ul>
+        <h3> Imagens Dinâmicas</h3>
+        <p>Para criarmos imagens dinâmicas via HTML, precisamos utilizar a tag Picture vista acima, pois através dela, poderemos colocar vários sources. Através desse source, setamos o min/max width de forma que assim possamos por exemplo: Abra a img X,  SE a tela máxima for menor que 800px, abra a imagem Y e se a tela máxima for menor que 400px, abra a imagem Y. Lembre-se que para funcionar deve seguir uma ordem do maior para o menor ou vice-versa, mas sempre em ordem. </p>
+        <p> Caso tenha ficado confuso, basta reassistir a esta aula grátis do Curso em Vídeo <a href="https://www.youtube.com/watch?v=cAgkwPWE4hU&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=32">clicando aqui</a>.</p>
+        <!-- Vídeos -->
+        <h2>Videos</h2>
+        <p> Quando trabalhamos com vídeos, podemos utilizar quatro formatos: MP4 , M4V , WEBM , OGV. Os vídeos podem estar hospedados dentro do projeto do seu site (que o faz ficar mais lento), ou em algum repositório externo como o <a href="https://www.youtube.com/" target="_blank">Youtube</a> ou <a href="https://vimeo.com/" target="_blank">Vimeo</a> por exemplo, tornando seu site mais rápido, porém quando esses repositórios cairem, seu site ficará sem vídeo.</p>
+        <ul>
+            <li> video - tag para embrulhar todo o player.</li>
+            <li> source - tag para informar o local do vídeo.</li>
+            <li> type - para informar o tipo de vídeo adicionado.</li>
+            <li> autoplay - já inicia tocando o vídeo</li>
+            <li> preload - auto(já baixa o vídeo) - metadata(o básico).</li>
+            <li> loop - repete o vídeo.</li>
+            <li> poster - coloca a imagem de fundo antes do vídeo começar</li>
+        </ul>
+        <p> Dica: Utilize o Software <a href="https://handbrake.fr/">HandBrake</a> para converter o formato dos seus vídeos.</p>
+        <h2> Video Iframes </h2>
+        <p> Utilizamos a tag iframe quando desejamos trazer um vídeo hospedado em outra plataforma, como o youtube ou o vimeo por exemplo.</p>
+        <p> Iframes não servem apenas para vídeos. Iframes são janelas que abrem dentro da sua página, fazendo com que voce possa abrir um site ali por exemplo. Para maiores informações consulte a esta aula gratuita do <a href="https://www.youtube.com/watch?v=y6CKgnBYs5E&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=5">Curso em Vídeo</a>.</p>
+        <!-- Audios-->
+        <h2>Audios</h2>
+        <p> Quando trabalhamos com audio, podemos utilizar três formatos: mp3, wav ou OGG. Em geral, as tags são basicamente as mesmas que existem nas tag video citadas acima.</p>
+        <ul>
+            <li> audio - tag para embrulhar todo o player.</li>
+            <li> source - tag para informar o local do audio.</li>
+            <li> type - para informar o tipo de audio adicionado.</li>
+        </ul>
+    
+    
+        <!--- FORMS -->
+        <h2>Forms </h2>
+        <p> Parte de extrema importância dentro do HTML, pois sempre que formos construir aplicações na qual o usuário interaja com a mesma, usaremos formulários.</p>
+        <ul>
+            <li> Form - principal tag para abrirmos e colocarmos tudo que ficará dentro do formulário.</li>
+            <p>Dentro delas, colocamos determinados atributos:</p>
+                <ul> 
+                    <li> id - identificação do mesmo.</li>
+                    <li> action - para onde ele será submetido.</li>
+                    <li> method - (GET/POST).</li>
+                </ul>
+            <li> Label - Serve para identificar e associar uma ou mais tags de entrada, acessibilidade. Ao clicar no label, voce automaticamente envia o cursor para o input. O for do label precisa estar linkado com o id do input para que funcione   </li>
+            <li> Button - Representa um botão. É usado primariamente para enviarmos formulários. Ele é estilizado por padrão por cada navegador. Possui sempre alguns atributos padrões: </li>
+                <ul>
+                    <li>type - submit/reset/button</li>
+                    <li> autofocus, disabled</li>
+                    <li> name, value</li>
+                    <li> form </li>
+                </ul>
+            <li> Datalist - </li>
+        </ul>
+        <h3> Tags de Entrada de Dados </h3>
+        <ul>
+            <li> Input name id- Tag mais utilizada ao falarmos de forms, sempre vem acompanhada por diversos atributos citados abaixo. </li>
+                <ul>
+                    <li>type - define o tipo de texto do input.</li>
+                    <li>autocomplete - busca no navegador algum tipo de dado usado frequentemente de acordo com o tipo do input. </li>
+                    <li>autofocus - quando a página for carregada, o cursor ficará piscando no ponto desejado.</li>
+                    <li>disabled - deixa desbalitado o campo selecionado.</li>
+                    <li>form - Caso o imput esteja fora do form, ele linca o campo a algum formulário </li>
+                    <li> required - não permite que o formulário seja enviado sem o campo estar preenchido (validação apenas do front.</li>
+                    <li> placeholder - deixa uma mensagem pré digitada dentro do input do tipo: "Digite seu Email</li>
+                </ul>
+        </ul>
+        <h4> Types of Inputs</h4>
+        <ul>
+            <li>Password - Funciona igual um text, porém com o texto escrito em ****. O segredo é que através dos atributos conseguimos controlar.</li>
+                <ul>
+                    <li>min/maxlength="" - define o tamanho da senha minima e maxima.</li>
+                </ul>
+            <li>Email - Espera e valida se o usuário digitou um email</li>       
+            <li>URL - Epsera e valida se o usuário digitou uma URL.</li>
+            <li>File - Escolhe um ou mais arquivos para enviar no formulário. Para funcionar o método do formulário precisa ser POST e também um enctype do tipo multipartform-data. </li>
+                <ul>
+                    <li>accept - Seta os arquivos que serão aceitos como por ex .doc , .mp3, .jpeg ou image/* que aceitaria todos os tipos de imagens..</li>
+                    <li>multiple - permite enviar mais de um arquivo.</li>
+                </ul>
+            <li>Color - Permite que voce selecione uma cor e no value será enviada uma cor RGB.</li>
+            <li>CheckBox -  Caixas que podemos marcar e assim selecionando um valor. Caso nao selecione nenhuma, nenhum valor será enviado. Em caso de marcado, caso possua um value ok, caso contrário o backend irá receber como On. </li>
+            <li> Radio - Diferente do checkbox, ele é projetado para selecionar uma única escolha dentre um grupo de opções. </li>
+            <li>Hidden - Campo invisível ao usuário, leitores de tela não irão perceber esse campo. Utilizado caso queira por exemplo enviar por debaixo dos panos o horário que o formulário foi enviado. </li>
+            <li>TextArea - Serve para quando queremos colocar textos com mai sde uma linha.</li>
+            <li>Select/Option - Serve para nos informar um menu de opções para o usuário selecionar (Options).</li>
+                <ul>
+                    <li>Dentro da tag select, colocamos as options juntamente com seu atributo value que é o valor que irá para o backend. </li>
+                </ul>
+            <li>Search - Campo de busca. Funciona igual o text, mas dependendo do seu navegador ele pode se comportar diferente.</li>
+            <li>Number - Funciona igual o text, porém só é aceito caracteres do tipo numbers. </li>
+            <li>Range - Nos dá um controle para selecionar um valor numérico através de um Slider.</li>
+            <li>Date - Campo que permite selecionar uma data (yyyy-mm-dd).</li>
+            <li>datetime-local - Além de dia mes e ano também trás o horário. </li>
+            <li> month - seleciona apenas o mes</li>
+            <li> week - seleciona qual a semana do ano</li>
+            <li> time - seleciona um horário. </li>
+        </ul>
+        <p> Sempre lembre que formulários gigantes desanimam o usuário. Antes de começar a codar, pense cuidadosamente na UX do projeto.</p>
+    
+        <h2>Tables</h2>
+        <h2> Tags Semanticas no HTML </h2>
+        <p> O HTML5 é baseado em tags semanticas. Tags que atribuam significado para o navegador.</p>
+        <p> Aqui podemos ver tags para estruturacão do site: </p>
+        <ul>
+            <li>Header - tudo que fica no cabeçalho do site</li>
+            <li>main - conteúdo principal do site</li>
+            <li>footer - conteúdo do rodapé do site</li>
+            <li>nav - conteúdo dentro de menus do site</li>
+            <li>section - conteúdo de alguma sessão do site</li>
+            <li> article - conteúdo dentro de um artigo no site.</li>
+            <li> aside - conteúdo extra em algum site.</li>
+        </ul>
+
+    </main>
+</body>
+</html>

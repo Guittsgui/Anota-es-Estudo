@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+</head>
+<body>
+    <main>
+        <h1> CSS - Guide</h1>
+
+        <h2> O que é o CSS?</h2>
+        <p>CSS é um acrônimo para Cascading Style Sheet. É um código para criar estilos no HTML. Básicamente o HTML é a estrutura e o CSS é a beleza, vem para transformar a estrutura em uma aplicação devidamente apresentável. Igual o HTML o CSS não é uma linguagem de programação. </p>
+        <h2> Estilos de CSS: </h2>
+        <p> O css pode ser adicionado no seu HTML de três formas, sendo a terceira forma a mais utilizada. </p>
+        <ol>
+            <li> CSS Inline - dentro do atributo style="color:red"</li>
+            <li> CSS Interno - dentro do head criar a tag style </li>
+            <li> Css Externo - criar o próprio arquivo CSS. </li>
+        </ol>
+        <h2> DevTools</h2>
+        <p> Ferramenta quase obrigatória para que possamos estudar, compreender e utilizar o CSS no nosso dia a dia. Ele consegue nos mostrar exatamente todos os elementos de uma página junto com seus códigos HTML e CSS. </p>
+        <h2> Cascata do CSS: </h2>
+        <p> É importante saber que o estilo aplicado em sua página sempre será lido de cima para baixo e deve ser levado em consideração três fatores para a execução correta do estilo: Origem, especificidade e importância.</p>
+        <ul>
+            <li> Origem - Inline > Interno > Externo </li>
+            <li> Especificidade - Id > Class > Elemento > Universal * </li>
+            <li> Important - Ao colocar !important depois do atributo, ele irá sobreescrever tudo.</li>
+        </ul>
+        <h2> Seletores do CSS: </h2>
+        <p> Seletores servem para linkarmos o elemento HTML que voce deseja estilizar com o seu CSS do projeto. </p>
+        <ol>
+            <li>Direto em qualquer elemento tag HTML - h1{ }</li>
+            <li>Através da Class - Múltiplo - .NomeDaClasse</li>
+            <li>Através do ID - Único - #NomeDoID</li>       
+            <li>Efeitos globais - * { } - Tudo que está no arquivo</li>
+            <li> Para alplicar mais de um seletor -  .titulo, #paragrafo{}</li>
+        </ol>
+        <h3> Combinators</h3>
+        <p> Através de combinadores podemos trabalhar para buscar e combinar seletores afim de aplicar uma estilização.</p>
+        <ul>
+            <li> Descendent - busca um elemento dentro de outro.</li>
+                <ul>
+                    <li> Ao colocarmos por exemplo body article h2 {}, ele irá estilizar todos os h2 que estejam dentro de articles que esteja dentro do body. </li>
+                </ul>
+            <li>Child - Identificado pelo sinal > entre dois elemtnos. Só seleciona o elemento que é filho direto do pai.</li>
+                <ul>
+                    <li> Ao colocarmos por exemplo body > ul > li , ele irá estilizar o primeiro UL que estiver após o body, e cada li seguinte. No caso acima, ele iria estilizar todos os UL que estejam dentro do body.</li>
+                </ul>
+            <li>Sibling - Identificado pelo sinal de + entre dois seletores. Ele irá selecionar somente o elemento do lado direito que é irmão direto na hierarquia.</li>
+                <ul>
+                    <li> Ao colocarmos por exemplo button + button{} ele irá estilizar o botao que possua outro botao dentro da mesma hierarquia . ex:  div>button*2 </li>
+                    <li> Ao colocarmos por exemplo h1 ~ p , ele irá selecionar todos os paragrafos que estejam na mesma hierarquia(abaixo da tag h1) </li>
+                </ul>
+        </ul>
+    
+        <h3> Pseudo-Classes</h3>
+        <p> É um tipo de seletor que irá selecionar um elemento que estiver em um estado específico. Por exemplo: É o primeiro elemento dentro de uma caixa. O elemento que está com o ponteiro do mouse encima dele entre diversos outros.</p>
+        <ul>
+            <li>first-child - Seleciona o primeiro filho de um elemento.</li>
+                <ul>
+                    <li> ao colocarmos por exemplo ul::first-child ele irá selecionar o primeiro item dentro da lista. </li>
+                </ul>
+            <li>nth-of-type - voce escolhe qual elemento filho voce deseja selecionar.</li>
+                <ul>
+                    <li> por exemplo, ao colocarmos ul:nth-of-type(2) irá selecionar o segundo elemento dentro da ul. </li>
+                </ul>
+            <li>Even/Odd (Pár e Ímpar) - seleciona itens pares ou itens ímpares </li>
+                <ul>
+                    <li>ao colocarmos por exemplo ul li:nth-child(odd) dentro de uma lista, ele irá estilizar apenas os itens em posições ímpares.</li>
+                </ul>
+            <li>Hover and Focus - Personaliza ao usuário passar o cursor por cima do elemento e quando o elemento estiver focado (em caso de inputs text's). </li>
+            <li>Disabled e Required - Quando o imput for disabled por exemplo, voce consegue personalizar apenas quando estiver desativado. Da mesma forma se aplica para o required.</li>
+                <ul>
+                    <li> input:disabled {} ...</li>
+                </ul>
+        </ul>
+    
+        <h3>Pseudo-Elements</h3>
+        <p> Com eles nós podemos adicionar elementos html pelo próprio CSS. Temos como principais exemplos: </p>
+        <ul>
+            <li> ::before</li>
+            <li> ::after</li>
+            <li> ::first-line </li>
+        </ul>
+        
+    
+    
+    
+        <h2> Box Model</h2>
+        <p> O CSS trabalha com a idéia de caixas. Todas as caixas possuem seus limites (altura e largura). Com o tempo iremos perceber que praticamente tudo que encontramos nos layouts são construídos a base de caixas. Toda caixa possuirá seu posicionamento, tamanhos, espaçamentos, bordas, cores e aí por diante. Todos os elemtnos HTML são caixas. </p>
+        <ul>
+            <li>Box-Sizing - Devemos ficar atentos ao tamanho de nossas caixas, que podem ser trabalhadas de duas formas:  </li>
+            <ul>
+                <li>content-box - é o que vem por padrão. Se voce estipular que o tamanho da caixa é de 50px, ele irá colocar o tamanho do conteúdo de 50px, e caso haja paddings, margins, etc, será somado a parte.</li>
+                <li>border-box - Diferente do citado acima, se definirmos o tamanho da caixa de 50px e essa caixa possua borda, ela automáticamente irá fazer o calculo para que a caixa como um todo seja de 50px.</li>
+            </ul>
+            <li>Display-Block & Inline - Caixas podem se comportar com dois tipos de displays: </li>
+            <ul>
+                <li>display block - ocupam toda a linha, colocando o próximo elemento abaixo, width e height são respeitados, padding margins e border irão funcionar normalmente.</li>
+                <li>display inline - elemento ao lado do outro, width e height não funcionam, somente valores horizontais de margin padding e border irão funcionar.</li>
+            </ul>
+            <li>Margin - Externo - Espaço entre os elementos, geralmente definidos com três possíveis formas:</li>
+            <ul>
+                <li> unidades exatas (px,em)</li>
+                <li> porcentagem (%) </li>
+                <li> auto - centraliza o objeto na horizontal </li>
+            </ul>
+            <li>Padding - Interno - Preenchimento interno da caixa. Distancia entre a borda e o conteúdo. </li>
+            <ul>
+                <li> unidades exatas (px,em)</li>
+                <li> porcentagem (%) </li>
+                <li> auto - centraliza o objeto na horizontal </li>
+            </ul>        
+            <li>Border-Outline</li>
+        </ul>
+    
+        <h2> Posicionamento CSS </h2>
+        <p> Quando falamos em posicionamento devemos pensar em como montar corretamente o layout de uma página na tela. Antigamente, esses layouts eram criados através de tabelas no html.(Tática não utilizada hoje em dia).</p>
+        <p> Nos dias de hoje, existem duas formas nas quais são construídos os layouts modernos.</p>
+        <ul>
+            <li>FlexBox</li>
+            <li>CssGrid</li>
+        </ul>
+        <p> Posicionamento no CSS talvez seja o tópico que mais possa gerar complicações no assunto, por isso é necessário atenção. Para controlarmos onde nosso elemento irá ficar, podemos usar de primeiro a propriedade Position. </p>
+        <p>Vale lembrar que por padrão, um elemento ficará embaixo do outro e ocupará toda sua linha até o final.</p>
+        <ul>
+            <li> Static - fluxo padrão, um abaixo do outro.</li>
+            <li> Relative - ao aplicarmos, se torna possível aplicarmos cinco propriedades : right,bottom,left,top e z-index. Dessa forma podemos empurrar cada objeto setando seus pixels. Exemplo: position:relative top: 20px - irá afastar no top em 20 px.  </li>
+            <li> Absolute - Também libera todos as cinco propriedades acima. Diferente do Relative, ele de certa forma faz o elemento ir para outra camada, jogando o elemento selecionado para um novo fluxo.  </li>
+            <li> Fixed - Volta a mesma idéia de que ele sai do contexto, porém o elemento fica fixo na  página. </li>
+            <li>Element Stacking : </li>
+        </ul>
+    
+        <h2> Flexbox</h2>
+        <p> Quando falamos em flexbox, falamos principalmente nos layouts das páginas e a forma com que ela é estruturada. O Normal flow é a maneira que os elementos block e inline ficam na página por seu comportamento padrão. Obviamente que o normalflow não deixa uma página harmônica e nem visivelmente apresentável e para isso que precisamos ir atrás de customizações.</p>
+        <p>Durante muito tempo foi utilizado o modelo em tabelas, nas quais através de uma tabela, cada campo recebe um determinado display, assim constituindo o layout do site. Este modelo NÃO é mais utilizado nos dias de hoje. Com a evolução foi passado a utilizar o modelo tableless, na qual passaram a implementar o float-left, etc, porém este modelo também não é utilizado nos dias de hoje. </p>
+        <p> Enfim, chegamos onde as páginas modernas são construídas no dia a dia, o FlexBox. O flexbox é uma caixa que se tornam flex, fazendo com que seus elementos dentro da caixa possam receber um melhor alinhamento, ordenação e tamanhos flexíveis. </p>
+        <p> Ao aplicarmos o dislpay:flex, automaticamente eles passam a ficar um ao lado do outro, se tornando mais fácil sua ordenação. </p>
+        <h3> Terminologia:</h3>
+        <ul>
+            <li>Flex Container & Flex item - Para que o flex funcione, precisamos pegar um container maior para ser o flex container, e todos os itens dentro dele se tornarão o flex item. Este conceito de elementos dentro de outros elementos, é chamado de Nesting.</li>
+            <li>Axis - Eixo Principal x Cruzado - Ao trabalharmos com Flexbox precisamos sempre ficar atentos aos eixos, pois através do flex-direction podemos alterar o eixo, colocando da horizontal para a vertical por exemplo. </li>
+            <li>Flex Sizing - É o conceito do item ser flexível. Alterar a altuar e largura dos itens para preenchimentos dos espaços do flex container. Colocando Flex:1 por exemplo, todos os itens dentro do container passarão a ocupar a mesma porção dentro dele. </li>
+        </ul>
+        <h3> Propriedades do Flex-Container:</h3>
+        <p> Ao colocarmos DisplayFlex dentro de um container, podemos alpica-las uma série de propriedades </p>
+        <ul>
+            <li>Flex Direction: Com flexbox ou os itens ficarão na horizontal ou na vertical. Através do Flex Direction podemos alterar seu eixo, e podemos colocar os seguintes valores:</li>
+                <ul>
+                    <li> row - é o que vem no padrão.</li>
+                    <li> row-reverse - Coloca de trás para frente 100% ao inverso.</li>
+                    <li> column -</li>
+                    <li> column reverse - </li>
+                </ul>
+            <li> Flex-Wrap - O flexbox tem a capacidade de utilizar multilinhas, na qual cada linha será um novo eixo a ser criado. Por padrão, o flex vai fazer sempre o item se encaixar dentro do limite do seu flex. A não ser que coloquemos o Flex-Wrep. Caso ele tenha tamanho suficiente para ficará em uma só linha e caso contrário ele irá quebrando. </li>
+            <li>Flex-Flow - É um ShortHand do Flexbox, na qual colocamos o flex direction e o Wrap . Assim colocamos o FlexFlow direction + wrap. Ex: flex-flow: column wrap. </li>
+            <li>Justify-Content - Alinhamento e distribuição do container no eixo principal (horizontal). Para isso temos alguns valores a serem colocados </li>
+                <ul>
+                    <li>flex-start - padrão, um ao lado do outro.</li>
+                    <li>flex-end - alinha ao final do container.</li>
+                    <li>center - alinha ao centro do container</li>
+                    <li>space-around - espaços por igual ao redor deles, inclusive entre os da ponta e o container. </li>
+                    <li>space-between - espaço entre eles mas os da ponta ficam colados no container.</li>
+                    <li>space-evenly - espaço por igual em cada um deles.</li>
+                </ul>
+            <li>Align-Items - Alinhamento dos elementos no eixo cruzado (vertical). Para isso temos alguns valores a serem colocados </li>
+            <ul>
+                <li>flex-start - deixa os elementos no inicio do eixo cruzado </li>
+                <li>flex-end - deixa os elementos no final do eixo cruzado.</li>
+                <li>center - deixa os elementos no centro do eixo cruzado. </li>
+            </ul>
+            <li>gap - capacidade que temos em colocar espaço entre os elementos. Podendo ser colocados através de medidas fixas(pixels) ou flexiveis como porcentagens por exemplo. Exeplo: gap:4px, colocando 4px de distancia entre cada elemento.</li>
+        </ul>
+        <h3> Propriedades do Flex-Item</h3>
+        <p> Assim como o flex-container tem suas propriedades para organizar todos os itens dentro dele, cada item também possui suas respectivas propriedades para que possamos estiliza-los.</p>
+        <ul>
+            <li>Flexis-Basis - Serve para ajustar medidas dos elementos.</li>
+            <ul>
+                <li>auto - vem por padrão, respeita o tamanho do conteúdo de cada elemento.</li>
+                <li>flex-basis: 25px - aplica 25 pixels para cada elemento. Também aceita %, etc.</li>
+            </ul>
+            <li>Flex-Grow - Capacidade da expansão de um elemento para ocupar os espaços vazios sobrando de um flex-container. Através dele, colocamos como valor 1, 2, para que cada um vá pegando uma porção respectivamente. </li>
+            <li>Flex-shrink - Capacidade do encolhimento de um elemento. </li>
+            <li>Flex - Propriedade ShortHand igual temos no Flex-Flow, podendo em uma única linha aplicar todos os três comandos acima na ordem:  Shrink->Grow->Basis. </li>
+            <li></li>
+        </ul>
+    
+    
+        <h2> Grid</h2>
+        <p>a</p>
+    
+        <!-- CSS TÓPICS -->
+    
+        <h2> Valores e Unidades de medidas </h2>
+        <p> Existem diversos tipos de valores e medidas que iremos precisar saber ao trabalhar com CSS. Em sua documentação pode ser checada em: <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS">MDN WEB DOCS</a>. </p>
+        <h3> Tipos Numéricos: </h3>
+        <ol>
+            <li>integer - números inteiros (-10 ou 10)</li>
+            <li>number - números decimais</li>
+            <li></li>
+            <li></li>
+        </ol>
+        <h2> Cores no CSS: </h2>
+        <p> Como utilizamos o CSS para estilização de nossos projetos, então é através dele que conseguimos setar as cores da aplicação. Quando falamos de cores, falamos de color(textos), bg color (fundo de caixas), border-color para as bordas, entre outras.
+        <p> Cores são muito mais importante do que pensamos, afinal, a harmonia visual de um site nos diz se iremos consumir o seu conteúdo ou não. Muitas das vezes isso acontece de forma irracional, sites estéticamente harmônicos atraem mais os usuários. Para mais informações sobre isso, estude mais sobre psicologia das cores e a UI.</p>
+        <p>No CSS3 existem quatro principais formas de definirmos valores das cores:  </p></p>
+        <ol>
+            <li> Name - background-color: red</li>
+            <li> RGB - background-color: rgb(122,0,140)  </li>
+            <li> HexaDecimal - background-color: #12C2F8</li>
+            <li> Globais - inherit(herança), initial(cor inicial) </li>
+        </ol>
+        <p> Agora que já sabemos como representar as cores precisamos também aprender a harmoniza-las. Você consegue se aprofundar no assunto estudando design/UI, mas segue abaixo algumas ferramentas e dicas de como criar uma paleta de cores harmônica. </p>
+        <ul>
+            <li> <a href="https://color.adobe.com/pt/create/color-wheel">Adobe Colors</a> - Grande parte gratuita na qual nos ajuda a montar uma paleta eficiente e também a arrastar arquivos para extrair uma paleta baseado no arquivo, como uma logo do instagram por exemplo. Também pode nos fornecer paletas baseado em layouts mais utilizados na internet. </li>
+            <li><a href="https://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF">Paletton</a> - Funciona de forma parecida com o adobe colors, porém nos permite uma pré visualização de um layout aleatório utilizando a paleta inserida nele. </li>
+            <li> <a href="https://coolors.co/">Coolors</a> - Divide sua tela em 05 partes e gera uma paleta aleatória, na qual ao apertar espaço ele vai mudando a paleta até chegar uma do seu gosto. Também é possível lockar alguma das cores, para as demais irem mudando e a que você gostou ficar travada.</li> 
+            <li><a href="https://chrome.google.com/webstore/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp">ColorZilla</a> Extensão do GoogleChrome que nos permite capturar a # de uma cor específica que você olhar em qualquer página na internet. </li>
+        </ul>
+    
+        <h2> Bordas no CSS </h2>
+        <p>Colocamos a propriedade Border com 03 informacoes distintas</p>
+        <ol>
+            <li>Primeiro colocamos os pixels ex: 5px </li>
+            <li>Em seguida colocamos o tipo de borda ex: Solid, Dotted, Dashed,  </li>
+            <li>Por ultimo colcamos a cor da borda ex: blue </li>
+            <li>Coloque tudo em uma linha: Border: 15px solid black</li>
+            <li> border-radius: 5px - arredonda as bordas da borda. </li>
+        </ol>
+        <h2> Margins and Paddings </h2>
+        <p> Todos os elemtnos possuem 04 propriedades: Conteudo, Borda, Margin, Padding.</p>
+        <ol>
+            <li>Margin: Distancia do item para fora. </li>
+            <li>Padding: Distancia do item para dentro.</li>
+        </ol>
+        <h2> Width and Height no CSS:</h2>
+        <ul>
+            <li>Podem ser medidas tanto por px, quanto por % (mais usadas) </li>
+            <li>Min-width/Max-width - Permite que seu item nunca ultrapasse o minimo/máximo. </li>
+            <li>Ao definir a largura e altura, definimos do conteúdo dele. As bordas e paddings sao somadas por cima.</li>
+            <ul>
+                <li>box-sizing: content-box(padrão) ou border-box (inclui tudo)</li>
+            </ul>
+        </ul>
+        <h2> Textos & Fontes </h2>
+        <ul>
+            <li>Color: blue - altera a cor do texto</li>
+            <li>font-size: O tamanho da fonte pode ser aplicado em medidas absolutas e medidas relativas. Exemplos:</li>
+                <ul>
+                    <li>Absolutas - cm, mm, in, px, pc</li>
+                    <li>Relativas - em (relativa ao tamanho), ex (relativa a uma altura X), rem (relativo ao root), vw (relativo a viewport), %.  </li>
+                    <li>Por recomendação da <a href="https://www.w3c.br/">W3C</a> as mais apropriadas para uso são a PX e EM. </li>
+                </ul>
+            <li>font-weight: Relacionada ao peso da vonte, podendo receber os seguintes valores:</li>
+                <ul>
+                    <li>Lighter</li>
+                    <li>Bold</li>
+                    <li>Bolder</li>
+                    <li>Numérico - Ao invés das palavras acima, podemos colocar 100,200,300 por exemplo, para ir setando o peso da fonte.</li>
+                </ul>
+            <li>font-family: Arial - Altera o tipo da fonte.</li>
+                <ul>
+                    <li>aqui voce pode colocar mais de uma separada por virgula, para caso nao haja a primeira. Ex: font-family: Arial, xxx, etc. Dessa forma caso no dispositivo ou navegador não ache a Arial ele irá aplicar a xxx, e caso não haja irá colocar a etc.</li>
+                </ul>
+            <li> font-style- Altera o estilo da fonte, vindo como padrão o normal, podendo ser alterado para italic.</li> 
+            <li> text-align: left, center, right, justify - alinhamento do texto. </li>
+            <li> text-align - Alinha o texto dentro do espaço que ele está.Podemos utilizar alguns valores:</li>
+                <ul>
+                    <li>center - centrilizado</li>
+                    <li>right - alinhado a direita</li>
+                    <li>justify - alinha o texto a esquerda e a direita.</li>
+                </ul>
+            <li> text-indent - Em PX voce coloca a separacao do inicio do texto da borda. </li>    
+            <li> text-decoration: none(sem decoracao), over-line(linha encima), line-trhough(linha cortada)</li>
+            <li> text-transform: uppercase(maiusculo), lowercase(minusculo),  </li>
+            <li> letter-spacing: 10px - espacamento entre as letras.</li>
+            <li> word-spacing: 20px - distanciamento entre uma palavra e outra.</li>
+            <li> line-height: 10px - distanciamento entre uma linha e outra. </li>
+            <li> text shadow: 0px(dist direita) 2px(dist abaixo) 3px(fumaça) red(cor) - sombra no texto.</li>
+        </ul>
+        <h3> Fontes Externas:</h3>
+        <p> Muitas das vezes iremos utilizar fontes customizáveis da internet na qual ela não estará instalada nos dispositos que irão acessar a aplicação. Para isso, igual nas imagens, podemos utilizar uma fonte hospedada em outro servidor, ou baixarmos e hospedar a fonte dentro do nosso próprio projeto.  
+        <p>Quando falamos de fontes externas, temos como referência o <a href="https://fonts.google.com/">Google Fonts</a>, que nos permite utilizar diversas fontes de seu servidor. </p>
+        <p> E para implementa-las na nossa aplicacão é muito fácil, podemos fazer isso via link(Html5) ou como @import(Css3). O LINK fica sempre dentro do HEAD, dentro do HTML5, e o IMPORT fica dentro do CSS no topo da página geralmente. </p>
+        <p> Já para implementarmos fontes baixadas, primeiramente precisamos ter essas fontes em nossa máquina, e para isso o site <a href="https://www.dafont.com/pt/">DaFont</a> pode te ajudar a encontrar a fonte de seu agrado. Após o download, jogue a fonte para alguma pasta dentro do seu projeto. Em seguida, dentro do css use o código @font-face que ele já irá montar a estrutura para voce colocar onde af onte se localiza e setar o nome da fonte desejada.</p>
+        <p> Caso tenha ficado dúvidas, confira nesta aula gratuita do <a href="https://www.youtube.com/watch?v=3YIXnxA1kqg&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s&index=15">Curso em Vídeo</a>.</p>
+        <p> Dica Extra Fonte:</p>
+        <ul>
+            <li>Fonte dentro de um Site - Caso você esteja navegando por algum site e veja alguma fonte que lhe agradou, podemos usar o <a href="https://chrome.google.com/webstore/detail/fonts-ninja/eljapbgkmlngdpckoiiibecpemleclhh">Fonts Ninja</a>. É uma extensão do Chrome de fácil manuseio que analisa a página aberta e nos dá as informações das fontes.</li>
+            <li>Fonte dentro de uma Imagem - Caso você veja uma imagem com uma fonte e deseja descobri-la, podemos usar algumas ferramentas a nosso favor como por exemplo o <a href="https://www.whatfontis.com/">WhatFontIs</a>, o <a href="https://www.fontsquirrel.com/">FontsQuirrel</a> e também o <a href="https://www.myfonts.com/">MyFonts</a>. </li>
+        </ul>
+        <h2> Background </h2>
+        <p> Através do Background podemos definir o fundo de alguma div, colocando duas propriedades mais utilizadas. </p>
+        <ul>
+            <li>Background-color - colore a div em uma cor específica, mas também podemos criar degrades, por exemplo:</li>
+                <ul>
+                    <li>background-color: linear-gradient(to bottom), yellow, red; - Dessa forma, surge um degrade do amarelo para o vermelho de cima para baixo.</li>
+                </ul>
+            <li>Background-image- Coloca uma imagem no fundo da div, na qual por padrão ele irá repetir a imagem para um lado e para o outro, de forma com que ele consiga ocupar 100% da ViewPort. Podemos alterar esse comportamento através da propriedade background-repeat.</li>
+                <ul>
+                    <li>background-repeat: no-repeat - Aplica apenas uma imagem sem repetir. </li>
+                    <li> repeat X ou repeat Y - Repete apenas no eixo desejado.</li>               
+                </ul>
+            <li>Background-Position - Quando colocamos uma imagem maior do que o tamanho da div em que ela se encaixa, podemos posiciona-la da forma que aparecerá a parte desejada da imagem. Para isso usamos o bg position com as seguintes informacoes:</li>  
+                <ul>
+                    <li>background-position: left top - centraliza na esquerda e para o topo, e assim podemos ir alterando da forma que quisermos para pegar a parte desejada.</li>
+                </ul>
+            <li>background-size - Muitas das vezes iremos precisar reajustar o tamanho da imagem de fundo para que ela possa se adaptar ao certo no ponto desejado da sua aplicação. Como boa prática, é sempre indicado colocarmos uma cor de fundo no local onde irá receber a imagem de fundo, para que quando a aplicação estiver carregando a imagem,a tela não fique completamente em branco.</li>
+                <ul>
+                    <li>background-size: 1000px - voce seta em pixels o tamanho da imagem de fundo, porém não é muito indicado pois dependendo do tamanho do monitor do usuário, sua aplicação pode ficar quebrada.</li>
+                    <li>background-size: 100% - adapta a imagem a 100% da VP, porém ela provavelmente ficará preta na parte inferior.</li>
+                    <li>background-size: contain - faz com que a imagem seja 100% exibida independente do tamanho da tela.</li>
+                    <li>background-size: cover - cobre a tela inteira mesmo que para isso tenha que cobrir levemente a imagem.</li>
+                </ul>
+            <li>background-attachment - Aqui podemos criar vínculos no CSS. Podemos utilizar basciamente duas propriedades: </li>
+                <ul>
+                    <li>background-attachment: scroll - é o padrão, rolou o conteúdo o fundo rola junto.</li>
+                    <li>background-attachment: fixed - Ele pausa a imagem de fundo e apenas o conteúdo rola, muito usado para o efeito parralax nos sites.</li>
+                </ul>
+            <li> ShortHand - E por fim, podemos resumir todos os itens acima em apenas uma linha, seguindo a ordem: </li>
+                <ul>
+                    <li>background: color > image > position > repeat > size > attachment </li>
+                </ul>
+        </ul>
+        <h2>MediaQueries & Responsividade</h2>
+        <p> Nos dias atuais conseguimos consumir conteúdo na internet em diversos dispositivos com diversos tamanhos de tela diferentes, como por exemplo abrir um site em um Macbook, Ipad, Iphone.Para que o site fique harmônico em diversos tipos de tamanhos, precisamos usar a mediaquerie para que ele fique responsivo e adaptativo. Também pode ser utilizada para mais coisas como por exemplo para a impressão de uma matéria em uma página. Através da mediaqueries podemos excluir os menus e demais coisas do site que não são desejáveis na impressão. </p>
+        <p>Ao criarmos o LINK do CSS dentro do Head do HTML, podemosc colocar o atributo media="". </p>
+        <ul>
+            <li> media="all" - Css responsável para estilização geral da aplicação. </li>
+            <li> media="screen" - CSS responsável pela estilização da tela.</li>
+            <li>media="print"- CSS responsável pela estilização da impressão.</li>
+        </ul>
+    
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>        
+    </main>
+</body>
+</html>
