@@ -84,7 +84,7 @@
         <p> Parametros: Dentro desses parenteses nós conseguimos enviar e receber informações (variáveis & dados) para a função. Quando os dados são enviados na chamada são chamados de argumentos, e quando são recebidos na função são chamados de parâmetros.</p>
         <p> Retorno de Valores: Funções podem ou não retornarem algo. Quando quisermos que retorne, utilizamos a palavra chave return. </p>
         <p> Function Hoisting: Ao declararmos uma função de forma tradicional, ela pode estar em qualquer lugar do escopo global, que irá funcionar. Ao declararmos uma função anônima, ela nao irá sofrer o hoisting, logo, precisa ser declarada antes de ser chamada.</p>
-        <h2> Manipulando Dados.</h2>
+        <h2> Manipulando Dados</h2>
         <ul>            
             <li>(String(number)) - transforma um número em uma string.</li>
             <li>(Number(string)) - transforma uma string numérica em um número.</li>
@@ -96,11 +96,86 @@
             <li> let myArray = string.split(" ") - Cria um array, separando uma string por espaço ou por qualquer outro caracter desejado.</li>
             <li> let fraseNova = myArray.join(" ") - Junta todo o array em uma só frase, colocando um espaço ou qualquer caracter desejado em uma nova string.</li>
             <li> string.includes("vodka") - boolean que retorna true or false caso dentro da sua string contenha a palavra desejada. PS: CaseSensitive.</li>
+            <li> Array.from(string) - pega uma string e cada letra dela vira um elemento do array.</li>
+        </ul>
+        <h2> Manipulando Arrays</h2>
+        <h2> Expressões & Operadores</h2>
+        <ul>
+            <li> New - expressão utilizada para criar um novo objeto.(Array,Object).</li>
+            <li> typeof - serve para informar o tipo de dado em questão. </li>
+            <li> delete - serve para deletar uma propriedade de um objeto por exemplo.</li>
+                <ul>
+                    <li>delete person.age - remove a idade do objeto pessoa.</li>
+                </ul>
+            <li>Operadores Aritméticos </li>
+                <ul>
+                    <li> * - multiplicação</li>
+                    <li> / - divisão</li>
+                    <li> + - soma</li>
+                    <li> - subtração</li>
+                    <li> ++ - incremento</li>
+                    <li> -- - decremento</li>
+                    <li> ** - exponencial</li>
+                    <li> % - resto da divisão</li>
+                </ul>
+            <li>Operadores Comparassão</li>
+                <ul>
+                    <li> == - igual a</li>
+                    <li> != - diferente de</li>
+                    <li> === - estritamente igual a (compara os valores e os tipos)</li>
+                    <li> !=== - estritamente diferente de (compara os valores e os tipos)</li>
+                    <li> > - maior que </li>
+                    <li> < - menor que</li>
+                    <li> >= - maior igual a</li>
+                    <li> <= - menor igual a</li>
+                </ul>
+            <li>Operadores de Atribuição</li>
+                <ul>
+                    <li> = - recebe algum valor</li>
+                    <li> += - soma ao valor já existente.</li>
+                    <li> -= - subtrai ao valor já existente</li>
+                    <li> *= - multiplica ao valor já existente</li>
+                    <li> /= - divide ao valor já existente</li>
+                </ul>
+            <li>Operadores Lógicos</li>
+                <ul>
+                    <li> && - um E outro.</li>
+                    <li> || - um OU outro.</li>
+                    <li> ! - se não tiver.</li>
+                </ul>
+            <li>Operador Ternário. - Então/Senão </li>
+                <ul>
+                    <li> condição ? ação : senão,outraação </li>
+                </ul>
         </ul>
 
-        <h2> Expressões & Operadores</h2>
         <h2> Condicionais & Controle de Fluxo</h2>
+        <p> Toda aplicação tem um fluxo padrão, e a partir daqui, iremos começar a ditar os caminhos que a aplicação pode seguir... Exemplo: Se voce estiver de tennis, voce ja pode ir correr. Se voce nao estiver de tennis, voce vai colocar o tennis. Tudo isso é possível através das condicionais. </p>
+        <ul>
+            <li>IF/ELSE - Ele muda o fluxo da aplicação.</li>
+                <ul>
+                    <li>if(condicao){código se entrar na condição}else{se nao entrar na condição}</li>
+                </ul>
+            <li>SWITCH - conseguimos colocar</li>
+                <ul>
+                    <li>switch(expressao){ case'a': /código break}default</li>
+                </ul>
+            <li>Throw & Try/Catch - Tente executar um bloco de código, e caso aconteça algum error, ele será disparado e capturado. Entenda mais nessa aula da <a href="https://app.rocketseat.com.br/discover/course/o-guia-estelar-de-java-script/condicionais-e-controle-de-fluxo/throw-e-try-catch">RocketSeat</a> gratuita</li> 
+        </ul>
         <h2> Estruturas de Repetição</h2>
+        <p> Existem quatro tipos principais de estruturas de repetição que precisamos saber: </p>
+        <ul>
+            <li>For - for (let i = 0 ; i < 10 ; i++)</li>
+            <li>While - while(condicao){} - enquanto a condição bater, executará o código.</li>
+            <li>For Of - Cria um loop através de uma variável/array.</li>
+                <ul>
+                    <li>for ( let pessoa of grupoPessoas){} - percorre todo o array. </li>
+                </ul>
+            <li>For In - Cria um loop encima de um objeto pegando suas propriedades.</li>
+                <ul>
+                    <li> for ( let property in person){} - vai rodar o objeto pegando suas propriedades ou os valores das propriedades - person[property] </li>
+                </ul>
+        </ul>
     </main>  
 </body>
 </html>
