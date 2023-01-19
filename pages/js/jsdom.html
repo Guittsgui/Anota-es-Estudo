@@ -60,6 +60,23 @@
                     <li>.toogle('toogle') - Ele procura uma classe, se achar ele remove, se não achar adiciona.</li>
                 </ul>
         </ul>
+        <h2>Navegando pelos Elementos</h2>
+        <h2>Criando e Adicionando Elementos</h2>
+        <h2>Eventos</h2>
+        <p> A Dom ela é direcionada a eventos. O Js é direcionado a eventos através de clicks, scroll, passar encima de algo.Existem basicamente os eventos de teclado, de mouse, e alguns outros. Para colocarmos eventos, começamos inserindo a tag on diretamente no HTML, para em seguida completarmos com uma das infinidades de eventos que temos a disposição. </p>
+        <h3> Add eventos via JS. </h3>
+        <p> Para isso precisamos selecionar o elemento através das formas já aprendidas, e atribuir a uma variavel, element, por exemplo.</p>
+        <ul>
+            <li>element.addEventListener(click,sayHello) - Para isos, precisamos informar dois argumentos. O primeiro é o tipo de evento, e o segundo qual a função que ele irá executar.</li>
+        </ul>
+        <p>Eventos de Teclado: </p>
+        <ul>
+            <li>input.onkeydown - ativa ao apertar a tecla, antes de soltar.</li>
+            <li>input.onkeyup - ativa ao soltar a tecla quando voce pressiona.</li>
+            <li>input.onkeypress - imediato, assim que apertar. </li>
+        </ul>
+        <h3> Argumento Event </h3>
+        <p> Existe em todas as funcionalidades que disparamos em cada evento. Ele já existe, já espera que essa função possa receber esse objeto event. É um objeto do evento bem grande, que pode proporcionar diversas funcionalidades como por exemplo saber as teclas que estão sendo digitadas em um input. </p>
     </main>
 </body>
 </html>
