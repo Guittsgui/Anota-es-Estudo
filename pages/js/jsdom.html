@@ -11,6 +11,55 @@
     <main>
         <p><a href="../../index.html">Voltar</a></p>
         <h1>JavaScript - DOM</h1>
+        <h2> O que é Dom?</h2>
+        <p> A Dom é o HTML convertido para JavaScript. É uma API que intearge com o HTML. Estrutura de dados do tipo árvore, criada pelo browser, na qual possui suas propriedades e seus métodos.</p>
+        <p> O JavaScript usa a DOM para se conectar e manipular o HTML. A programação WEB só existe por que existe a DOM.</p>
+        <p> Por hierarquia temos docuent -> html -> head/body -> e por ai vai diminuindo.</p>
+        <h2> Selecionando Elementos</h2>
+        <ul>
+            <li>document.getElementByID('id') - Seleciona o elemento pelo ID.</li>
+                <ul>
+                    <li>Retorna um Elemento.</li>
+                </ul>
+            <li>document.getElementsByClassName('class') - Seleciona os elementos pelas Classes.</li>
+                <ul>
+                    <li>Retorna um HTMLCollection</li>
+                </ul>
+            <li>document.getElementsByTagName('tag') - Seleciona os elementos pelas Tags.</li>
+                <ul>
+                    <li>Rtorna um HTMLCollection</li>
+                </ul>
+            <li>document.querySelector('SeletorCSS') - pega o primeiro html pelo Seletor , com a escrita igual a do CSS.</li>
+                <ul>
+                    <li>Retorna um Elemento</li>
+                </ul>
+            <li>document.querySelectorAll('SeletorCSS') - ao contrário do querySelector, trás todos os encontrados e não só o primeiro</li>
+                <ul>
+                    <li>Retorna um NodeList (Consegue aplicar um ForEach)</li>
+                </ul>
+        </ul>
+        <h2> Manipulando Conteúdos.</h2>
+        <p> Após pegarmos o elemento e jogarmos ele para uma variável element, por exemplo, podemos começar a manipula-los</p>
+        <ul>
+            <li>element.textContent = "Olá" - Altera o conteúdo de texto do elemento. </li>
+            <li>element.innerText = "Olá Amigo" - Troca o texto interno do seu elemento HTML.</li>
+            <li>element.innerHtml = "h2,olá,h2," - Permite adicionar código HTML dentro do elemento via JS. </li>
+            <li>element.value = "valor qualquer" - Permite adicionar ou alterar o valor dentro de um Input. </li>
+            <li></li>
+        </ul>
+        <h2> Manipulando Estilos & Classes</h2>
+        <ul>
+            <li>element.style.backgroundColor = "blue" - Permite adicionar CSS inline, trocando - por camelCase.</li>
+                <ul>
+                    <li>Podemos pegar ou setar as propriedades.</li>
+                </ul>
+            <li>element.classList. - Nos permite uma série de comandos para trabalharmos com Css. </li>
+                <ul>
+                    <li>.add('active') - ativa uma classe no elemento selecionado.</li>
+                    <li>.remove('active') - remove uma classe no elemento selecionado.</li>
+                    <li>.toogle('toogle') - Ele procura uma classe, se achar ele remove, se não achar adiciona.</li>
+                </ul>
+        </ul>
     </main>
 </body>
 </html>
