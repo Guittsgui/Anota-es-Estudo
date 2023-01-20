@@ -54,7 +54,20 @@
         </ul>
 
         <h2> GitHub </h2>
-        
+        <p> Como vimos, o GIT é um gerenciador do histórico do seu projeto em sua máquina local. Quando pensamos em tirar nossos projetos da máquina local e enviar para uma plataforma remota, o GITHUB (e várias outras) entram para solucionar este problema. Utilizamos o GITHUB para ser nosso repositório remoto. Em resumo, podemos utilizar o git sem o GITHUB, mas não podemos utilizar o GITHUB sem o git.</p>
+        <p> Agora que já sabe mais ou menos o que é, para começar a utilizar você precisa criar uma conta no <a href="https://github.com/">GitHub</a>.</p>
+        <p> Como primeiro passo, precisamos aprender a criar repositórios dentro do gihub, para futuramente, conectarmos nosso projeto local a esse repositório. Para criar um repositório, basta logar no github, e no canto superior direito clicar em + -> New Repository.</p>
+        <p>Agora que já sabemos GIT e já possuímos nosso repositório remoto criado, podemos conecta-los e de fato passar a usar todo o poder do GIT + GITHUB.</p>
+        <h2> Chave SSH - Autorizando Máquina </h2>
+        <p> Para que possamos conectar nossa máquina com o github, precisamos realizar uma espécie de autenticação da máquina desejada com os servidores do GitHub. Para cada máquina que quisermos conectar, será necessário fazer uma autorização. Para realizar isso, clicamos na parte superior direita -> Settings -> SSH and GPG keys -> New SSH Keys. Chegando nesse ponto, abrimos nosso terminal e digitamos o seguinte código:  </p>
+        <ul>
+            <li> ssh-keygen -t rsa -b 4096 -C "emailDoGithub@gmail.com"</li>
+        </ul>
+        <p> Em seguida damos ENTER, ENTER. Agora a chave SSH já estará criada. Geralmente ela será colocada dentro da pasta usuário. Basta irmos lá, pegarmos a PUBLIC, e arrastar para uma aba vazia dentro do próprio editor de código, nos possibilitando visualizar a chave escrita(Será vários e vários números e letras encriptografadas). Agora voltamos para a página do GITHUB, colocamos o título (Forma de saber qual máquina que é EX: Macbook Principal), e embaixo colamos essa chave. Pronto, seu dispositivo estará autorizado a enviar/receber do GitHub. </p>
+        <p> Caso queira ver o passo a passo de forma simplificada, basta acessar esta parte da <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key-for-a-hardware-security-key">Documentação do GitHub</a>.</p>
+        <h2> Linkando GIT com GITHUB</h2>
+        <p> Agora que nossa máquina já está autorizada, podemos começar a usar a mesma. Para isso criamos um repositório geralmente em branco (Sem Readme,GitIgnore). Logo em seguida ele nos dará o passo a passo "Or push an existing repository from the command line". Então basta irmos na pasta principal do nosso projeto que queremos enviar para nuvem (tenha ele sido criado agora ou sendo antigo), e digitarmos os comandos na página do git.</p>
+        <h2> Modificando Local e Enviando p/ Remoto</h2>
     </main>
 </body>
 </html>
