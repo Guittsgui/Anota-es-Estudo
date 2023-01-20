@@ -11,6 +11,98 @@
     <main>
         <p><a href="../../index.html">Voltar</a></p>
         <h1> MYSQL - Banco Relacional</h1>
+        <h2> O que é um banco de dados?</h2>
+        <p> Banco de dados é um repositório sistêmico de informações, ou seja, uma forma organizada de armazenar diversos tipos de informações. Bancos de dados podem ser relacionais ou não relacionais. Neste caso, estudaremos os bancos de dados relacionais. </p>
+        <p> Dentro de um banco de dados, as informações são organizadas em tables(entidades), com suas linhas e colunas, cada tabela possui os seus campos (títulos das informações), e suas informações, que preenchem cada campo. Ex: Campo Nome, possui o Guilherme, Joao, Maria (informações). </p>
+        <p> Existem algumas regras para nomearmos tabelas e campos. </p>
+        <ul>
+            <li>Deve começar por uma letra do alfabeto.</li>
+            <li>Não se deve colocar caracteres especias: ()+-/* etc....</li>
+            <li>Não pode conter espaços</li>
+        </ul>
+        <h2> Tipos de Campos no SQL.</h2>
+        <ul>
+            <li>text</li>
+            <li>number</li>
+            <li>Datatime</li>
+            <li>Primary Key</li>
+        </ul>
+        <h2> Comandos Básicos: </h2>
+        <ul>
+            <li>create database bancoEscola - cria um novo banco de dados.</li>
+            <li>use bancoEscola - seta para o mysql passar a usar o banco desejado.</li>
+            <li> create table nomeTabela - cria uma nova tabela.</li>
+        </ul>
+        <h2> Comando Select </h2>
+        <p> Tem por função buscar informações e mostrar para gente. </p>
+        <ul>
+            <li>SELECT * FROM nomeTable - vai trazer todos os campos da tabela desejada.</li>
+            <li>SELECT nome, idade FROM nomeTable - vai trazer apenas os campos nome e idade.</li>
+            <li>SELECT * FROM nomeTable WHERE id = 1 - vai trazer apenas o resultado que o id seja igual a 1. </li>
+            <LI>SELECT * FROM nomeTable WHERE nome like "j%" - vai trazer quem o nome começa com j.</LI>
+                <ul>
+                    <li> %j - colocaria quem acaba com J. </li>
+                    <li> %j% - colocaria quem tem J no meio.</li>
+                </ul>
+        </ul>
+
+        <h2> Operadores Relacionais </h2>
+        <p> SQL irá se basear em queries (buscas). Para isso precisamos dominar seus operadores, para criar cada vez mais queries efetivas e precisas. </p>
+        <ul>
+            <li> = - igual - WHERE cpf = 183283273. (Só funciona em campo numérico).</li>
+            <li> Like - Funciona igual o = , porém para textos. Textos sempre entre "". </li>
+            <li> > - Maior - WHERE idade > 10. </li>
+            <li> < - Menor - WHERE idade < 10.</li>
+            <li> >= - Maior Igual - Where idade >= 10</li>
+            <li> <= - Menor Igual - Where idade <= 10</li>
+            <li><> - Não Igual a - Where idade <> 10</li>
+            <li> != - Diferente de - </li>
+        </ul>
+        <h2> Operadores Lógicos</h2>
+        <ul>
+            <li>AND - e - SELECT * FROM aluno WHERE nome like "%j" AND idade > 10</li>
+                <ul>
+                    <li> Traga os alunos que o nome termine com j E que tenha mais de 10 anos.</li>
+                </ul>
+            <li> OR - ou - SELECT * FROM aluno WHERE nome like "%j" OR idade > 10</li>
+                <ul>
+                    <li>Traga os alunos que o nome termine com j OU que tenha mais de 10 anos.</li>
+                </ul>
+            <li>BETWEEN - entre - SELECT * FROM estudantes WHERE id BEETWEEN 4 and 7 </li>
+                <ul>
+                    <li> Traga os estudantes que o ID esteja entre 4 e 7.</li>
+                    <li> NOT BETWEEN - Traga todos os estudantes que o ID nao seja entre 4 E 7.</li>
+                </ul>
+            <li>IN/NOTIN - SELECT * FROM funcionarios WHERE id_Loja IN (1,2,5)</li>
+                <ul>
+                    <li>Traga todos os funcionários que o id_Loja sejam 1, 2, 5.</li>
+                    <li>NOT IN - Traga todos os funcionários que o id_Loja não sejam 1, 2, 5</li>
+                </ul>
+            <li>Is NULL/NOT NULL - SELECT * FROM estudantes WHERE id IS NULL</li>
+                <ul>
+                    <li>Traga todos os estudantes que o id seja NULL</li>
+                    <li> NOT NULL - Traga todos os estudantes que o id não seja NULL.</li>
+                </ul>
+        </ul>
+
+        <h2> Inserindo, Atualizando, Deletando</h2>
+        <ul>
+            <li>INSERT INTO - Adiciona na tabela.</li>
+                <ul>
+                    <li> INSERT INTO aluno (nome, idade, cpf) VALUES ("Joao", 25, 17171717)</li>
+                    <li> Insere no aluno um novo registro com nome de Joao, idade 25, e cpf 17171717. </li>
+                </ul>
+            <li>UPDATE - Altera algo na tabela.</li>
+                <ul>
+                    <li>UPDATE aluno SET nome="Marcos" WHERE id = 2</li>
+                    <li>Pega na tabela o id de número 2, e altera seu nome para Marcos </li>
+                </ul>
+            <li>DELETE - Deleta algum registro na tabela (não apaga campo, só o registro inteiro).</li>
+                <ul>
+                    <li> DELETE FROM aluno WHERE id = 3</li>
+                    <li>Deleta da tabela aluno o registro em que o id seja 3</li>
+                </ul>
+        </ul>
     </main>
 </body>
 </html>
