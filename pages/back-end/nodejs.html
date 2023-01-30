@@ -16,6 +16,36 @@
         <p> E quais as vantagens de utilizar NODEJS ? Uma das suas maiores vantagens é sua alta velocidade e escalabilidade. Outra grande vantagem que ele utiliza o JS, fazendo com que inciantes não precisem aprender outra linguagem de programação para desenvovler o back-end, e sim podem utilizar o JS, linguagem já utilizada no Front. </p>
         <p> Mas, afinal, o que é o NODEJS? É impossível rodar JavaScript sem que tenhamos um ambiente próprio para isso. Por isso surge o Node. Node é um JS Runtime Enviroment, ou seja, é um ambiente que executa o JS em um ambiente completamente exclusivo a ele. Vale ressaltar que o NodeJS não é um framework como o React,Vue,etc.</p>
         <p> E como ele funciona? O node funciona com base no Event Loop, ou seja, como o node é single  threaded ele não bloqueia nada, trabalha de forma assíncrona, fazendo com que o Node trabalhe de maneira muito mais rápida que o Apache por exemplo. </p>
+        <p> Depois de já sabermos tudo sobre o que é, agora chegou a hora de instalar, para isso, acesse o seu site <a href="https://nodejs.org/en/">NodeJS</a> e realize o download.</p>
+        <h2> Variáveis Globais</h2>
+        <p> </p>
+        <h2>Módulos</h2>
+        <p> Node JS é baseado em módulos. Através da função required podemos utilizar diversos módulos dentro do nosso arquivo JS.</p>
+
+        <h2> NPM - Node Package Manager</h2>
+        <p> É um gerenciador de pacotes do node. Aqui iremos falar muito de dependências, pacotes, módulos etc. O primeiro comando que precisamos saber para começar a utilizar o NPM é como criar um novo pacote :  </p>
+        <ul>
+            <li> npm init  || npm init -y (sim p/ tudo)</li>
+        </ul>
+        <p> Utilizando este comando teremos acabado de criar nosso package.json. Além de criarmos, também podemos instalar módulos de terceiros, para isso utilizamos o comando: </p>
+        <ul>
+            <li> npm i nomeDaDependência || npm i nomeDaDependência -D (dependencia de desenvolvimento)</li>
+        </ul>
+        <p> Após instalarmos uma dependência de terceiros perceberemos que irá surgir o node_modules e o package-lock.json em nosso projeto. O node_modules, é onde fica todas as dependencias das dependencias que estalamos. Ao instalar uma dependência X, ela irá depender de uma Y, que poderá depender de uma Z. Tudo isso ficará localizado no nodule_modules. </p>
+        <p> Já o package-lock.json é um arquivo que basicamente nós não mexemos em nada, ele serve para mapear todas as dependências que temos em nosso projeto. Ele faz o projeto ficar mais rápido com esse mapeamento. </p>
+        <p>  Também é possível instalar dependencias de forma global, ou seja, não estará instalado apenas em nosso projeto, e sim na máquina em geral, para todos os futuros projetos.</p>
+        <ul>
+            <li> npm i nomeDaDependência -g </li>
+            <li> npm unistall nomeDaDependência -g</li>
+        </ul>
+        <p> Outra coisa que faremos constântemente é atualizar versões de projetos.  Para isso utilizaremos alguns comandos: </p>
+        <ul>
+            <li>npm outdated - mostra todos os pacotes,  suas versões mais desejadas etc.</li>
+            <li>npm upgrade - atualiza todos os pacotes para as versões desejadas.</li>
+            <li>npm i nomeDaDependência@latest - atualiza o pacote específico para ultima versão</li>
+        </ul>
+        <p> E para finalizar, também será de extrema importância aprender a excluir dependências</p>
+        <p> npm unistall nomeDaDependência</p>
 
     </main>
 </body>
