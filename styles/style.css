@@ -4,6 +4,7 @@ body{
 main{
     width: 800px;
     margin: auto;
+    margin-top: 50px;
     padding: 20px;
     background-color: white;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.219);
