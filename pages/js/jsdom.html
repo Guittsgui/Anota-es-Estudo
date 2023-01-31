@@ -38,30 +38,47 @@
                     <li>Retorna um NodeList (Consegue aplicar um ForEach)</li>
                 </ul>
         </ul>
-        <h2> Manipulando Conteúdos.</h2>
-        <p> Após pegarmos o elemento e jogarmos ele para uma variável element, por exemplo, podemos começar a manipula-los</p>
+        <h2> Manipulando Elementos </h2>
+        <p> Após pegarmos o elemento e jogarmos ele para uma variável element, por exemplo, podemos começar a manipula-los. </p>
         <ul>
+            <li>let novoElemento = document.createElement(li,div)- cria um novo elemento.</li>
+            <li>element.children - mostra os filhos que possuem dentro do elemento.</li>
+            <li>element.innerHtml = "h2,olá,h2," - Retorna todo o conteúdo HTML. Nos permitindo consultar e alterar valores. </li>
+            <li>element.innerText = "Olá Amigo" - Troca o texto interno do seu elemento HTML.</li>            
             <li>element.textContent = "Olá" - Altera o conteúdo de texto do elemento. </li>
-            <li>element.innerText = "Olá Amigo" - Troca o texto interno do seu elemento HTML.</li>
-            <li>element.innerHtml = "h2,olá,h2," - Permite adicionar código HTML dentro do elemento via JS. </li>
             <li>element.value = "valor qualquer" - Permite adicionar ou alterar o valor dentro de um Input. </li>
-            <li></li>
+            <li>element.append("(alterado)") - Diferente dos inner, ele só adiciona o elemento em específico, e não altera a página inteira. Ele também só adiciona Textos e não HTML.</li>
+            <li>element.appendChild(novoElemento)- adiciona um novo elemento criado com o createelement.</li>
+            <li>element.after("adicionado depois") - Adiciona um texto após um elemento</li>
+            <li>element.before("adicionando antes") - Adiciona um texto antes do elemento</li>
+                <ul>
+                    <li>Se ao invés da string entre aspas, colocarmos um novoElemento, ele irá adicionar o elemento HTML como um botão ou uma div por exemplo.</li>
+                </ul>
         </ul>
-        <h2> Manipulando Estilos & Classes</h2>
+        <h2> Manipulando Atributos</h2>
         <ul>
-            <li>element.style.backgroundColor = "blue" - Permite adicionar CSS inline, trocando - por camelCase.</li>
+            <li>element.getAttribute('type') - Pega o atributo caso exista.</li>
+            <li>element.hasattribbute('placeholder') - Retorna boolean se tem ou não o atributo.</li>
+            <li>element.setAttribute('placeholder', 'valor a ser colocado') - Adiciona um atributo caso não existe com o valor setado, e caso já existe, substitui o valor.</li>
+                <ul>
+                    <Li>No dia a dia você pode ver isso em um input de senha, clicando para mostrar ou ocultar senhas.</Li>
+                </ul>
+        </ul>
+
+        <h2> Manipulando CSS (Estilos & Classes)</h2>
+        <ul>
+            <li>element.style.backgroundColor = "blue" - Permite adicionar CSS inline, trocando os - por camelCase.Se já existir, troca, se não existir adiciona.</li>
                 <ul>
                     <li>Podemos pegar ou setar as propriedades.</li>
                 </ul>
-            <li>element.classList. - Nos permite uma série de comandos para trabalharmos com Css. </li>
+            <li>element.classList. - Nos retorna um dOMTokenList, que é um array que nos permite uma série de comandos para trabalharmos com Css. </li>
                 <ul>
                     <li>.add('active') - ativa uma classe no elemento selecionado.</li>
+                    <li>.contais('classe') - procura se tem uma classe.</li>
                     <li>.remove('active') - remove uma classe no elemento selecionado.</li>
                     <li>.toogle('toogle') - Ele procura uma classe, se achar ele remove, se não achar adiciona.</li>
                 </ul>
         </ul>
-        <h2>Navegando pelos Elementos</h2>
-        <h2>Criando e Adicionando Elementos</h2>
         <h2>Eventos</h2>
         <p> A Dom ela é direcionada a eventos. O Js é direcionado a eventos através de clicks, scroll, passar encima de algo.Existem basicamente os eventos de teclado, de mouse, e alguns outros. Para colocarmos eventos, começamos inserindo a tag on diretamente no HTML, para em seguida completarmos com uma das infinidades de eventos que temos a disposição. </p>
         <h3> Add eventos via JS. </h3>
@@ -69,14 +86,19 @@
         <ul>
             <li>element.addEventListener("click",() => (sayHello) - Para isos, precisamos informar dois argumentos. O primeiro é o tipo de evento, e o segundo qual a função que ele irá executar.</li>
         </ul>
-        <p>Eventos de Teclado: </p>
+        <h3>Eventos de Teclado: </h3>
         <ul>
             <li>input.onkeydown - ativa ao apertar a tecla, antes de soltar.</li>
             <li>input.onkeyup - ativa ao soltar a tecla quando voce pressiona.</li>
             <li>input.onkeypress - imediato, assim que apertar. </li>
         </ul>
         <h3> Argumento Event </h3>
-        <p> Existe em todas as funcionalidades que disparamos em cada evento. Ele já existe, já espera que essa função possa receber esse objeto event. É um objeto do evento bem grande, que pode proporcionar diversas funcionalidades como por exemplo saber as teclas que estão sendo digitadas em um input. </p>
+        <p> Existe em todas as funcionalidades que disparamos em cada evento. Ele já existe, já espera que essa função possa receber esse objeto event. É um objeto do evento bem grande, que pode proporcionar diversas funcionalidades como por exemplo saber as teclas que estão sendo digitadas em um input. </p>        
+
+
+        <h2>Navegando pelos Elementos</h2>
+        <h2>Criando e Adicionando Elementos</h2>
+        
     </main>
 </body>
 </html>
