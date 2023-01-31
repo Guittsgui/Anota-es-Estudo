@@ -16,8 +16,18 @@
         <p> Para começar a entender sobre requisições precisamos começar entendendo oque é síncrono e assíncrono. </p>
         <ul>
             <li>Síncrono - Basicamente na programação quando dizemos que alguma coisa é síncrona, basicamente estamos dizendo que uma coisa espera a outra para executar a próxima tarefa. Basicamente executa uma linha, termina, e parte para a debaixo, termina, e assim sucessivamente.</li>
-            <li>Assíncrono -  </li>
+            <li>Assíncrono - É quando as coisas funcionam fora de ordem. Por exemplo, se sua aplicação tiver que consultar um banco de dados e esperar ela retornar uma lista. Um processo assíncrono é quando a sua aplicação continua rodando enquanto ela recebe esses dados. Ela não precisa esperar travando a aplicação para que o usuário continue a utilizando. </li>
         </ul>
+        <h2>Como a internet funciona ?</h2>
+        <p> É importante aprender os conceitos iniciais, para depois ter melhor entendimento de como funciona a mão na massa. Toda vez que através de nossos dispositivos acessamos algum servidor externo, essa ação é chamada de Requisição. Ao acessarmos o goggle e procurarmos pela previsão do tempo por exemplo, estamos realizando uma requisição ao google.</p>
+        <p> Bastante coisas no universo da programação web será baseada em Request e Response. Ao acessar o google, estamos fazendo uma requisição("google, me envie a página que eu quero"), e dentro dessa requisição, enviamos diversas informações ao google para ajudar os seus servidores a achar as informações que desejamos obter. Essas informações geralmente são enviadas através do Head e do Body da requisição. </p>
+        <p> Após a requisição acontecer, o servidor nos envia a Resopnse. Que também possui seu Head e seu Body, que enviam dados diferentes do que na Request, mas a ideia funciona da mesma maneira. </p>
+        <h2> Como uma API funciona ?</h2>
+        <p> Além das requisições, também é de extrema importância que saibamos o que é uma API e o que ela faz. Api = Application Programming Interface. Uma API nada mais é do que uma forma para realizar a comunicação de um sistema e outro. Por exemplo, ao cadastrarmos um usuário no sistema, precisamos de uma API para conectar nosso programa, com o nosso banco de dados. Mesmo falando de máquinas, é necessário que usemos uma linguagem para a comunicação entre elas, e nesse caso, a linguagem mais utilizada no momento é o JSON-Javascript Object Notation. Para ver melhor sobre JSON e suas rotas, acesse <a href="https://jsonplaceholder.typicode.com/" target="_blank">JsonPlaceHolder</a></p>
+        <h2> O que é um Callback </h2>
+        <p> Este conceito não tem relação direta com requisições, porém também pode ser aplicado, mas será muito utilizado em eventos de click, eventos de teclado, etc. Mas enfim, o que é callback? CallBack a grosso modo é ligar de volta. Callback aplicado na programação, é quando criamos uma função, passamos para alguma parte do código para delegar a essa parte qual o momento que essa função será ativada. É uma função que criamos para ser executada no futuro. Já o CallBack aplicado em requisições funcionam da mesma forma. Ao realizarmos uma requisição ao servido, quando a resposta estiver pronta, ele fará alguma coisa com a resposta.(Esse faz alguma coisa com a resposta será o callback) </p>
+        <h2> Requisição na prática: </h2>
+        
     </main>
 </body>
 </html>
