@@ -92,10 +92,13 @@
             <li>input.onkeyup - ativa ao soltar a tecla quando voce pressiona.</li>
             <li>input.onkeypress - imediato, assim que apertar. </li>
         </ul>
-        <h3> Argumento Event </h3>
-        <p> Existe em todas as funcionalidades que disparamos em cada evento. Ele já existe, já espera que essa função possa receber esse objeto event. É um objeto do evento bem grande, que pode proporcionar diversas funcionalidades como por exemplo saber as teclas que estão sendo digitadas em um input. </p>        
-
-
+        <p> Por padrão todos os eventos em inputs enviam para a função um argumento chamado pelos programadores de Event, ou simplesmente E. Através dele conseguimos saber quais teclas foram digitadas dentro do input, para a partir dai já podermos começar a trabalhar com os dados, antes mesmo do usuário submeter o formuário.</p>
+        <ul>
+            <li>e.code - informa cada tecla que o usuário digitou.</li>
+            <li>e.key - mais simplório, utilizada mais para saber se o usuário apertou alguma tecla em específico. </li>
+            <li>e.shiftKey - retorna um boolean se o shift estava apertado ou não na hora que o usuário digitou uma tecla.</li>
+        </ul>
+           
         <h2>Navegando pelos Elementos</h2>
         <h2>Criando e Adicionando Elementos</h2>
         
