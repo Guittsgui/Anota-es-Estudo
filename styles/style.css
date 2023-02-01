@@ -10,7 +10,7 @@ main{
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.219);
     border-radius: 15px;
 }
-h1,h2{
+h1,h2,h3{
     text-align: center;
 }
 h1{

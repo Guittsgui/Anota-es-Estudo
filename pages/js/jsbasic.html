@@ -183,6 +183,59 @@
                 </ul>
         </ul>
         <h2> POO em JS</h2>
+        <p> Aqui entraremos mais na parte de código da POO no universo JavaScript. Você pode ir para nossa aba de <a href="../tiposprog/poo.html" target="_blank">POO</a> ou de <a href="../tiposprog/pfunc.html" target="_blank">PFunc</a> para ver mais sob suas teorias. No JS podemos utilizar a POO através de classes, ou então de funções construtoras. Abaixo iremos abordar mais sob elas e qual usar em cada situação específica.</p>
+        <h3>Classes - POO</h3>
+        <p> Classes funcionam como uma espécie de Templates, ou seja, como o nosso objeto tem que funcionar. Nada nas classes de fato funcionam, ela irá passar a funcionar assim que um objeto for criado/instânciado. Todas as classes possuem básicamente duas coisas: Atributos e Métodos(). Para criarmos uma classe é fácil, basta colocar:</p>
+        <ul>
+            <li>class Person{}</li>
+                <ul>
+                    <li>Por padrão colocamos a primeira letra maiúscula.</li>
+                </ul>
+        </ul>
+        <p> Logo em seguida é necessário criar uma função construtora. É uma função que será executada sempre que instanciarmos um objeto de uma classe, nesse caso, pessoa. Para isso, recebemos as propriedades por padrão, e dentro dela colocamos this.name = name;. O this, é um ponteiro, que significa "isto". No JS ele aponta para o próprio objeto que estamos criando. Se criarmos o João e a Maria, cada this apontará para seu respectivo objeto. Se quisermos colocar algum atributo já setado por padrão dentro da classe e fora do construtor(não vai receber externo), basta acima da função construtora colocar por exemplo: raça = 'humana', sem precisar declarar a variável ou algo do tipo. </p>
+        <ul>
+            <li>constructor(name, age) {this.name = name ; this.age = age ;}</li>
+        </ul>
+        <p> Após criada nossa Classe, para começarmos a utiliza-la precisamos realizar a Instância do objeto.</p>
+        <ul>
+            <li>let pessoa = new Pessoa("Joao",30)</li>
+                <ul>
+                    <li>Nessa linha estamos instânciando um objeto pessoa através da classe Pessoa.</li>
+                </ul>
+        </ul>
+        <p> Além dos atributos, cada classe também pode ter os seus métodos(ações). Por exemplo, dentro da classe pessoa podemos criar a função "sayMyName". Para isso embaixo do construtor colocamos:</p>
+        <ul>
+            <li>sayMyName(){console.log(`Olá meu nome é ${this.name} !`)}</li>
+        </ul>
+        <h3> Getter and Setters</h3>
+        <p> Getter and Setters - É um conceito muito poular em POO, na qual o GET nos permite pegar o valor de um atributo e o SET nos permite SETAR o valor de algum atributo. Para isso criamos duas "funções" para isso.</p>
+        <p> Getter </p>
+        <ul>
+            <li>get name(){return this.name}</li>
+                <ul>
+                    <li>caso tenha sido passado por parâmetro no construtor</li>
+                </ul>
+            <li>get age(){return _age}</li>
+                <ul>
+                    <li>caso tenha sido setado na mão dentro da classe acima do construtor.</li>
+                </ul>
+        </ul>
+        <p>Setter</p>
+        <ul>
+            <li>set name(name){this.name = name}</li>
+                <ul>
+                    <li>Pega por parâmetro o nome informado e altera.</li>
+                </ul>
+        </ul>
+        <h3> Herança</h3>
+        <p> Uma classe pode extender outra classe, ou seja, podemos "pegar" os atributos e métodos de uma classe. Por exemplo. Temos a classe pessoa com nome, idade, etc. Quando criamos uma classe Estudante por exemplo, ela pode extender a classe pessoa, para tambáem ter nome, idade, e também acrescentar os atributos apenas do estudante. Dessa forma evita códigos repetidos.</p>
+        <p> Para acontecer, primeiro colocamos a palavra extends. ex:</p>
+        <ul>
+            <li>class Student extends Person{}</li>
+        </ul>
+        <p> E a classe Student funciona como uma classe normal. Lá voce irá colocar seus atributos e métodos. Vale lembrar que para puxar todos os "dados" da classe pai, é necessário colocar a palavra super(name,age), dentro do construtor, para que ela possa executar o construtor do pai dentro dela.</p>
+        <h3> Métodos Estáticos</h3>
+        <p> </p>
     </main>  
 </body>
 </html>
