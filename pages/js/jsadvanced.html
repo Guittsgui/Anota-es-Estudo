@@ -44,6 +44,12 @@
             <li>req.then((response)=>{response.json()})</li>
             <li>req.then((json)=>// {fazer o que quiser com o objeto puro.})</li>
         </ul>
+        <p> Além do .then() toda promise também nos da mais duas funções que podem ser executadas. .catch(()=>{}), nos permite tratar de erros, caso por algum motivo sua requisição não funcione, caso o servior esteja fora do ar, qualquer coisa do tipo, ele nos permite tratar esse erro e informar ou não ao usuário o que está acontecendo por exemplo. Junto do catch, vem por parametro o error, na qual podemos dentro dele capturar. ex: </p>
+        <ul>
+            <li>.catch((error)=>{//aqui podemos mexer ou não com esse error.})</li>
+        </ul>
+        <p> Depois de tudo podemos colocar o .finally(), que é basicamente o final de tudo. Na prática, utilizamos por exemplo, quando queremos bloquear o formulário até ele ser finalizado. </p>
+        <h2> Estados de uma Requisição</h2>
     </main>
 </body>
 </html>
