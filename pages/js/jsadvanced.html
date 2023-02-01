@@ -50,6 +50,65 @@
         </ul>
         <p> Depois de tudo podemos colocar o .finally(), que é basicamente o final de tudo. Na prática, utilizamos por exemplo, quando queremos bloquear o formulário até ele ser finalizado. </p>
         <h2> Estados de uma Requisição</h2>
+        <p> Todas as requisições possuem seu status, que são informadas por números. Abaixo citaremos os principais.</p>
+        <ul>
+            <li>200- Resposta de Sucesso (OK)</li>
+            <li>201- Resposta de Sucesso de Criação.</li>
+            <li>301- A URL acessada foi alterada permanentemente</li>
+            <li>400- Requisição está errada.</li>
+            <li>401- Tentando acessar algo sem autorização</li>
+            <li>404- Url não existe.</li>
+            <li>405- Método não permitido para a determinada URL.</li>
+            <li>500- Erro no Servidor, o navegador não sabe o que aconteceu.</li>
+        </ul>
+        <p> Dentro de uma requisição, quando recebemos a response dentro do primeiro callback, conseugimos pegar esse status (response.status), e analisar o que está acontecendo com aquela resposta do servidor.</p>
+        <h2> Métodos de Envio de uma requisição.</h2>
+        <p> Geralmente ao enviarmos dados para o servidor utilizamos o método GET. Tanto que por padrão, quando não informamos nenenhum método, ele utiliza o GET. Porém ele não é o único, também temos o POST, PUT, DELETE, entre outros, porém de início já basta esse. </p>
+        <ul>
+            <li>GET- Pegar informações do servidor</li>
+            <li>POST- Mandando informações para o servidor.</li>
+            <li>PUT- Quando queremos alterar alguma informação.</li>
+            <li>DELETE- Método para remover alguma informação.</li>
+        </ul>
+        <p>Quando utilizamos o fetch, por padrão (GET), nós utilizamos apenas um parametro que é a URL. Quando queremos utilizar outros métodos, enviamos como segundo parâmetro um objeto, com três coisas dentro, method, headers, body.</p>
+        <ul>
+            <li>{ method: 'POST',</li>
+                <ul>
+                    <li>Aqui informamos o método sem ser o GET</li>
+                </ul>
+            <li>headers: {'Content-Type':'application/json'},</li>
+                <ul>
+                    <li>Aqui informamos ao servidor em qual formato enviaremos o body, que no caso é via JSON. </li>
+                </ul>
+            <li>body: JSON.stringify(objParaAdicionar)}</li>
+                <ul>
+                    <li>Aqui enviamos o corpo da requisição em si. Pegamos um objeto e traduzimos ele para JSON para que posas ser enviado.</li>
+                </ul>
+        </ul>
+        <h2> Promises com Async  & Await</h2>
+        <p>Aqui iremos aprender a fazer a mesma requisição, porém de forma talvez mais simples, com algumas diferenças e benefícios. O Fetch trabalha de forma assíncrona, ele retorn auma promise que precisa de seus callbacks. O que vier depois do fetch, ele será executado. Porém existe uma forma de você forçar o código a ficar síncorno, ou seja, esperar o código para depois continuar. </p>
+        <p> Para isso, precisamos colocar  antes de uma função, a palavra async. Exemplo:</p>
+        <ul>
+            <li>async funciton clicou(){}</li>
+            <li>const clicou = async function(){}</li>
+            <li>const clicou = async ()=>{}</li>
+        </ul>
+        <p> Em seguida, precisamos armazenar a requisição em uma variável e colocar a palavra await.</p>
+        <ul>
+            <li>const req = await fetch('http://urlqualquerdarequisição')</li>
+                <ul>
+                    <li>Esse await basicamente faz freiar o código, fazendo com que ele espere a req.</li>
+                </ul>
+        </ul>
+        <p> Deopis precisamos transforma-la em JSON.</p>
+        <ul>
+            <li>const json = await req.json();</li>
+                <ul>
+                    <li>Aqui estamos pegando a resposta da requisição acima, jogando a função JSON para transforma-la em objeto e armazenando-a em uma variável</li>
+                </ul>
+        </ul>
+        <p> Agora abaixo basta  utilizar o objeto na variavel json, e utiliza-la da forma que melhor entender. Essa forma acima é mais utilizada pois torna o código mais limpo. Ela pode ser utilizada em qualquer método. </p>
+        <p></p>
     </main>
 </body>
 </html>
