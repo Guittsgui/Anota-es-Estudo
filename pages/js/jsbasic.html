@@ -234,8 +234,16 @@
             <li>class Student extends Person{}</li>
         </ul>
         <p> E a classe Student funciona como uma classe normal. Lá voce irá colocar seus atributos e métodos. Vale lembrar que para puxar todos os "dados" da classe pai, é necessário colocar a palavra super(name,age), dentro do construtor, para que ela possa executar o construtor do pai dentro dela.</p>
-        <h3> Métodos Estáticos</h3>
-        <p> </p>
+        <h3> Factory </h3>
+        <p>Aqui é apenas um conceito que não está internamente no código em si, e sim na teoria. Ele é um conceito que significa fábrica. Em classes, o conceito de Factory, é fazer uma função construtora. </p>
+        <ul>
+            <li>funciton createPerson(name){let p = new Person(name); return p;}</li>
+        </ul>
+        <p> Através dessa função, logo em seguida podemos criar uma variavel e já atribuir sendo criada, por exemplo: </p>
+        <ul>
+            <li>const p1 = createPerson("joão")</li>
+        </ul>
+        <p> Dessa forma criamos uma Factory para a classe Pessoa. Através da função, ela fica mais organizado na parte em que formos instânciar em si. Digamos que é uma boa prática para um código mais "clean".</p>
     </main>  
 </body>
 </html>
