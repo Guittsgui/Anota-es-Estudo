@@ -109,7 +109,50 @@
         </ul>
         <p> Agora abaixo basta  utilizar o objeto na variavel json, e utiliza-la da forma que melhor entender. Essa forma acima é mais utilizada pois torna o código mais limpo. Ela pode ser utilizada em qualquer método. </p>
         <h2> EJ6 - Módules</h2>
-        <p> Aqui vem a parte "novidades de funcionalidades" (que não são mais tão novidadesa assim) que foram implementadas no JS junto com o ES6., na qual são de extrema importância no dia a dia.</p>
+        <p> Aqui vem a parte "novidades de funcionalidades" (que não são mais tão novidadesa assim) que foram implementadas no JS junto com o ES6., na qual são de extrema importância no dia a dia. Algumas ja vimos anteriormente, mas vale ressaltar aqui.</p>
+        <h3> Function vs Arrow Functions</h3>
+        <p> A maior diferença entre functions e arrow functions é o contexto do objeto This. O valor do objeto this pode variar de acordo com o contexto que criamos a função. Funções criadas com o nome Function tem o seu próprio this, já as funções com arrow, tem o this de acordo com o escopo que foram criadas.  </p>
+        <p> Arrow functions nao possuem this próprio. Dentro de uma Arrow, o this estará apontando para o contexto/escopo em qual a função foi criada. Em resumo a ArrowFunction usa o this do contexto em que foi criada, e a Function cria o seu próprio contexto this. </p>
+        <h3>Parâmetros Dinâmicos</h3>
+        <p>Muitas vezes iremos nos deparar cons ituações que iremos precisar enviar parâmetros mas sem saber a quantidade em específico. para isso, podemos utilizar dois métodos.</p>
+        <ul>
+            <li>arguments - dentro da função podemos utilizar a variavel especial do JS arguments, que retorna um objeto com todos os parâmetros passados. O arguments em arrow functions funciona igual o this, ele irá herdar de onde ela foi criada.</li>
+            <li>Spread Operator - dentro do paraenteses de parametro da função, podemos colocar (...params), de forma que vai em forma de array todos os parametros passados. Tirando isso, podemos por exemplo (parametro1, ...params), dessa forma o primeiro parametro irá para a variável parametro1, e todo o resto para ...parms em forma de array.</li>
+        </ul>
+        <h3> Params Default</h3>
+        <p> Função mais moderna no JS que nos permite atribuir valor de um parâmetro dentro da função. por exemplo.</p>
+        <ul>
+            <li>function sayMyName(name = 'padrao'){}</li>
+                <ul>
+                    <li>Aqui criamos uma função, que ao chamarmos, se passarmos algum valor por parametro ele irá atribuir este valor, e caso não passemos nada por parâmetro ele irá setar o valor default definido, que no caso é o 'padrao'. </li>
+                </ul>
+        </ul>
+        <h3> Desestruturação</h3>
+        <p> É uma forma que o JS nos proporciona de extraírmos apenas aquilo que desejamos de um objeto. Por exemplo, supomos que tenhamos um objeto user, e nele possuimos primeiroNome, ultimoNome, idade, instatgram, skills, e que desse objeto, gostariamos de pegar apenas o primeiroNome e o ultimoNome. De maneira convencional, poderiamos fazer:  </p>
+        <ul>
+            <li>const lastName = user.lastName</li>
+            <li>const firstName = user.firstName</li>
+        </ul>
+        <p> Porém com as modernidades do JS, podemos fazer isso de forma mais prática, e aí que entra a Desestruturação. Para isso, criamos uma const e abrimos chaves, e recebe user. Porém vale ressaltar que o nome da propriedade que queremos pegar tem que ser exatamente igual a informada no objeto.</p>
+        <ul>
+            <li>const {firstName, lastName} = user</li>
+                <ul>
+                    <li>Por via das dúvidas, caso queiramos desestruturar um objeto, já alterando o nome de sua variável para o escopo desejado, basta colocarmos: </li>
+                        <ul>
+                            <li>const {firstName: primeiroNome} = user</li></li>
+                        </ul>
+                </ul>
+        </ul>
+        <p> Desas forma podemos utilizar essas variaveis de forma normal igual a citada no exemplo anterior. Vale lembrar que a desestruturação também pode ser utilizada em arrays. Dentro de objetos, delimitamos seu começo e fim através de chaves e dentro de array delimitados através de colchetes. Ou seja, para desestruturar um array, ao invés de chaves colocamos colchetes. </p>
+        <p> Outra diferença é que para pegarmos os valores desejados, em objetos pegamos pelo nome do atributom, e em arrays iremos pegar pela posição desejada. Supomos que tenhamos um array como uma lista de compras com pera, maca, uva, melancia. Para desestruturar: </p>
+        <ul>
+            <li>const [item1, item2, item3] = array </li>
+                <ul>
+                    <li> Dessa forma, criamos uma variavel item1, que receberá o valor de pera, e assim sucessivamente.</li>
+                </ul>
+        </ul>
+        <h3> Rest Operator</h3>
+
     </main>
 </body>
-</html>
+</html> 
