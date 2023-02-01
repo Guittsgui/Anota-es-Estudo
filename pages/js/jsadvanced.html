@@ -27,7 +27,23 @@
         <h2> O que é um Callback </h2>
         <p> Este conceito não tem relação direta com requisições, porém também pode ser aplicado, mas será muito utilizado em eventos de click, eventos de teclado, etc. Mas enfim, o que é callback? CallBack a grosso modo é ligar de volta. Callback aplicado na programação, é quando criamos uma função, passamos para alguma parte do código para delegar a essa parte qual o momento que essa função será ativada. É uma função que criamos para ser executada no futuro. Já o CallBack aplicado em requisições funcionam da mesma forma. Ao realizarmos uma requisição ao servido, quando a resposta estiver pronta, ele fará alguma coisa com a resposta.(Esse faz alguma coisa com a resposta será o callback) </p>
         <h2> Requisição na prática: </h2>
-        
+        <p> Para começarmos utilizamos o fetch('url'), na qual o primeiro parâmetro colocamos a url desejada, e em seguida o .then(funcao(response)), que significa, quando voce receber ua resposta da requisição,  execute uma função específica com essa resposta. Como parâmetro nessa função, recebemos por parâmetro um response, que contem a resposta, na qual podemos colocar response.json(), que transformaremos a resposta para json. E então, colocamos outro .then((data)=>{}) </p>
+        <p> Abaixo separado segue o passo a passo: </p>
+        <ul>
+            <li>fetch("http://urlqualquerdarequisição") -- aqui voce informa a URL da requisição</li>
+            <li>.then((response)=> {return response.json()}) -- aqui voce esepra a resposta, e transforma p/ JSON</li>
+            <li>.then((data ou json)=>{ // aqui voce tem o objeto em JS da resopsta, pronto para ser usado,armazenado,ou qualquer outra coisa que queira manusea-lo})</li>
+        </ul>
+        <p> Basicamente funciona em três tapas. Primeiro informamos a URL e fazemos a requisição, depois pegamos a resposta pura e transforfamos para objeto, e por fim temos o objeto puro JS pronto para ser utilizado.</p>
+        <h2> Entendendo Promises</h2>
+        <p> Conceito primordial para o bom fluxo de um Dev.Web. Ao pé da letra é uma promessa. Toda a função fetch nos retorna como resultado final uma Promise. Básicamente ele nos diz que a resposta da função fetch é que em algum momento do futuro iremos receber uma resposta,  seja rápido ou não. Sempre encima de promises podemos utilizar um .then, que é : Quando receber a resposta, faça isto. </p>
+        <p> Baseado nisso, podemos montar a requisição acima de uma forma mais separada. </p>
+        <ul>
+            <li>const req = fetch('http://urlqualquerdarequisição')</li>
+            <li> dai abaixo, de forma separada, podemos utilizar o .then na variavel req.</li>
+            <li>req.then((response)=>{response.json()})</li>
+            <li>req.then((json)=>// {fazer o que quiser com o objeto puro.})</li>
+        </ul>
     </main>
 </body>
 </html>
