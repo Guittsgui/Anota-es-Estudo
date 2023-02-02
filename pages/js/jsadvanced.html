@@ -182,6 +182,47 @@
 
         <h3>EsModules</h3>
         <h3>Métodos em Arrays </h3>
+        <p> Talvez uma das coisas que um DEV WEB mais irá fazer em seu dia a dia é manipular dados dentro de um array. Para isso, o JS já nos fornece alguns Helpers para nos ajudar.</p>
+        <h4>Includes()</h4>
+        <p> Verifica se alguma string ou array existe alguma coisa que estamos passando para dentro dela. Exemplo : Se na string 'Node.js' dermos um .includes('s') ele irá retornar true, pois contém. se dermos um .includes('f') ele irá retornar false. Vale ressaltar que assim como tudo no JS, ele é caseSensitive.</p>
+        <h4>startsWith()/endsWith()</h4>
+        <p> Segue o mesmo esquema do includes, é uma função que verifica se alguma string começa ou termina com o desejado. 
+        <h4>find()</h4>
+        <p> Assim como a tradução, serve para pesquisar alguma coisa dentro do array. Ele basicamente recebe uma função, na qual irá iterar todo o array e dentro dela executar algo. por exemplo:</p>
+            <ul>
+                <li>const arrayProcurado = array.find((produto)=>{//aqui faz o que quer})</li>
+            </ul>
+        <p>A ideia do Find é que ele espera que retornemos um booleano de dentro da função, ou seja, se colocarmos uma condição, ele irá retornar true or false caso essa condição seja ou não atendida. Caso a condição de margem para retornar-mos mais de um elemento, o primeiro elemento que ele achar que bata com a condição, será o retornado. Ex </p>
+        <ul>
+            <li>const arrayProcurado = array.find((produto)=> produto.preco>1000)</li>
+                <ul>
+                    <li>irá retornar o primeiro produto que o preço seja maior que 1000.</li>
+                </ul>
+        </ul>
+     <h4>findIndex()</h4>   
+     <p> Funciona exatamente igual o find(). Porém o find ao encontrarmos o objeto, nos retorna exatamente o objeto. Já o findIndex() nos retorna exatamente o seu índice.</p>    
+     <h4>some()</h4>    
+     <p> Verifica se algum elemento do nosso array bate com a condição dita. Também recebe uma função que irá iterar todo o array, e também retorna um boolean.</p>
+     <ul>
+        <li>const arrayProcurado = array.map((produto)=> produto.preco>1000)</li>
+            <ul>
+                <li>irá retornar true caso algum produto do array tenha o preço maior que 1000</li>
+            </ul>
+    </ul> 
+    <h4>every()</h4>
+    <p> Funciona exatamente igual o some, porém como o próprio nome já diz, ele irá retornar true apenas se todos os itens do array baterem com a condição.</p>
+    <h4>map()</h4>
+    <p>Dentro dos métodos talvez um dos mais utilizados no dia a dia. O map, serve basicamente para pegarmos o array de um jeito, e criarmos um novo array baseado no anterior porém com alguma propriedade modificada ou alguma alteração. O retorno do MAP, sempre vai ser um array com o mesmo número de posições que o array de base. (SEMPRE). Se não criarmos condição nenhuma, ele retorna um array com o mesmo número do arary base, todo undefined. Dessa forma podemos criar novos atributos para arrays de objetos, etc.</p>
+    <h4>filter()</h4>
+    <p>O filter diferente do array, retorna um array com posição diferente do original. Por exemplo. Temos um array com mil objetos. Com o filter, podemos criar um novo array que só faça parte os objetos cujo preço seja maior que mil.</p>
+        <ul>
+            <li>const arrayFiltrado = array.filter((product)=>product.price > 1000)</li>
+                <ul>
+                    <li>Aqui ele irá criar um novo array apenas com os objetos com preço selecionado</li>
+                </ul>
+        </ul>\
+    <h4>reduce()</h4> 
+    <p> </p>   
 
     </main>
 </body>
