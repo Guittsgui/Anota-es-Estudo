@@ -13,7 +13,7 @@
         <nav class="nodeNav">
             <ul><a href="#">Introdução</a></ul>
             <ul><a href="#nodecore">Node Core Modules</a></ul>
-            <ul><a href=""> NPM </a></ul>
+            <ul><a href="#npmFund"> NPM </a></ul>
             <ul><a href=""> Express</a></ul>
         </nav>
         <h1> Node-JS - Basic</h1>
@@ -88,6 +88,27 @@
         <p> Basicamente quando trabalhamos na web, recebemos uma requisição, e em seguida enviamos uma resposta para ele. </p> 
         <p> No exemplo abaixo, criaremos um servidor HTTP, sendo ouvido na porta 3000, e colocando esse servidor para ser ouvido, e como callback informando que está tudo ok.  </p>
         <img src="../../img/nodejs/httpNod.png" alt="">
+        <p> Existem alguns serviços do node que ocupam a aba do terminal para continuar rodando, e um desses serviços é o modulo HTTP. Para isso é importante saber que utilizando CTRL + C, ele será interrompido, tombado, finalizado. Isso é útil quando existe algum problema no código também. </p>
+        <p> Avançando no tópico servidores, começaremos a retornar páginas HTML ao invés de uma simples mensagem como na foto acima. Para isso será necessário implementarmos mais recursos. Podemos adicionar um status code no retorno, com a propriedade statusCode. Mudar os headers para text/html e também retornar o html pelo método end do http.</p>
+        <img src="../../img/nodejs/httpHtml.png" alt="">
+        <h2> Módulo URL </h2>
+        <p> O módulo URL serve para decompor uma url que passamos para o método parse. Podemos resgatar diversas informações como host, path, search, query, etc. A partir dessas informações podemos alterar a lógica do nosso código.</p>
+        <img src="../../img/nodejs/url.png" alt="">
+        <h2> Módulo FS </h2>
+        <p> O módulo FS serve para trabalhar com arquivos e diretórios. Através deles podemos ler e escrever em arquivos. Possui uma utilização interessante em log de sistema por exemplo.</p>
+        <p> Via FS podemos ler arquivos como visto acima(ReadFile), e também escrever em arquivos, (writeFile). Além de escrever em arquivos, também é possível atualizar arquivos, utilizando o (appendFile) Estas escritas pode estar associada a um conjunto de operações, como o envio de informações de um usuário por exemplo.</p>
+        <p> Com o módulo FS também podemos trabalhar com diretórios(pastas). O método existis pode envidenciar se um diretório existe ou não, e o mkdir pode criar um diretório.</p>
+        <img src="../../img/nodejs/mkdir.png" alt="">
+
+        <h2> Módulo Path </h2>
+        <p> Com o path conseguimos extrair diversas informações sobre caminhos e arquivos. Com eles podemos extrair informações como nomne do diretório, nome do arquivo, extensão do arquivo, etc.</p>
+        <img src="../../img/nodejs/pathM.png" alt="">
+        <p> Com a função resolve é possível saber qual o path completo até o arquivo alvo. E com a função join, podemos formar um path dinâmico, com variáveis e valores fixos. São duas funções muito importantes no universo Node. </p>
+        <img src="../../img/nodejs/pathFinal.png" alt="">
+        <h2> Módulo OS </h2>
+        <p> Aqui podemos extrair informações do sistema operacional. </p>
+
+        <h1 id="npmFund"> Fundamentos do NPM</h1>
     </main>
 </body>
 </html>
