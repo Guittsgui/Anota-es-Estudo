@@ -17,20 +17,46 @@
         <p> Mas, afinal, o que é o NODEJS? É impossível rodar JavaScript sem que tenhamos um ambiente próprio para isso. Por isso surge o Node. Node é um JS Runtime Enviroment, ou seja, é um ambiente que executa o JS em um ambiente completamente exclusivo a ele. Vale ressaltar que o NodeJS não é um framework como o React,Vue,etc.</p>
         <p> E como ele funciona? O node funciona com base no Event Loop, ou seja, como o node é single  threaded ele não bloqueia nada, trabalha de forma assíncrona, fazendo com que o Node trabalhe de maneira muito mais rápida que o Apache por exemplo. </p>
         <p> Depois de já sabermos tudo sobre o que é, agora chegou a hora de instalar, para isso, acesse o seu site <a href="https://nodejs.org/en/">NodeJS</a> e realize o download.</p>
-        <h2> Variáveis Globais</h2>
-        <p> </p>
+    
         <h2>Módulos</h2>
-        <p> Node JS é baseado em módulos. Através da função required podemos utilizar diversos módulos dentro do nosso arquivo JS.</p>
+        <p> Node JS é baseado em módulos.  Módulos nada mais são do que scripts reaproveitáveis constantemente utilizados em Node. Geralmente os projetos terão diversos módulos instalados. Eles são divididos em três categorias:  </p>
+        <ul>
+            <Li> Internos: Módulos que nós desenvolvemos</Li>
+            <Li> Core Modules: Módulos que já vem com o próprio Node</Li>
+            <Li> Externos: módulos de terceiros que instalamos via NPM</Li>
+        </ul>
+        <h3> Módulo interno </h3>
+        <p> Módulos internos são criados nas pastas do nosso projeto. Para utilizarmos, precisamos exportar o módulo, utilizando a instrução module.exports por exemplo. E também será necessário importa-los onde queiramos utiliza-los, e para isso utilizaremos a instrução require. No exemplo abaixo exportamos uma função (módulo), e utilizamos ela em outro arquivo.
+        <div class="photoInfo">
+            <img src="../../img/nodejs/mod.exp.png" alt="">
+            <img src="../../img/nodejs/req.png" alt="">
+        </div>
+        <p> Também podemos importar e exportar de uma forma mais moderna, lançada no ES6. Para isso, precisamos modificar os nossos arquivos para a extensão .mjs. Assim opderemos utilizar o export default e o import.  </p>
+        <div class="photoInfo">
+            <img src="../../img/nodejs/es6export.png" alt="">
+            <img src="../../img/nodejs/es6import.png" alt="">
+        </div>
+        <h3> Core Modules</h3>
+        <p> No Node temos diversos Core Modules, que são os que vem prontos para serem utilizados. Eles resolvem diversos problemas como: trabalhar com arquivos e diretórios, servir aplicações etc. Precisamos imoprtar estes módulos no projeto para que posasmos utilizar. </p>
+        <p> Por padrão nomeamos a variável com o mesmo nome do módulo importado, para assim facilitar a legibilidade de terceiros.</p>
+        <div class="photoInfo">
+            <img src="../../img/nodejs/path.png" alt="">
+        </div>
+        <p> No node também é possível passarmos argumentos via linha de comando. Passamos eles após a execução do arquivo. Os argumentos ficam em um array chamado: processes.argv, onde podemos fazer loops e resgatar seus valores enviados. Recurso mais utilizado de programador para programador, porém é importante saber de sua utilidade. Por exemplo, ao startarmos o programa, colocando node .\index.js nome=Guilherme, estamos passando o nome via argumento do terminal, na qual podemos pegar dentro do programa : </p>
+        <div>
+            <img src="../../img/nodejs/args.png" alt="">
+        </div>
+        <h3> Módulos Externos </h3>
+        <p> Os módulos externos serão inicializados via NPM. Node Package Manager, como o próprio nome já diz, é o gerenciador de pacotes do node. Para isso, precisamos inicializar o npm no projeto, com o comando: NPM INIT ou NPM INIT - Y. A partir daí os módulos ficam mapeados e podemos instalar novos módulos externos, que serão automaticamente salvos na pasta node_modules. Para instalar qualquer pacote, basta utilizar o comando: npm install nomeDoPacote.</p>
+        <p> Aqui abaixo, instalaremos o minimist, que é um pacote que nos ajuda a receber os argumentos do tópico acima de uma maneira mais simples. Para isso utilizamos o comando: npm install minimist. E estará pronto para ser utilizado. Com o minimist passamos o parametro da seguinte forma : node index.js --nome=Guilherme</p>
+        <img src="../../img/nodejs/minimistArg.png" alt="">
+        <p> Como outro exemplo, utilizaremos um módulo chamado Chalk, que nos permite "colorir" a exibição do Console, nos proporcionando uma melhor visualização em cores do mesmo. Para isso, npm install chalk.</p>
+        <img src="../../img/nodejs/chalk.png" alt="">
 
-        <h2> NPM - Node Package Manager</h2>
-        <p> É um gerenciador de pacotes do node. Aqui iremos falar muito de dependências, pacotes, módulos etc. O primeiro comando que precisamos saber para começar a utilizar o NPM é como criar um novo pacote :  </p>
-        <ul>
-            <li> npm init  || npm init -y (sim p/ tudo)</li>
-        </ul>
-        <p> Utilizando este comando teremos acabado de criar nosso package.json. Além de criarmos, também podemos instalar módulos de terceiros, para isso utilizamos o comando: </p>
-        <ul>
-            <li> npm i nomeDaDependência || npm i nomeDaDependência -D (dependencia de desenvolvimento)</li>
-        </ul>
+
+
+
+        <h1> SEPARADO SEPARADO</h1>
         <p> Após instalarmos uma dependência de terceiros perceberemos que irá surgir o node_modules e o package-lock.json em nosso projeto. O node_modules, é onde fica todas as dependencias das dependencias que estalamos. Ao instalar uma dependência X, ela irá depender de uma Y, que poderá depender de uma Z. Tudo isso ficará localizado no nodule_modules. </p>
         <p> Já o package-lock.json é um arquivo que basicamente nós não mexemos em nada, ele serve para mapear todas as dependências que temos em nosso projeto. Ele faz o projeto ficar mais rápido com esse mapeamento. </p>
         <p>  Também é possível instalar dependencias de forma global, ou seja, não estará instalado apenas em nosso projeto, e sim na máquina em geral, para todos os futuros projetos.</p>
@@ -46,6 +72,8 @@
         </ul>
         <p> E para finalizar, também será de extrema importância aprender a excluir dependências</p>
         <p> npm unistall nomeDaDependência</p>
+
+
 
         <h2> NodeJS Events</h2>
         <p> O módulo de eventos já faz parte do core do NODEJS, e podem ser muito úteis como por exemplo: Alguém se inscreve em seu canal do Youtube, isso pode disparar um evento. (Exemplo ilusório). para isso, utilizamos o require(events), para que possamos começar a utiliza-los.</p>

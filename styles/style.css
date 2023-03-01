@@ -36,3 +36,8 @@ a:hover{
     margin-bottom: 40px;
 }
 
+.photoInfo img {
+    height: 80px;
+    margin: 0 30px;
+}
+
