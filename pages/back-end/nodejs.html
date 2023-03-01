@@ -10,6 +10,12 @@
 <body>
     <main>
         <p><a href="../../index.html">Voltar</a></p>
+        <nav class="nodeNav">
+            <ul><a href="#">Introdução</a></ul>
+            <ul><a href="#nodecore">Node Core Modules</a></ul>
+            <ul><a href=""> NPM </a></ul>
+            <ul><a href=""> Express</a></ul>
+        </nav>
         <h1> Node-JS - Basic</h1>
         <h2> Para que serve ?</h2>
         <p> No início o javascript era utilizado apenas para rodar em navegadores. Com o passar do tempo o seu poder foi ficando cada vez mais forte devido a diversas tecnologias que foram surgindo em seu universo. Uma dessas tecnologias é o NodeJS. Ele nos permite desenvolver back-end, front-end, micro-services, API'S, tudo isso com o Javascript.</p>
@@ -52,41 +58,36 @@
         <img src="../../img/nodejs/minimistArg.png" alt="">
         <p> Como outro exemplo, utilizaremos um módulo chamado Chalk, que nos permite "colorir" a exibição do Console, nos proporcionando uma melhor visualização em cores do mesmo. Para isso, npm install chalk.</p>
         <img src="../../img/nodejs/chalk.png" alt="">
+        <h2> Lendo Input Dados</h2>
+        <p> Através de um coreModule do Node (ReadLine), podemos iteragir via terminal com o usuário, realizando perguntas e respostas. O node realiza uma pergunta, o usuário entra com a resposta e assim podemos processar e utilizar a resposta.</p>
+        <img src="../../img/nodejs/readline.png" alt="">
+        <p> Essa forma acima é a forma utilizando o nodejs puro, porém possuimos formas mais simples e digamos que melhores para trabalharmos com inputs, como é o caso do inquirer. O inquirer é um modulo externo (npm), baseado em Promises, o que torna sua utilização mais simples. Dentro dele, as perguntas são alocadas dentro de arrays, e cada pergunta estará dentro de um objeto, que possuirá name e message como atributos. </p>
+        <img src="../../img/nodejs/inquirer.png" alt="">
+        <h2> Event Emitter </h2>
+        <p> O Event Emitter se comporta como os eventos do navegador estudados em JS DOM. Podemos ativar um trecho de código em alguns opntos da aplicação desejados. É um Core Module chamado Events. Precisamos instanciar a classe EventEmitter que vem dentro do módulo Event e então utilizar os métodos para atingir o objetivo desejado. </p>
+        <p> No exemplo abaixo, criamos um event emitter mais básico possível, no qual entre antes durante e deopis, o durante será chamado via evento.</p>
+        <img src="../../img/nodejs/eventEmitter.png" alt="">
+        <h2> Sync e Async </h2>
+        <p> Em node temos duas opções de executar métodos que são conhecidos como sincronos e assíncronos. Síncrono é quando o código acontece linha após linha, esperando, não importa quanto tempo demore. Já a forma assíncrona é quando o código continua progredindo e em algum momento ele nos dará a resposta pendente.</p>
+        <h2> Erros no Node</h2>
+        <p> Temos duas formas principais de lidar com erros no Node, que são gerando ou evidenciando erros. Através do throw, uma forma de encerrar um programa, gerando um novo erro. E também via try/catch, que é uma forma de evidenciar algo que deu errado em um bloco de código e exibir a mensagem de erro para o usuário.</p>
+        <div>
+            <img src="../../img/nodejs/errcatch.png" alt="">
+            <img src="../../img/nodejs/errthrow.png" alt="">
+        </div>
 
-
-
-
-        <h1> SEPARADO SEPARADO</h1>
-        <p> Após instalarmos uma dependência de terceiros perceberemos que irá surgir o node_modules e o package-lock.json em nosso projeto. O node_modules, é onde fica todas as dependencias das dependencias que estalamos. Ao instalar uma dependência X, ela irá depender de uma Y, que poderá depender de uma Z. Tudo isso ficará localizado no nodule_modules. </p>
-        <p> Já o package-lock.json é um arquivo que basicamente nós não mexemos em nada, ele serve para mapear todas as dependências que temos em nosso projeto. Ele faz o projeto ficar mais rápido com esse mapeamento. </p>
-        <p>  Também é possível instalar dependencias de forma global, ou seja, não estará instalado apenas em nosso projeto, e sim na máquina em geral, para todos os futuros projetos.</p>
-        <ul>
-            <li> npm i nomeDaDependência -g </li>
-            <li> npm unistall nomeDaDependência -g</li>
-        </ul>
-        <p> Outra coisa que faremos constântemente é atualizar versões de projetos.  Para isso utilizaremos alguns comandos: </p>
-        <ul>
-            <li>npm outdated - mostra todos os pacotes,  suas versões mais desejadas etc.</li>
-            <li>npm upgrade - atualiza todos os pacotes para as versões desejadas.</li>
-            <li>npm i nomeDaDependência@latest - atualiza o pacote específico para ultima versão</li>
-        </ul>
-        <p> E para finalizar, também será de extrema importância aprender a excluir dependências</p>
-        <p> npm unistall nomeDaDependência</p>
-
-
-
-        <h2> NodeJS Events</h2>
-        <p> O módulo de eventos já faz parte do core do NODEJS, e podem ser muito úteis como por exemplo: Alguém se inscreve em seu canal do Youtube, isso pode disparar um evento. (Exemplo ilusório). para isso, utilizamos o require(events), para que possamos começar a utiliza-los.</p>
-        <ul>
-            <li>Event Emitter - É uma função que pegamos para a partir dela passar a emitir eventos. </li>
-                <ul>
-                    <li>const ev = new eventEmitter()</li>
-                </ul>
-            <li>ev.emit('SaySomething')</li>
-            <li>ev.on('SaySomething')</li>
-            <li></li>
-        </ul>
-
+        <h1 id="nodecore"> Node Core Modules </h1>
+        <p> Aqui iremos explorar todos os Core Modules que são mais utilizados na vida real dentro do universo Node. </p>
+        <p> Mesmo que não coloquemos diretamente algum desses módulos em nossa aplicação, provavelmente algum módulo externo estará fazendo uso deles, por isso é de extrema importância saber o que eles fazem, para futuramente entender com clareza o que ocorre por debaixo dos panos. A base e o alicerce são de extrema importância para manusear Node.</p>
+        <ul> HTTP: Módulo para criar servidores HTTP (acessar aplicação, base do Express)</ul>
+        <ul> Path: Extrair informações de paths(caminhos) de arquivos.</ul>
+        <ul> FS: File System, leitura e escrita de arquivos, diretórios. </ul>
+        <ul> URL: Módulo para trabalhar com URL, endereços, Query Params, Domínio, etc.</ul>
+        <h2> Módulo HTTP: </h2>
+        <p> É uma forma de criar um servidor HTTP com um cormodule do node. Basicamente recebemos uma requisição e enviamos código HTML com o resposta, por exemplo.Vamos utilizar alguns métodos como createServer por exemplo, para a criação do servidor. E também o Listen, que irá determinar uma porta para receber essa resposta.</p>
+        <p> Basicamente quando trabalhamos na web, recebemos uma requisição, e em seguida enviamos uma resposta para ele. </p> 
+        <p> No exemplo abaixo, criaremos um servidor HTTP, sendo ouvido na porta 3000, e colocando esse servidor para ser ouvido, e como callback informando que está tudo ok.  </p>
+        <img src="../../img/nodejs/httpNod.png" alt="">
     </main>
 </body>
 </html>
