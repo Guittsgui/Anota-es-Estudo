@@ -118,8 +118,12 @@
         <h2>Dependências de Desenvolvedor</h2>
         <p> Há uma possibilidade de instalar pacotes apenas para o ambiente de desenvolvimento. Eles ficarão separados do packaged.json. Ou seja, na build de produção esses módulos não serão instalados. Um exemplo: Servidor para ambiente local, como o Nodemon. Para essa instalação utilizamos o comando <span>npm install --save-dev chalk</span>. </p>
         <h2> Scripts de NPM. </h2>
-        
-
+        <p> É possível criar rotinas com o npm, ou seja, executamos uma série de comandos com apenas um. Utilizamos o comando <span>npm run script</span> onde script é o nome da sequência de comandos que configuramos no package.Json . Exemplo comum, é configurar o start, para rodarmos o projeto com npm start.</p>
+        <h2> Pacote Global </h2>
+        <p> Um pacote global não fica salvo na pasta node_modules do projeto, ele fica salvo no computador do usuário. A vantagem é que podemos acessá-los em qualquer local via terminal. Utilizamos o comando: <span>npm install -g loadash </span>. </p>
+        <h2> Executando  e Removendo Pacotes </h2>
+        <p> Alguns pacotes são scripts executaveis que resultam em alguma ação no nosso computador. Como por exemplo a isntalação do React, é feita pelo npx. Desta maneira uma série de processos são simplificados por este executor. </p>
+        <p> Já para removermos um pacote utilizado, basta colocar o comando <span> npm unistall nomeDoPacote</span>. Isso faz com que o pacote seja removido do package.json também. </p>
     </main>
 </body>
 </html>
