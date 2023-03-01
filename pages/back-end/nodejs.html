@@ -105,10 +105,21 @@
         <img src="../../img/nodejs/pathM.png" alt="">
         <p> Com a função resolve é possível saber qual o path completo até o arquivo alvo. E com a função join, podemos formar um path dinâmico, com variáveis e valores fixos. São duas funções muito importantes no universo Node. </p>
         <img src="../../img/nodejs/pathFinal.png" alt="">
-        <h2> Módulo OS </h2>
-        <p> Aqui podemos extrair informações do sistema operacional. </p>
 
         <h1 id="npmFund"> Fundamentos do NPM</h1>
+        <h2> O que é NPM ?</h2>
+        <p> Quando começamos a utilizar NODE em cenários reais, utilizaremos NPM o tempo inteiro. Ele é o principal gerenciador de pacotes do NodeJS(Também existe o Yarn entre outros, mas o Node é o principal). NPM significa Node Package Manager. A maioria dos projetos que você encontrar em NODE terá a atuação do NPM. Ele nos permite instalar, remover, atualizar, executar scripts entre outros. A criação de um projeto com NPM sempre gera um arquivo chamado PACKAGE.JSON, que será como o "coração" do projeto. Podemos pegasr pacotes NPM de empresas, usuários, podemos inclusive criar um pacote e deixar disponível para todos. </p>
+        <p> Para um desenvolvedor, voce nao precisa saber tudo sobre o NPM. Na grande verdade, voce utilizará poucos comandos para instalar remover e atualizar dependências. É analogo ao Linux, voce nao precisa saber como funciona o Kernel do Linux milimétricamente para usa-lo.</p>
+        <p> Para inciar um projeto, podemos utilizar o comando <span>npm init</span> . Seremos questionados para configurar algumas opções iniciais como o nome do projeto, etc. Caso queira pular tudo e aceitar tudo, basta colocar o comando <span>npm init -y</span> . Ao criarmos, instântaneamente será criado um arquivo package.json condensando as informações do projeto.</p>
+        <h2> NPM - Pacotes/Módulos. </h2>
+        <p> Para instalar um pacote vamos utilizar o comando npm install nomeDoProjeto. Quando fazemos desta maneira, a instalação de uma pasta node_modules é criada. Nela todos os arquivos de módulos de terceiros serão armazenados. Sempre que rodamos o comando npm install, a pasta node_modules é recriada com todos os módulos do package.json. Ou seja, no git, nunca sobe a pasta node_modulos, pois ao usarmos o <span>npm install</span> , ele já irá reinstalar denovo.</p>
+        <p> Todos os módulos existentes no NPM estão catalogados <a href="https://www.npmjs.com/">Clicando Aqui</a>.</p>
+        <p> Como NPM, Node são muito utilizados globalmente, os pacotes são constantementes passados por processo de atualização por seus desenvolvedores. Então, para isso temos o comando <span>npm update</span> que vai fazer a atualização de todos os pacotes instalados no package.json. Porém, em casos específicos iremos atualizar apenas um módulo em específico, e para isso, utilizamos o comando <span>npm update nomeDoPacote</span>. E quando saber quando tem atualização disponível? <span>npx npm-check-updates -u </span></p>
+        <h2>Dependências de Desenvolvedor</h2>
+        <p> Há uma possibilidade de instalar pacotes apenas para o ambiente de desenvolvimento. Eles ficarão separados do packaged.json. Ou seja, na build de produção esses módulos não serão instalados. Um exemplo: Servidor para ambiente local, como o Nodemon. Para essa instalação utilizamos o comando <span>npm install --save-dev chalk</span>. </p>
+        <h2> Scripts de NPM. </h2>
+        
+
     </main>
 </body>
 </html>

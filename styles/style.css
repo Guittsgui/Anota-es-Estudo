@@ -1,5 +1,6 @@
 body{
     background: rgba(232, 238, 153, 0.795);
+    text-align: justify;
 }
 main{
     width: 800px;
@@ -45,4 +46,8 @@ a:hover{
     display: flex;
     justify-content: space-around;
     margin-top: 50px;
+}
+span{
+    font-weight: bolder;
+    color: darkblue;
 }
