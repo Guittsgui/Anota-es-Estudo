@@ -102,9 +102,16 @@
         <p> Por exemplo, ao enviarmos uma lista do back para o front, podemos iterar sob essa lista para renderiza-la, como no exemplo abaixo:  </p>
         <img src="../../img/express/repHandle.jpg" alt="">
         <h3> Utilizando o With.</h3>
+        <p> O with nos permite abstrair o objeto, ou seja, nos permite deixar ele mais simples. Por exemplo, ao enviarmos um objeto USER do back para o frotn, ao inves de ficarmos digitando user.name, user.age, user.email, com o WITH podemos simplifica-lo, e digitar apenas suas propriedades sem nos referenciarmos ao objeto antes. Sintaxe: <span> {{#with objeto}}</span> ... <span>{{/with}}</span>. Desta maneira nosso código fica ainda mais limpo. Muito útil quando nos deparamos com objetos grandes. Exemplo abaixo: </p>
+        <img src="../../img/express/withHandle.jpg" alt="">
         <h3> Partials</h3>
+        <p> O partials funciona como mini templates que precisam ser repetidos em diversos locais da nossa aplicação. Por exemplo, em um ecommerce, um produto aparece dentro de um card, que se repetem diversas vezes (quando procura, quando vai comprar,etc). Através do partials, podemos criar esses templates menores(como o do cards de produtos),para serem renderizados dentro do template maior(Muito semelhante aos componentes do React). Para funcionar, precisamos realizar algumas modificações na implementação do handlebars. Os partials geralmente ficam em views/partials. E utilizamos a sintaxe <span> {{>partial}}</span> para chama-lo no projeto. </p>
+        <p style="color: red;">Falta Coisa</p>
         <h2> Css com HandleBars. </h2>
-
+        <p> A inclusão do CSS no handleBars é muito semelhante a que realizamos com o CSS. Precisamos definir a pasta dos arquivos estáticos (public), e assim linkar o css com nosso layout em comum para todas as páginas. Isso tonra possivel estilizar os nossos projetos.</p>
+        <p> primeiramente configuramos o projeto para receber CSS, com o middleware, da mesma forma que vimos lá encima. </p>
+        <img src="../../img/express/cssHandle.jpg" alt="">
+        <p> Agora basta criar a pasta public => css => styles.css.</p>
         <h1 id="sql"> Integrando MySQL</h1>
         <h1 id="sequelize"> Sequilize </h1>
         <h1 id="mvc"> Arquitetura MVC</h1>
