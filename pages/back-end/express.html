@@ -127,6 +127,21 @@
         <h2> Resgatando Dados </h2>
         <p> Para resgatar dados, vamos precisar de uma query que será um SELECT. Podemos escolher quais dados serão retornados, determinando suas colunas. Querys com select podem ir do mais simples possível até querys extremamente complexas.</p>
         <img src="../../img/express/selectQuery.jpg" alt="">
+        <h2> Editando Dados </h2>
+        <p>  Para editar algum dado temos antes alguns preparos para realizar. Primeiramente vamos resgatar o dado do a ser editado do banco de dados, como fizemos no tópico acima. E normalmente, preenchemos o formulário de dados com os dados qeu foram resgatados via Select. Assim o usuário consegue ver os dados existentes, e verificar qual dado ele gostaria de trocar. </p>
+        <p> Para pegarmos, a sintaxe será igual a de cima, apenas alterando a view que será enviado. Dentro desta view, teremos um formulário já preenchido com esse objeto retornado(basta utilizar o atributo value, que ele já abrirá o form de edição com os dados do banco).</p>
+        <p> Para concluir o registro, precisamos criar uma nova rota com o método POST, na qual alteraremos os dados, enviaremos estes dados alterados para esta rota via POST, onde iremos tratar e realizar a alteração no banco, utilizando a query UPDATE. É importante lembrar que é necessário enviarmos o ID desse livro no formulário também(para enviar esse ID, utilizamos o método HIDDEN).</p>
+        <p> Essa parte fica assim: </p>
+        <img src="../../img/express/update.jpg" alt="">
+        <h2> Removendo Dados </h2>
+        <p> E para finalizar, aqui vem a última parte de CRUD, o Delete. Para funcionar, precisaremos enviar para uma rota com o verbo POST, com o ID a ser removido. Este processo pode ser realizado em uma única etapa. Exemplo abaixo: </p>
+        <img src="../../img/express/delete.jpg" alt="">
+        <h2> Connection Pool </h2>
+        <p> Connection Pool é um recurso para otimizar as conexões, criando um cache e permitindo sua reutilização. O driver mysql tem esse recurso desenvolvido e basta aplicarmos. Este recurso também controla as conexões abertas, fechando assim que se tornam inativas.</p>
+
+
+
+
 
         <h1 id="sequelize"> Sequilize </h1>
         <h1 id="mvc"> Arquitetura MVC</h1>
