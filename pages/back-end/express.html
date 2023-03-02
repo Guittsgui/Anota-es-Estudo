@@ -60,6 +60,39 @@
         <h2> Pag 404</h2>
         <p> Em todo projeto é necessário criar uma página 404 em caso de o usuário digitar um URL não existente ou qualqeur outro tipo de erro. Ela é usada quando o usuário tenta logar em uma página não encontrada. Basta criar um novo middleware abaixo de todas as rotas, que responde com este status, e enviar um arquivo de template diferente a esta página. Veremos na prática:</p>
         <img src="../../img/express/404.jpg" alt="">
+        <h1 id="template"> Template Engines </h1>
+        <p>Template Engine é um motor de Templates, um motor de HTML. Ele dá funcionalidades e recursos as views. Agora temos a possibilidade de receber dados e injeta-los em nossas views. É uma forma de deixar nosso html dinâmico. É uma forma de inserir variáveis do back para o front end. Podemos utilizar layouts que são reaproveitáveis, não será necessário repetir tanto código html. É essencial para projetos que usam banco de dados. Temos diversos disponíveis como EJS, PUG, HandleBars. Todos atingem o mesmo objetivo porém há algumas diferenças de setup e funcionalidades. Aqui utilizaremos o handlebars, que tem como prática o minimo possível de código na view, deixando o código um pouco mais trabalhoso, porém mais limpo. Dentro da programação web muito será falado em separar as responsabilidades. A parte de front-end deve ser apenas para exibir o que tem que ser exibido e não ser responsável por muita lógica de programação.</p>
+        <p> Aprendendo a trabalhar com um, será muito fácil de aprender com todos e migrar para qual mais lhe agradar. Mas, o que é HandleBars ?</p>
+        <h2> HandleBars</h2>
+        <p> O handlebars é uma das template engines mais utilizadas no universo do Node. Colocamos os dados dinâmicos no HTML entre {{}} para serem impressos(imprimir variáveis). Podemos criar condicionais e também loops dentro do template. O handlebars é conhecido pela sua sintaxe limpa no front, nos forçando a não executar lógica de programação dentro dos templates. </p>
+        <p> O nome do pacote é express-handlebars, comando: <span>npm install npm-handlebars</span>. O handle-bars não é algo exclusivo do NODEJS, pode ser utilizado em outras linguagens. No nosso caso, utilizamos a express-handlebars, que é uma handlebars adaptada para o Node.</p>
+        <p> Assim como vimos no Express, o passo a passo para instalar o handlebars: </p>
+        <ul>
+            <li>Instalar o Nodemon, Express e o HandleBars</li>
+            <li>Importar os pacotes instalados.</li>
+            <li>Adicionar o express a engine do HandleBars</li>
+            <li> Criar uma view com a extensão handlebars</li>
+            <li> Método Render para enviar esta view para a requisição(diferente do sendFile).</li>
+        </ul>
+        <p> Segue abaixo a foto do setup:</p>
+        <img src="../../img/express/handlebar.jpg" alt="">
+        <p> Como boas práticas, colocamos sempre os arquivos html ( no caso .handlebars), dentro de uma pasta <span>View</span>.</p>
+        <h3> Layouts</h3>
+        <p> Uma das grandes sacadas de usar template engines, além de tornar a aplicação dinâmica, é o fato de podermos criar layouts para reaproveitar código entre páginas.Dentro de Views criamos uma pasta chamada <span>Layout</span> onde nela criaremos o template que será repetido e utilizado por padrão. Para isso utilizamos a tag especial <span>{{{body}}}</span> que é o miolo da página, a parte que muda, é aqui que toda a informação será muidada. A partir desse momento, todas as nossas views o layout será repetido. A partir desse momento, todas as "páginas" de .handlebar não precisam mais ter a p </p>
+        <p style="color: darkcyan;"> OBS: Nas configurações do projeto, mudar layout false, para layout TRUE, ou simplesmente apagar.</p>
+        <h2> Dados para a View. </h2>
+        <p> Aqui realmente aprenderemos a deixar nossas páginas dinâmicas. Vamos passar os dados por meio do método Render. Enviamos um objeto com chaves e valores, e isso nos possibilita acessar estes dados dentro do template. Para isso, utilizamos a sintaxe <span>{{dados}} </span>e o dado em si será impresso. Dentro da rota, fazemos a regra para enviarmos para a view. Exemplo: </p>
+        <img src="../../img/express/enviarvIEW.jpg" alt="">      
+        <p> Desta forma dentro da View já podemos utilizar a variavel user, como no exemplo: </p>  
+        <img src="../../img/express/viewDinamic.jpg" alt="">
+        <h3> Condicionais</h3>
+        <p> Da mesma forma que podemos imprimir agora variáveis dentro das views, também podemos executar condicionais dentro delas. Utilzar condicionais nos permite mais flexibilidade no layout. A sintaxe é : <span> {{#if algumacoisa}}</span> ... <span>{{/if}}</span>. Ela só imprime o que está entre as condicionais caso o dado seja verdadeiro. Precisamos encaminhar o dado a ser validado pelo BackEnd. Aqui que o handlebars começa a dificultar a vida, pois como não possui regra no front, tudo precisa ser feito no backend e enviado de forma mastigada para o front(Apesar de gerar dificuldade no início, é uma boa prática).</p>
+        <p> No exemplo abaixo, a parte do voce esta autenticado... só será renderizado caso a variavel Auth enviada pelo backend seja True. Caso seja false, nada aparecerá.</p>
+        <img src="../../img/express/ifHandle.jpg" alt="">
+        <p> Assim como possuímos o IF, também temos o ELSE. O else é um complemento do IF. Utilizamos no Handlebars para a exibição de outra parte do layout (caso a condição seja falsa). Isso nos dá mais flexibilidade ainda. a sintaxe é: <span> {{#if algumacoisa}}</span> ... <span>{{else}}</span> ... <span> {{#/if}}</span> . Dessa forma, tudo o que está entre o else e o fechamento do if, só será renderizado caso o IF seja falso. </p> 
+        <h3> Repetição</h3>
+        <p>As estruturas de repetição no handlebars são feitas pelo operador EACH. A sintaxe é <span> {{{#each}} </span> ... <span> {{/each}}</span>. Em um array podemos chamar os itens com {{this}. Então cada um dos itens é acessado na view. Vale lembrar, como o Handlebars prega um tempalte mais limpo, devemos mandar apenas o necessário para o front. Não será possível por exemplo filtrar uma lista dentro das Views. </p>
+
         
     </main>
 </body>
