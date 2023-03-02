@@ -36,8 +36,31 @@
         <img src="../../img/express/nodemon.jpg" alt="">
         <h2> MiddleWares </h2>
         <p> É mais um conceito que junto as rotas, estarão presente o tempo inteior quando trabalhamos com NodeJS. Middlewares são códigos que podem ser executos no meio/entre alguma ação e outra. Um exemplo prático é verificar se o usuário está logado. Por exemplo, um usuário tenta acessar uma rota em específico na qual apenas usuários autênticados possuem acesso. Nesse momento colocamos um middleware(algo que será executado entre a req do usuário e a res) e aqui se vermos que ele está logado prossegue e se não tiver, vá embora. </p>
-        <p> O método que nos da acesso a utilizar middlewares no express é o Use. Futuramente iremos aprender a utilizar os middlawares para rotas individualmente. Abaixo segue um exemplo de um middleware simples funcionando para toda a aplicação: </p>
+        <p> O método que nos da acesso a utilizar middlewares no express é o Use. Futuramente iremos aprender a utilizar os middlawares para rotas individualmente, o que trará mais sentido, pois na maioria das vezes iremos querer ver se o usuário está logado por exemplo em apenas algumas das rotas e em outras não, mas fica para o futuro. Abaixo segue um exemplo de um middleware simples funcionando para toda a aplicação: </p>
         <img src="../../img/express/middl.jpg" alt="">
+        <p> Vale ressaltar que os middlewares sempre precisarão utilizar o método NEXT como mostrado acima, para assim que ele realizar sua função seja ela qual for, ele redirecionar para o next(Seuginte). </p>
+        <h2> Parâmetros via URL.</h2>
+        <p> Ao falarmos de requisições, elas podem enviar dados que podem vir básicamente pelo método GET ou pelo método POST. Devido a isso, podemos resgatar os parâmetros da URL por meio do REQ. Acessamos req.params.nome onde o nome deve ser o que está definido na URL do Express. Dessa forma por exemplo, fica dessa forma: /users:id por exemplo. Neste caso , estaríamos buscando o usuário no banco de dados pelo ID. </p>
+        <p> No exemplo abaixo mostramos uma rota que recebe um ID por parâmetro da URL e atribuimos esse id para uma variável. Em seguida, poderemos fazer qualquer coisa com essa informação como por exemplo uma consulta no banco de dados onde ele irá retornar o usuário com o id em questão. </p>
+        <img src="../../img/express/params.jpg" alt="">
+        <h2> Parâmetros via POST</h2>
+        <p> Post é quando enviamos algo através de um usuário, geralmente na intenção de inserir informações em algum banco de dados. Para enviar os dados é necessário criar um form e enviar os dados via POST. No express é necessário colocar alguns midwares como o express.json, para ler os dados do body. E também uma rota qeu vai receber estes dados, utilizando o método post do express.  Básicamente o fluxo é : O usuário preenche o form e envia. O servidor(Express), recebe a solicitação para a rota desejada, o middleware entra no meio e trata os dados e em seguida redireciona para a rota para enfim realizar a ação necessária.</p>
+        <p> Quando recebemos os dados via POST, </p>
+        <img src="../../img/express/post.jpg" alt="">
+        <h2> Módulos de Rotas: </h2>
+        <p> É possível unir várias rotas em um módulo, isso vai deixar nosso código mais organizado. Muitas vezes iremos ter diversas rotas para diversas entidades, como usuário, produtos, compras, e isso acaba deixando a aplicação bagunçada e ilegível. Para isso normalmente é criado uma pasta para cada entidade em comum, como users por exemplo. Dentro da pasta User criamos um arquivo index.js onde criaremos as rotas dos users. Para isso vamos utilizar um novo objeto chamado Router. Depois precisamos exporta-lo e importa-lo no arquivo principal.  </p>
+        <p> No arquivo index dentro da pasta Router, fica assim:</p>
+        <img src="../../img/express/userRout.jpg" alt="">
+        <p> Lembrar que no final precisa exportar <span>module.exports = router</span></p>
+        <p> E dentro da aplicação principal, é preciso importar esse Router exportado: </p>
+        <p style="color: red;"> falta fazer</p>
+        <h2> Css com Express </h2>
+        <p> Para inserir CSS nas páginas e arquivos estáticas vamos precisar de um middleware, que é o express.static. Precisamos colocar um diretório base, que normalmente é o public e em seguida criar os estáticos a partir desta pasta. No html podemos acessar o caminho relativo após a pasta estar definida e pronto. Linha para colocar no App principal:  </p>
+        <img src="../../img/express/cssjs.jpg" alt="">
+        <h2> Pag 404</h2>
+        <p> Em todo projeto é necessário criar uma página 404 em caso de o usuário digitar um URL não existente ou qualqeur outro tipo de erro. Ela é usada quando o usuário tenta logar em uma página não encontrada. Basta criar um novo middleware abaixo de todas as rotas, que responde com este status, e enviar um arquivo de template diferente a esta página. Veremos na prática:</p>
+        <img src="../../img/express/404.jpg" alt="">
+        
     </main>
 </body>
 </html>
