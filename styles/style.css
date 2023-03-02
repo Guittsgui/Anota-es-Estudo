@@ -1,6 +1,7 @@
 body{
     background: rgba(232, 238, 153, 0.795);
     text-align: justify;
+    text-indent: 20px;
 }
 main{
     width: 800px;

@@ -11,6 +11,33 @@
     <main>
         <p><a href="../../index.html">Voltar</a></p>
         <h1> Express </h1>
+        <h2> O que é o Express ?</h2>
+        <p> Express é um framework para NodeJS utilizado no BackEnd. Ele serve para criarmos aplicações WEB, tanto estáticas quanto dinâmicas com BD, Autenticações, etc. Ele acaba dominando o mercado de NODEJS, onde iremos aprender a criar rotas, aprender sobre arquiteturas (MVC), separar o front do back (API'S), entre diversas outras utilidades. É um framework leve e relativamente de ser utilizado. O Express torna a criação de apps muito mais simplificadas do que utilizando os Core Modules, pois uma série de coisas que criamos na mão antes, aqui é criado "automaticamente". Para instalar o express em um projeto,  primeiro utilizamos o comando <span>npm init - y </span> e em seguida instalar o pacote do Express <span>npm install express</span>.</p>
+        <h2> Rotas </h2>
+        <p> Rota  é um conceito super importante e presente em qualquer aplicação WEB. Rotas são básicamente os caminhos, as URL's que acessamos. Se acessarmos um site www.teste.com/produtos, esse /produtos é uma rota do nosso site. Vale ressaltar que uma url sem a barra, também é uma rota, a HOME, que dependendo do projeto, já executa alguma coisa. Rotas estão sempre ligadas a alguma funcionalidade da nossa aplicação. Quando acessamos alguma rota podemos acessar várias lógicas, como nesse exemplo acima, carregar a lista de produtos vindas do banco de dados. Em resumo, rotas são uma ponte entre o usuário e a lógica da aplicação. Uma rota não necessáriamente irá fazer uma coisa apenas, dependendo do seu verbo (Put,Delete,Remove,Update), pode fazer até 04 coisas, que é o famoso CRUD.</p>
+        <h2> Setup Inicial </h2>
+        <p> Antes de startarmos o Express, vale ressaltar mais uma vez que a WEB funciona com requisicoes e respostas. REQ é onde o usuário envia os dados de um formulário por exemplo para o servidor. E na RES é quando o servidor envia uma resposta para o usuário. Relembrando isso, podemos iniciar o express. O setup inicial do express é simples, mas precisamos saber alguns passos.</p>
+        <ul>
+            <li>Importar o Express e Invocá-lo</li>
+            <li>Definir uma porta base para a aplicação</li>
+            <li>Criar uma rota (URL que será acessada)</li>
+            <li> Executar o método listen na porta especificada.</li>
+        </ul>
+        <p> Abaixo segue um exemplo simples do Express funcionando o passo a passo citado acima. </p>
+        <img src="../../img/express/firstExpress.jpg" alt="" class="teste">
+        <h2> Renderizando HTML</h2>
+        <p> No exemplo acima, ao acessarmos a rota desejada ela nos responde apenas uma mensagem de texto, no caso 'Olá Mundo', que acaba sendo algo pouco útil no dia a dia. Dando continuidade, aqui aprenderemos a renderizar HTML como resposta usando o Express. Para isso utilizaremos o método SendFile, fazendo com que o arquivo seja renderizado no navegador. Para isso precisamos acessar o arquivo por meio do diretório base, e isso requer o módulo PATH. </p>
+        <p> Por padrão colocamos nossos arquivos HTML em uma pasta chamada TEMPLATES. Utilizando o método path, pegamos nosso diretório atual (__dirname), e juntamos com o da pasta desejada (templates), assim teremos a localização precisa de onde estará nossos arquivos HTML. Em seguida basta enviarmos. Exemplo abaixo: </p>
+        <img src="../../img/express/expressHtml.jpg" alt="">
+        <p> Nesse exemplo contamos com a ajuda do PATH, porém futuramente aprenderemos outra forma mais simples de aplicar essa sintaxe. </p>
+        <h2> Problemas de Atualização</h2>
+        <p> Quando começamos a trabalhar com Express, podemos reparar que a cada atualização feita em nosso projeto precisamos parar o servidor (ctrl + c), e iniciar denovo para que as atualizações sejam vistas. Para solucionar isso contaremos com o módulo Nodemon, que a cada vez que o arquivo é salvo ele reinicia o projeto de forma automática, facilitando consideravelmente o workflow com Express. Para isso, salvamos ele como dependência de desenvolvimento, e acaba sendo uma boa prática para praticamente todos os projetos utilizando node. Para isso, utilziar o comando <span> npm install --save-dev nodemon</span>.</p>
+        <p> Após  instalado, nós não podemos mais iniciar o projeto com o comando node index.js por exemplo, pois ele não estará utilizando o nodemon, e sim startar pelo nodemon. Para isso, é de boa prática irmos nos scripts do NPM dentro da pasta packaged.json, e colocar o nodemon junto ao comando start, para que sempre que dermos um npm start, ele já abra com o nodemon automáticamente. Exemplo abaixo. Ou voce pode simplesmente startar o projeto com o comando <span>nodemon index.js</span>.</p>
+        <img src="../../img/express/nodemon.jpg" alt="">
+        <h2> MiddleWares </h2>
+        <p> É mais um conceito que junto as rotas, estarão presente o tempo inteior quando trabalhamos com NodeJS. Middlewares são códigos que podem ser executos no meio/entre alguma ação e outra. Um exemplo prático é verificar se o usuário está logado. Por exemplo, um usuário tenta acessar uma rota em específico na qual apenas usuários autênticados possuem acesso. Nesse momento colocamos um middleware(algo que será executado entre a req do usuário e a res) e aqui se vermos que ele está logado prossegue e se não tiver, vá embora. </p>
+        <p> O método que nos da acesso a utilizar middlewares no express é o Use. Futuramente iremos aprender a utilizar os middlawares para rotas individualmente. Abaixo segue um exemplo de um middleware simples funcionando para toda a aplicação: </p>
+        <img src="../../img/express/middl.jpg" alt="">
     </main>
 </body>
 </html>
