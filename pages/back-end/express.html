@@ -112,7 +112,22 @@
         <p> primeiramente configuramos o projeto para receber CSS, com o middleware, da mesma forma que vimos lá encima. </p>
         <img src="../../img/express/cssHandle.jpg" alt="">
         <p> Agora basta criar a pasta public => css => styles.css.</p>
-        <h1 id="sql"> Integrando MySQL</h1>
+        <h1 id="sql"> Banco de Dados </h1>
+        <p> Aqui o foco será mais diretamente na integração do banco de dados com nossos projetos NODEJS. Para ter acesso ao coteúdo completo de SQL, veja a aba <a href="../database/mysql.html">MySQL</a>.</p>
+        <h2> Integrando o MySQL e Node</h2>
+        <p> Primeiramente vamos precisar instalar o driver, que é um pacote chamado mysql, e assim como tudo visto até aqui, instalaremos ele com o npm com o comando <span>npm install mysql</span>. Depois precisamos conectar ao nosso banco de dados, sendo necessário inserir informações como host ou ip do servidor, user geralmente o root, password que geralmente vem em branco e o banco em questão. </p>
+        <p> Aqui vemos a conexão do banco : </p>
+        <img src="../../img/express/db1.jpg" alt="">
+        <p> Aqui vemos a conexão sendo ativada: </p>
+        <img src="../../img/express/db2.jpg" alt="">
+        <h2> Inserindo dados no Banco.</h2>
+        <p> Após tendo a conexão criada e executada, e o banco devidamente configurado (banco criado, tabelas), podemos começar a realmente realizar ações entre eles. ( inserir) no caso. Para inserir dados no banco vamos precisar criar e realizar uma query. Uma query em si é uma string, seguindo os padrões do MySql. Já para executar vamos utilizar o método query do próprio pacote mysql.</p>
+        <p> No exemplo abaixo, recebemos os parametros no body de uma req, atribuimos para a variável, montamos a query e enfim a executamos. </p>
+        <img src="../../img/express/queryFirst.jpg" alt="">
+        <h2> Resgatando Dados </h2>
+        <p> Para resgatar dados, vamos precisar de uma query que será um SELECT. Podemos escolher quais dados serão retornados, determinando suas colunas. Querys com select podem ir do mais simples possível até querys extremamente complexas.</p>
+        <img src="../../img/express/selectQuery.jpg" alt="">
+
         <h1 id="sequelize"> Sequilize </h1>
         <h1 id="mvc"> Arquitetura MVC</h1>
         <h1 id="api">API</h1>
