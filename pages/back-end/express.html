@@ -136,14 +136,22 @@
         <h2> Removendo Dados </h2>
         <p> E para finalizar, aqui vem a última parte de CRUD, o Delete. Para funcionar, precisaremos enviar para uma rota com o verbo POST, com o ID a ser removido. Este processo pode ser realizado em uma única etapa. Exemplo abaixo: </p>
         <img src="../../img/express/delete.jpg" alt="">
-        <h2> Connection Pool </h2>
-        <p> Connection Pool é um recurso para otimizar as conexões, criando um cache e permitindo sua reutilização. O driver mysql tem esse recurso desenvolvido e basta aplicarmos. Este recurso também controla as conexões abertas, fechando assim que se tornam inativas.</p>
-
-
-
-
-
         <h1 id="sequelize"> Sequilize </h1>
+        <p> Antes de estudarmos Sequilize, é importante saber o que são ORM, já que o sequilize é um ORM. Orm significa Object Relational Mapper, ou seja, mapeamento relacional de objetos. As orm's servem para abstrair a complexidade das queries, para trabalharmos com métodos. Dessa forma conseguimos escrever de forma resumida. Existem vários tipos de ORM's porém no universo NODE uma das mais utilizadas é o Sequelize. Toda a parte das queries ficam muito mais simples de serem feitas com o uso de ORM do que na mão.</p>
+        <p> Vale ressaltar que aprender ORM's sem saber o SQL cru, é a mesma coisa que saber um framework sem saber a linguagem, alguma hora irá dar m***.</p>
+        <p> Em alguns casos uma ORM pode trazer prejuízos de performance. Caso utilizemos de forma errada, pode gerar queries maiores e mais pesadas do que o necessário. A query pura executa mais rápido do que a ORM. </p>
+        <h3> O que é Sequelize?</h3>
+        <p> É um ORM baseada em promises(then,catch). Ele possui integração para vários bancos relacionais. Para utiliza-la é necessário criar um Model, que é o reflexo da nossa tabela em uma classe. E assim como tudo que instalamos por fora, usamos o comando <span> npm install sequelize</span>.</p>
+        <p> Para conectar precisamos passar os mesmos dados que no outro bacote (banco, usuário, senha, host). Em seguida instanciamos a classe Sequelize fornecida pelo pacote e então é possível verificar a conexão através do método authenticate.</p>
+        <p> Para esta belecer a conexão, colocamos em um arquivo externo, diferente do visto acima que era feita dentro do próprio Index. Tirando o banco,  usuario, senha, host, também é necessário colocar o dialect, que é exatamente o tipo de banco que iremos conectar. Exemplo abaixo: </p>
+        <img src="../../img/express/sequelize.jpg" alt="">
+        <p> Após a conexão ser estabelecida, o próximo passo é de criar a Model necessária para o Sequelize trabalhar.Para criar um MODEL temos que instanciar uma classe que presentará uma tabela. Um Model User cria uma nova tabela chamada User por exemplo. Teremos um model para cada tabela. Colocamos os campos e os estilos dele como propriedades do model. Futuramente ele será utilizado para as operações entre aplicação e o banco. Em resumo estamos configurando o sequelize para ele entender a estrutura do banco. O método Sync faz a criação das tabelas baseada nos models.</p>
+        <p> Veja o Exemplo abaixo de uma classe User.</p>
+        <img src="../../img/express/classSequelize.jpg" alt="">
+        <p> Ao criarmos a tabela via Sequelize, será automaticamente criado duas colunas a mais, que é a data de criação do registro e a data de atualização do registro. Ambas serão automaticamente atualizadas pelo sequelize. </p>
+        <h2> Inserindo - Sequelize </h2>
+        <p> Para inserir um dado vamos precisar do Model da tabela criada, ou seja, importar ele no arquivo de execução do comando. O método a ser utilizado é o <span>Create</span>. Ele leva como parâmetro todos os campos e insere o registro na tabela (Acaba sendo super simples). </p>
+
         <h1 id="mvc"> Arquitetura MVC</h1>
         <h1 id="api">API</h1>
         
