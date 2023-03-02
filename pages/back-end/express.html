@@ -10,6 +10,13 @@
 <body>
     <main>
         <p><a href="../../index.html">Voltar</a></p>
+        <nav class="navExpress">   
+                <li> <a href="#template"> Template Engine </a></li>
+                <li> <a href="#sql"> MySQL</a></li>
+                <li><a href="#sequelize"> Sequelize</a></li>
+                <li><a href="#mvc">Arquitetura MVC</a></li>
+                <li><a href="#api"> API</a></li>
+        </nav>
         <h1> Express </h1>
         <h2> O que é o Express ?</h2>
         <p> Express é um framework para NodeJS utilizado no BackEnd. Ele serve para criarmos aplicações WEB, tanto estáticas quanto dinâmicas com BD, Autenticações, etc. Ele acaba dominando o mercado de NODEJS, onde iremos aprender a criar rotas, aprender sobre arquiteturas (MVC), separar o front do back (API'S), entre diversas outras utilidades. É um framework leve e relativamente de ser utilizado. O Express torna a criação de apps muito mais simplificadas do que utilizando os Core Modules, pois uma série de coisas que criamos na mão antes, aqui é criado "automaticamente". Para instalar o express em um projeto,  primeiro utilizamos o comando <span>npm init - y </span> e em seguida instalar o pacote do Express <span>npm install express</span>.</p>
@@ -92,7 +99,16 @@
         <p> Assim como possuímos o IF, também temos o ELSE. O else é um complemento do IF. Utilizamos no Handlebars para a exibição de outra parte do layout (caso a condição seja falsa). Isso nos dá mais flexibilidade ainda. a sintaxe é: <span> {{#if algumacoisa}}</span> ... <span>{{else}}</span> ... <span> {{#/if}}</span> . Dessa forma, tudo o que está entre o else e o fechamento do if, só será renderizado caso o IF seja falso. </p> 
         <h3> Repetição</h3>
         <p>As estruturas de repetição no handlebars são feitas pelo operador EACH. A sintaxe é <span> {{{#each}} </span> ... <span> {{/each}}</span>. Em um array podemos chamar os itens com {{this}. Então cada um dos itens é acessado na view. Vale lembrar, como o Handlebars prega um tempalte mais limpo, devemos mandar apenas o necessário para o front. Não será possível por exemplo filtrar uma lista dentro das Views. </p>
+        <p> Por exemplo, ao enviarmos uma lista do back para o front, podemos iterar sob essa lista para renderiza-la, como no exemplo abaixo:  </p>
+        <img src="../../img/express/repHandle.jpg" alt="">
+        <h3> Utilizando o With.</h3>
+        <h3> Partials</h3>
+        <h2> Css com HandleBars. </h2>
 
+        <h1 id="sql"> Integrando MySQL</h1>
+        <h1 id="sequelize"> Sequilize </h1>
+        <h1 id="mvc"> Arquitetura MVC</h1>
+        <h1 id="api">API</h1>
         
     </main>
 </body>

@@ -52,3 +52,11 @@ span{
     font-weight: bolder;
     color: darkblue;
 }
+.navExpress{
+    display: flex;
+    justify-content:space-around;
+    margin-top: 50px;
+}
+.navExpress li{
+    list-style: none;
+}
