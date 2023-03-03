@@ -150,7 +150,23 @@
         <img src="../../img/express/classSequelize.jpg" alt="">
         <p> Ao criarmos a tabela via Sequelize, será automaticamente criado duas colunas a mais, que é a data de criação do registro e a data de atualização do registro. Ambas serão automaticamente atualizadas pelo sequelize. </p>
         <h2> Inserindo - Sequelize </h2>
-        <p> Para inserir um dado vamos precisar do Model da tabela criada, ou seja, importar ele no arquivo de execução do comando. O método a ser utilizado é o <span>Create</span>. Ele leva como parâmetro todos os campos e insere o registro na tabela (Acaba sendo super simples). </p>
+        <p> Para inserir um dado vamos precisar do Model da tabela criada, ou seja, importar ele no arquivo de execução do comando. O método a ser utilizado é o <span>Create</span>. Ele leva como parâmetro todos os campos e insere o registro na tabela (Acaba sendo super simples).</p>
+        <img src="../../img/express/insertSeque.jpg" alt="">
+        <h2>Resgatando - Sequelize </h2>
+        <p> Aqui ao invés do select usaremos o método findAll, que também requer o model. Daqui para frente todas as ações serão baseadas nas models. Os dados vem em um objeto especial que será transformado em array para usarmos no Node. Na prática abaixo:  </p>
+        <img src="../../img/express/findAllSeque.jpg" alt="">
+        <p> E assim como previsto, assim fica utilizando a clausula <span>Where</span> e usaremos o método findOne (utilizado para selecionar um elemento em específico do banco, como por exemplo: Selecione o usuário cujo ID seja igual a 5). </p>
+        <img src="../../img/express/selectWhereS.jpg" alt="">
+        <h2> Removendo - Sequelize</h2>
+        <p> Aqui utilizaremos a action DESTROY da model ao invés do Delete do MYSQL. A função vai ficar bemn parecida com a de resgatar um usuário em específico. A idéia aqui é criar um mini formulário com um botão ou link de excluir, na qual redirecionará para a rota delete user com o verbo POST, pois iremos enviar o usuário pelo formulário para ser removido. Exemplo na prática: </p>
+        <img src="../../img/express/removeSeq.jpg" alt="">
+        <h2>Edição - Sequelize </h2>
+        <p> Editar funciona da mesma maneira da vista anteriormente, em duas etapas. Primeiramente criamos uma rota editar com o verbo GET, na qual iremos resgatar o usuário do banco, e redirecionar para uma  página que irá conter um formulário preenchido com os dados em questão. Em seguida o usuário realiza a alteração e ao submeter esse form, irá para a rota editar como verbo POST, onde irá receber os dados novos no corpo da requisição, manipula-los e por fim realizar a alteração no banco.</p>
+        <p>GET:</p>
+        <img src="../../img/express/editGETseq.jpg" alt="">
+        <p>POST:</p>
+        <p> Aqui iremos realizar a query UPDATE do sql, na qual será utilizado o método update do sequelize. Nele pasasmos o objeto atualizado por inteiro e também filtramos por meio do atributo where qual item vamos atualizar. No exemplo abaixo, primeiramente pegamos todos os parametros enviados na requisicao, colocamos para um objeto, e efetuamos o update: </p>
+        <img src="../../img/express/editPOST.jpg" alt="">
 
         <h1 id="mvc"> Arquitetura MVC</h1>
         <h1 id="api">API</h1>
