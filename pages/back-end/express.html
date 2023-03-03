@@ -167,8 +167,35 @@
         <p>POST:</p>
         <p> Aqui iremos realizar a query UPDATE do sql, na qual será utilizado o método update do sequelize. Nele pasasmos o objeto atualizado por inteiro e também filtramos por meio do atributo where qual item vamos atualizar. No exemplo abaixo, primeiramente pegamos todos os parametros enviados na requisicao, colocamos para um objeto, e efetuamos o update: </p>
         <img src="../../img/express/editPOST.jpg" alt="">
+        <h2> Relacionamentos </h2>
+        <p> Em bancos relacionais podemos criar relacionamentos entre tabelas. Para cocnretizer isso no sequelize vamos precisar de dois Models. Depois precisamos inserir um método em algum dos models que vai criar a relação. Após o sync uma coluna faz a relação entre as tabelas criadas, que representa a FOREIGN KEY. </p>
+        <p> Para colocarmos relacionamentos, precisamos entender qual é a entidade principal. Por exemplo, entre usuários e endereços, geralmente o usuário vai ser a entidade principal(no caso o usuário possui endereço). Então dentro da model endereço será colocado  a relação.</p>
+
+        <p style="color: aquamarine; font-size: 10px;"> Em caso de dúvidas: <a href="https://www.udemy.com/course/nodejs-do-zero-a-maestria-com-diversos-projetos/learn/lecture/28598120#announcements">Clique Aqui - Pago</a></p>
+        <img src="../../img/express/relacionam.jpg" alt="">
+        <h2> Inserindo Relacionado: </h2>
+        <p> Para adicionar dados relacionados o fluxo é praticamente o mesmo decima, porém passamos o ID do dado relacionado. Podemos enviar esse id via input do tipo hidden, e em exemplos mais complexos, o usuário estará logado e autenticado, logo seu id já estará salvo em algum lugar de fácil acesso. </p>
+        <img src="../../img/express/addRelativ.jpg" alt="">
+        <h3 style="color: red;"> TERMINAR ESSA PARTE - 03 AULAS FALTANDO </h3>
 
         <h1 id="mvc"> Arquitetura MVC</h1>
+        <h2> O que é o MVC? </h2>
+        <p> MVC é um acrônimo de Model View Controler. É um padrão de arquitetura de software, que pode deixar nossas aplicações mais organizadas(digo pode, pois nem em todos os casos será a melhor escolha de arquitetura). A aplicação fica dividida em camadas na qual cada camada recebe sua responsabilidade. Em resumo teremos uma nova estrutura de arquivos e pastas. A aplicação obedece um novo fluxo, que se repete para todas as ações desejadas. Aplicações em MVC tendem a ter uma manutenção/evoluir/escalar de maneira mais fácil. Para aprendermos mais fáceis, veremos separadamente cada um.</p>
+        <h3> M - Model </h3>
+        <p> É a camada onde vamos interagir com o banco de dados, normalmente interage com os arquivos do controller. Aqui é onde teremos as ações do banco, como inserts, delets, querys em geral. Seja via Query ou via ORM. Em grande parte dos casos, cada tabela será um model.</p>
+        <h3>V - View </h3>
+        <p> É onde apresentamos os dados que estão no banco. Geralmente a view  interage com o Controller. Um regra de boas práticas é a seguinte: Na view não existe regras de negócios. É nas views que possuimos a interação com os usuários, como formulários para inserir os dados no sistema. Normalmente a exibição é feita através do HTML.</p>
+        <h3>C - Controller</h3>
+        <p> É onde temos a iteração do model e view. É o meio de campo. Aqui é onde definimos qual view será impressa e também onde processamos dados que foram enviados para o banco ou para a view. Os controllers terão um código parecido com os das rotas que foram mostrados até agora nos exemplos anteriores da aba NodeJS.</p>
+        <p> Geralmente o número de Controllers ficará igual ao número de Models(GERALMENTE). Um projeto básico node, geralmente irá conter os elementos na estrutura: </p>
+        <ul>
+            <li>Models: Pasta que ficam os arquivos das Models</li>
+            <li>Views: Pasta que ficam os arquivos das Views</li>
+            <li>Controllers: Pasta que ficam os arquivos de Controller</li>
+            <li>Routes: Pasta que ficam os arquivos de rotas</li>
+            <li>Index.js: Arquivo que inicializa a aplicação. </li>
+        </ul>
+    
         <h1 id="api">API</h1>
         
     </main>
