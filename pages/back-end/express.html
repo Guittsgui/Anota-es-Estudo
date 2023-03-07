@@ -197,6 +197,7 @@
         </ul>
     
         <h1 id="api">API</h1>
+        <h2> O que é uma API ?</h2>
         <p> API - É um acrônimo de Application Programming Interface. É um intermediário entre um servidor e um aplicativo. É um intermediário entre dois softwares. Ele basicamente é um porteiro, um intermediario entre a aplicação que o usuário está utilizando e o banco de dados. </p>
         <p> Agora que já aprendemos o que é uma API, ele pode ser feito de infinitas formas como via códigos, WebServices (URL'S), e dentro desses webservices temos REST. </p>
         <p> Rest é um padrão. Restfull é um sistema que usa o padrão Rest. </p>
@@ -209,6 +210,28 @@
             <li>DELETE - remover informações.</li>
         </ul>
         <p> É um padrão que possuímos uma URL, na qual os métodos irão ditar a ação que temos que tomar. </p>
+        <h2> Entendendo CORS </h2>
+        <p> Cors significa cross origin resource sharing, ou seja, são uma troca de recursos de origens diferentes. Ou seja, nada. Na prática, geralmente uma aplicação que faz solicitações para uma API de URL diferente, ela sofrerá erro de CORS (caso nao seja liberada pela API). É necessário que o Acces-Control-Allow-Origin autorize uma URL em específico. E como solucionar? 
+        Instalamos uma biblioteca chamada cors -> <span>npm install cors</span> na qual irá nos permitir controlar os cabeçalhos e autorizar/negar determinados clientes. </p>
+        <p> Usamos ele importando, e em seguida ativando uma função, na qual dentro dela podemos colocar ou não determinadas configurações. </p>
+        <p> Quando não colocamos nenhuma configuração, ele estará liberando todos os sites que quiserem se conectar a sua API. Ou então podemos definir apenas apra determinados domínios o acesso a sua API, e também apenas determinados métodos, como no exemplo abaixo: </p>
+        <img src="../../img/express/cors.jpg" alt="">
+
+        <h2> Postman </h2>
+        <p> Software de fundamental importância para nos acompanhar na jornada backend, pois através dele conseguimos simular requisições para nosso servidor, incluindo head/body, etc. Podemos ter acesso a esse software <a href="https://postman.com/" target="_blank">Clicando Aqui</a>.</p>
+        <h2> Status Code </h2>
+        <p> Principalmente quando falamos de API'S com padrão REST, é de extrem importância (obrigatória) entendermos o status da resposta. Esses códigos de respostas são feitos em números (404 por ex), com o objetivo de ajudar o consumidor a entender o que está acontecendo em cada req/res. É possível conferir todos clicando na <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status" target="_blank">Documentação</a>.</p>
+        <p> Temos alguns mais conhecidos como: </p>
+        <ul>
+            <li> 404 - Não encontrado</li>
+            <li> 200 - Sucesso, tudo certo.</li>
+            <li> 201 - Sucesso, tudo certo com novo recurso criado. (POST). </li>
+        </ul>
+
+        <h2> PASSO A PASSO - CRIAR API </h2>
+        <p> Aqui segue um resumo o passo a passo para configurarmos qualquer API.</p>
+        
+        
     </main>
 </body>
 </html>
