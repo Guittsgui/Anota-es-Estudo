@@ -18,7 +18,28 @@
         <h2> Instalando o TypeScript </h2>
         <p> Para instalarmos o TypeScript podemos acessar o próprio <a href="https://www.typescriptlang.org/">site do TS</a> e lá conferirmos as alternativas de instalação, pois podemos instalar o TS apenas no projeto, o TS globalmente (Instalará no computador e funcionará em qualquer projeto). Para instalarmos o TypeScript é necessário que o node esteja instalado, para que possamos instalar o typescript via NPM com o comando: <span> npm install -g typescript </span> </p>
         <p><span>Regra 01:</span> Dentro do HTML voce nunca importa um arquivo TS. Voce importa ele JS e depois via comando ele é convertido. </p>
-        <p> Regra 02: Entrar dentro da pasta do projeto (terminal do VSCODE) e digitar o comando do TS: <span>tsc nomeDoArquivo.ts</span>. Logo em seguida ele irá gerar um arquivo JS, e irá "funcionar". </p>
+        <p> Regra 02: Entrar dentro da pasta do projeto (terminal do VSCODE) e digitar o comando do TS: <span>tsc nomeDoArquivo.ts</span>. Logo em seguida ele irá gerar um arquivo JS, e irá "funcionar".  </p>
+        <p> Mesmo que haja error dentro do arquivo TS, ele irá converter para html. Por boas práticas é necessário evitar isso. Comando: <span> tsc nomedoprojeto.ts --noEmitOnError</span>. Dessa forma o arquivo JS não será gerado caso exista erros na aplicação.</p>
+        <h2> Types Primitivos.</h2>
+        <p> Aqui começamos a realmente entrar dentro do universo typescript e suas principais typagens. As typagens primitivas são basicamente três. No JS quando queremos criar uma <span>VARIAVEL</span>, colocamos: </p>
+        <ul>
+            <li> let/const/var nome = 'Guilherme'</li>
+        </ul>
+        <p> Já no typescript precisamos typar o que ela está eseprando, ex: </p>
+        <ul>
+            <li>let nome: string = 'Guilherme'</li>
+            <li>let idade: number = 30 </li>
+            <li>let trueOrFalse: boolean = true</li>
+        </ul>
+        <p> Quando trabalhamos com TS o editor é o seu melhor amigo, pois ao você typar uma variável com number, ele irá acusar o erro caso você atribua a seu valor uma string.</p>
+        <h2> Types em Arrays</h2>
+        <p> Para tiparmos um array é basicametne igual ao superior, porém tipamos com chaves. exemplo  </p>
+        <ul>
+            <li>let listaFrutas: string[] = ['pera', 'maca', 'melancia']</li>
+            <li>const sequenciaNumeros: number[] = [2, 4 , 5 , 6] </li>
+        </ul>
+        <h2> O type Any: </h2>
+        <p> O type ANY é um processo que funciona apenas no TypeScript. Ele é desconsiderado quando geramos o arquivo JS. Ele é basicamente o último recurso, ou seja, quando nao dá mais para fazer de outra forma.  </p>
     </main>
 </body>
 </html>
