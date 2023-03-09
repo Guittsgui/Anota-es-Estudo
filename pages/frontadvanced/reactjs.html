@@ -31,7 +31,18 @@
         <p> Dentro da CRA, teremos a pasta PUBLIC, onde irá conter o arquivo INDEX HTML. É dentro desse arquivo index, que possui apenas uma div que toda a sua aplicação será renderizada. Já no VITE é um pouco mais limpo, e está fora da pasta public. </p>
         <p> Em ambos os projetos terão uma pasta SRC, no qual dentro do CRA temos o APP.tsx e dentro do VITE temos o MAIN.TSX. Em sintaxe ambos os arquivos são exatamentes iguais. Em outras palavras, ali é onde está ordenando pegar o projeto inteiro e renderizar dentro da div principal. (Aqui eles pegam e jogam na tela). Agora, o projeto mesmo, está localizado dentro do arquivo <span>APP.TSX </span> (igual em ambos). Ali encontraremos o código da página em si. </p>
         <span> O código Fonte fica dentro da pasta SRC.</span>
-
+        <h2> Componente </h2>
+        <p> Geralmente a primeira coisa que fazemos quando estamos começando uma aplicação em React é ir no arquivo App.tsx e apagar tudo que está dentro dele. Todo o React é baseado em <span>Componentes</span>. Componentes são partes ou até mesmo um todo. Componente é basicamente uma função que geralmente retorna algo gráfico.</p>
+        <img src="../../img/reactjs/r1.jpg" alt="">
+        <img src="../../img/reactjs/r2.jpg" alt="">
+        <p> Agora ao rodarmos o projeto teremos nosso primeiro Olá Mundo feito em ReactJS. Sempre que falarmos em criar um componente, provavelmente estaremos falando em criar uma função que retorna <span>geralmente</span> algo gráfico, podendo ser uma div, um botão, uma interface por completo. Tudo que iremos criar irá rodar dentro desse componente principal, inclusive podemos usar componentes dentro de componentes, passando dados ou não. </p>
+        <h2> JSX </h2>
+        <p> Antes de realmente mergulharmos no mundo do react, é importante entender sobre o famoso <span>JSX</span> e suas expressões. Ao criar o seu primeiro componente você irá perceber que foi utilizado HTML dentro de uma função JavaScript. Na verdade o que vimos não é HTMl(apesar de parecer bastante), e sim JSX. JSX é uma forma de digitar o código de forma mais simples, porém antes de ser exibido ele será convertido (pelo babel), e  recria utilizando o código sem ser com JSX. </p>
+        <p> Basicamente na ilustração abaixo, mostra primeiro como que fica o código compilado pelo Babel e em seguida como que é mais simples digitar via JSX.</p>
+        <p> Em resumo, é um pseudo HTML que é traduzido em código JavaScript que é traduzido pelo compilador que no caso é o Babel. Provavelmente iremos reparar maiores diferenças entre o html e o jsx quando formos utilizar css inline, classes, id's, etc.</p>
+        <img src="../../img/reactjs/r3.jpg" alt="">
+        <p> Agora que já entendemos o que é o JSX e que ele simplifica a escrita de JS para HTML, vamos começar a entender o porque ele se torna realmente útil para nossas aplicações. </p>
+        
 
 
     </main>
