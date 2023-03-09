@@ -11,6 +11,20 @@
     <main>
         <p><a href="../../index.html">Voltar</a></p>
         <h1> React JS. </h1>
+        <h2> O que é React JS ?</h2>
+        <p> React é uma Biblioteca feita em JavaScript criada e mantida pelo Facebook. Vem com o objetivo de deixar as páginas mais "leves". Para começar a compreender, vamos relembrar do DOM. Dom é básicamente todos os elementos que estão na tela do browser. Cada item (botao,etc) é um elemento, e através do DOM conseguimos selecionar um elemento em específico e manipula-lo, adicionar evento, etc. Isso demanda processamento do computador do usuário que está acessando e dependendo do que você fizer, isso pode ser muito custoso.  </p>
+        <p>Já no React isso não acontece, pois o react trabalha com o <span>Virtual Dom</span>. A grosso modo, é básicamente uma cópia do que você está vendo no computador só que direto na memória, uma cópia virtual. Você não ve mais ela existe. </p>
+        <p> Dessa forma, quando usamos React, ao realizarmos alguma alteração na página, na verdade inicialmente ela é alterada apenas na cópia (VirtualDom) e depois ele compara a tela(DOM) com o resultado da modificação feita no (VirtualDom), e em seguida, ele faz a alteração apenas naquele item em que foi alterado. Dessa forma o processamento é reduzido drasticamente, pois só é processado no DOM (browser) aquilo em que foi modificado e não o DOM inteiro.</p>
+        <p> Entendendo isso, que é a forma como o react trabalha, existe um conceito chamado <span> SPA </span> - Single Page Application, que é uma aplicação de uma página. Quando fazemos um projeto feito em react, nós temos apenas uma página e tudo é alterado dentro dessa mesma página. </p>
+        <p> Para instalar o React é necessário que seja instalado o Node, caso não saiba, vá para o nosso <a href="../back-end/nodejs.html">Módulo de Node</a>.</p>
+        <h2> Formas de criar projeto com React JS </h2>
+        <p> Dentro do React existem várias formas de criarmos nossos projetos, aqui veremos as duas mais utilizadas no mercado. </p>
+        <h3> Instalando via CRA - Create React App </h3>
+        <p>Para começarmos, colocamos o comando: <span>npmx create-react-app nomedoprojeto </span> caso queiramos utilizar o React com JS. Já caso queiramos utilizar o React com TS, utilizamos o comando: <span>npmx create-react-app nomedoprojeto --template typescript</span>.</p>
+        <p> Para rodar o projeto, abrimos o terminal do VSCODE, e rodar o comando: <span>npm start</span> dessa forma ele já irá abrir o navegador com nosso projeto rodando geralmente na porta 3000.</p>
+        <h3> Instalando via Vite </h3>
+        <p> Basicamente o vite é uma biblioteca que nos auxilia a criar projetos entre várias outras coisas. Ele geralmente cria o projeto de forma mais rápido do que o normal. Aqui utilizamos o comando <span> npm init vite nomedoprojeto --template react-js </span> em caso de usar o React com JavaScript. Já caso queira utilizar o React com Typescript, colocamos o comando: <span>npm init vite nomedoprojeto --template react-ts</span></p>
+
     </main>
 </body>
 </html>
