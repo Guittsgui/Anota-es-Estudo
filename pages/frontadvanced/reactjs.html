@@ -67,10 +67,26 @@
         <p style="color: brown;"> FALTA REVER CHILDREN</p>
 
         <h1 id="states"> States & Events </h1>
-        
-        
+        <h2> Criando Eventos </h2>
+        <p> Já conhecemos o que são eventosdos nossos estudos de JS. (Caso não lembre volte ao módulo de <a href="../js/jsdom.html">Js-DOM</a>). No React utilizamos a sintaxe: <span>onClick={}</span>. Agora precisamos criar uma função, passar a denifição dela e por fim cria-la. </p>
+        <p> Segue o exemplo: </p>
+        <img src="../../img/reactjs/r8.jpg" alt="">
+        <p> Também é possível criar uma função anonima c/ arrow function dentro dos <span>{}</span>.Evoluindo veremos vários tipos de evento, como evento de teclado, mudanças de algo, etc. Mas para avançar é de fundamental saber a base de como definir e como funciona sua estrutura. </p>
+        <h2> Usando State </h2>
+        <p>Aqui é onde começaremos a estudar os famosos <span>Hooks</span> do react. Hooks nada mais são do que funções do JavaScript, podendo ser executados por si só. Para entendermos o conceito de state precisamos saber que o React JS trabalha com o conceito de imutabilidade, ou seja, no React nós não alteramos nenhum dado em específico e sim trabalhamos com seu estado. Não adiantaira mudar uma variável diretamente pois assim que isso acontecesse o componente seria executado novamente e dessa forma ele voltaria pro seu valor original. </p>
+        <p> Exemplo : Caso você tenha uma tag p, como valor 'Guilherme', e alteremos ele para João via função por exemplo, o nome seria alterado em memória, o componente inteiro seria renderizado novamente, e em seguida voltaria a assumir o seu valor inicial. </p>
+        <p> Enfim entramos no <span>useState</span> que serve para gerenciar o estado de algum valor onde poderemos alterar e consultar também. Vamos a prática: </p>
+        <img src="../../img/reactjs/r9.jpg" alt="">
+        <p> Aqui atribuimos o useState com o valor inicial de Matheus, para a variável name. Porém ao darmos um console log nessa variável, iremos perceber que o useState retorna um array com duas posições. O primeiro valor é o seu valor inicial setado na função acima, e a segunda posição é uma função, que servirá para alterar a variável inicial em questão(nesse caso o name), que por padrão nomeamos com setName, ou setIdade, enfim, set o nome da variavel em questão. </p>
+        <p> Agora que já entendemos a estrutura do useState <span>(variavelAtual, funçãoParaAlterarEstado => useState('ValorInicial))</span>, é necessáriio saber que o usestate sempre será visto de forma desestruturada. Exemplo:</p>
+        <p style="text-align: center;"> <span style="color: green;">const [name, setName] = useState('Guilherme')</span></p>
+        <p> Dessa forma, sempre que em tela precisemos alterar o valor de name, utilizamos o setName. </p>
+        <p> Podemos ter um botão com um evento onClick que ativa uma função mudarNome, por exemplo, dentro dessa função usamos o setName('GuiGui'), que ela será alterada.</p>
+        <p> Sempre que utilizamos essa função (vinda no segundo parametro do useState), temos como receber um prevState por parâmetro. Esse prevState apenas nos informa o valor do estado atual. Como boa prática, ao invés de mudarmos direto, podemos ativar uma function para se blindar de possíveis erros.</p>
+        <p style="text-align: center;"> <span style="color: green;">setNumber((prevState)=> prevstate + 1)</span></p>
+        <p> Dessa forma podemos nos "blindar" de double clicks, entre outros possíveis mini-bugs que o react pode vir a oferecer.</p>
 
-
+        
     </main>
 </body>
 </html>
