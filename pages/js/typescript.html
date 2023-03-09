@@ -14,7 +14,7 @@
         <h2> O que é o TypeScript ?</h2>
         <p> Typescript é uma linguagem de programação feita pela Microsoft, porém ela é código aberto. É uma linguagem feita 100% baseada no Javascript. O typescript não funciona no navegador, ele sempre precisará ser convertido para javascript para funcionar. O TypeScript ão veio para substituir o JavaScript ou para fazer outra coisa que o javascript não faça. Tudo que fazemos com o TypeScript também é possível fazer com o JavaScript. Mas então porque usa-lo ? </p>
         <p> O <span>TypeScript</span> veio como uma forma de você criar um código melhor. Com o TypeScript é possível prever erros que podem vir a acontecer no futuro. É um código mais seguro, um código que voce sabe qual será o resultado final, um código livre de pequenos errinhos. É um código <span>Tipado</span>. Aqui iremos definir tipos para variáveis, funções etc. Talvez em um primeiro momento se torne algo mais "trabalhoso", "complicado", porém com o tempo você verá que ele irá assegurar o código e até mesmo facilitar quando o código ficar "maior". </p>
-        <p><span> TypeScript é um JavaScript "tipado" </span></p>
+        <p style="text-align: center;"><span> TypeScript é um JavaScript "tipado" </span></p>
         <h2> Instalando o TypeScript </h2>
         <p> Para instalarmos o TypeScript podemos acessar o próprio <a href="https://www.typescriptlang.org/">site do TS</a> e lá conferirmos as alternativas de instalação, pois podemos instalar o TS apenas no projeto, o TS globalmente (Instalará no computador e funcionará em qualquer projeto). Para instalarmos o TypeScript é necessário que o node esteja instalado, para que possamos instalar o typescript via NPM com o comando: <span> npm install -g typescript </span> </p>
         <p><span>Regra 01:</span> Dentro do HTML voce nunca importa um arquivo TS. Voce importa ele JS e depois via comando ele é convertido. </p>
@@ -39,7 +39,27 @@
             <li>const sequenciaNumeros: number[] = [2, 4 , 5 , 6] </li>
         </ul>
         <h2> O type Any: </h2>
-        <p> O type ANY é um processo que funciona apenas no TypeScript. Ele é desconsiderado quando geramos o arquivo JS. Ele é basicamente o último recurso, ou seja, quando nao dá mais para fazer de outra forma.  </p>
+        <p> O type ANY é um processo que funciona apenas no TypeScript. Ele é desconsiderado quando geramos o arquivo JS. Ele é basicamente o último recurso, ou seja, quando nao dá mais para fazer de outra forma.</p>
+        <p> Em um exemplo prático, quando temos um array de string e por algum motivo queremos dar um PUSH em um number nesse mesmo array, o que fazer? É ai que entra o type ANY.</p>
+        <ul>
+            <li> let lista : any = ['marcos', 'joao', 442] </li>
+        </ul>
+        <p> Em outras palavras, ela basicamente diz: Typescript, pode ignorar a tipagem dessa variável. </p>
+        <h2>Types em Funções </h2>
+        <p> Ao falarmos de funções precisamos abrir os olhos em seus parâmetros e também em seu retorno. </p>
+        <p> Nos Parâmetros typamos normalmente dentro dos parâmetros.</p>
+        <ul>
+            <li> function allName(name: string, lastName: string){}</li>
+        </ul>
+        <p> Já para typar o retorno de uma função, colocamos entre o parametro e o corpo dela: </p>
+        <ul>
+            <li> function allName(name: string, lastName: string): string{}</li>
+        </ul>
+        <p> Dessa forma a função estará completamente typada. </p>
+        <h2> Contexting Types </h2>
+        <p> Muitas vezes o próprio TS apenas de olhar o que está acontecendo ele será capaz de deduzir o type quando ele for "óbvio". Em resumo, o typescript possui a sua inteligência. É importante entender o porque o typescript se comporta dessa forma.</p>
+        <h2>Type em Objects</h2>
+        <p> Aqui aprendemos um dos types mais utilizados dentro do universo da programação. </p>
     </main>
 </body>
 </html>
