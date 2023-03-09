@@ -59,7 +59,45 @@
         <h2> Contexting Types </h2>
         <p> Muitas vezes o próprio TS apenas de olhar o que está acontecendo ele será capaz de deduzir o type quando ele for "óbvio". Em resumo, o typescript possui a sua inteligência. É importante entender o porque o typescript se comporta dessa forma.</p>
         <h2>Type em Objects</h2>
-        <p> Aqui aprendemos um dos types mais utilizados dentro do universo da programação. </p>
+        <p> Aqui aprendemos um dos types mais utilizados dentro do universo da programação. Vamos começar falando de objetos sendo passados para dentro de funções. Quando passamos objetos por parâmetros para dentro de funções, podemos typar as propriedades desejadas dentro desse objeto. Exemplo: </p>
+        <ul>
+            <Li> function falaNome (usuario: {nome: string , idade:number})</Li>
+        </ul>
+        <p> Vale a pena ressaltar que podemos informar também que podemos enviar propriedades opcionais ( que podem ou não ser enviada) e para isso colocamos o <span>?</span>. Exemplo:</p>
+        <ul>
+            <li>function falaNome (usuario: {nome <span>?</span>: string , idade <span>?</span>:number})</li>
+        </ul>
+        <h2> Múltiplos Tipos </h2>
+        <p> Em alguns casos em específico podemos nos deparar com a situação de uma variável poder vir a receber mais de um tipo de type.  Para isso utilizamos o operador <span>|</span>. Ex:</p>
+        <ul>
+            <li> const idade: string | number = 90</li>
+        </ul>
+        <p> Dessa forma estamos informando ao TypeScript que a idade pode vir a ser uma string ou pode vir a ser um number(Union Types).</p>
+        <p> Caso tenhamos uma função que recebe uma variável idade como o exemplo acima, e dentro dessa função executemos algum método específico de um dos possíveis types, é necessário verificar o type antes com if/else. Exemplo: Se passamos uma variável typada como number | string, com o valor de string, para executarmos um toUpperCase por exemplo, será necessário verificarmos if( typeof string).... pois senão o typescript irá acusar erro pois não é possível usar toUpperCase em variáveis do tipo Number.</p>
+        <h2> Criando Types </h2>
+        <p> Geralmente quando criamos type próprios utilizamos o padrão chamado PascalCase, e para criarmos funciona basicamente igual uma variável, exemplo:  </p>
+        <ul>
+            <li> type NomeCompleto = string</li>
+        </ul>
+        <p> Dessa forma já podemos utilizar nosso type desta forma : </p>
+        <ul>
+            <Li> let nome: NomeCompleto = 'Guilherme' </Li>
+        </ul>
+        <p> Geralmente utilizamos types próprios em duas situações: Quando queremos simplificar e organizar melhor nosso código, geralmente quando estamos trabalhando com objetos e o segundo motivo é quando o type é replicável em outras partes do nosso código. Dentre elas , utilizamos mais quando falamos de objeto. </p>
+        <p> Muitas vezes ao typarmos os parâmetros necessários de um objeto igual feito acima, fica extremamente cansativo e de forma não legível, pois no exemplo acima temos apenas dois parâmetros, porém e quando formos passar 10, 15 parâmetros ? </p>
+        <p> Quando isso acontecer, podemos criar o type do próprio objeto facilitando a legibilidade e futuras manutenções. </p>
+        <p> Para criar esses próprios types podemos utilizar tanto via type quanto via interfaces, porém a sintaxe é praticamente a mesma. A diferença é que com type nao podemos realizar alterações e no interface permite alterações. (<a href="https://alunos.b7web.com.br/curso/typescript/type-e-interface-como-usar-e-diferencas">Aula - $$$</a> ). Geralmente será utilizado o type.</p>
+        <img src="../../img/tpscp/t1.jpg" alt="">
+        <img src="../../img/tpscp/t2.jpg" alt="">
+        <h2> Type Assertions </h2>
+        <p> Em outras palavras é quando ajudamos o typescript a ser um pouco mais específico. Por exemplo, ao selecionarmos um input que é um objeto HTML (document.getElementByID('id')), ela irá retornar um objeto chamado HTMLElement que é um elemento geral do HTML( Div, botao, input, qualquer coisa). Porém quando tentamos acessar o value do input, ele irá dar um erro. E porque isso acontece? Acontece pois nem todos esses caras (HTMLElements) terão uma propriedade value. Uma div por exemplo não possui, já um input possui. Em geral, precisamos ajudar o type script a saber que este input que estamos pegando é de fato um input. </p>
+        <ul>
+            <Li>let idade = document.getElementById('ID') <span>  as HTMLInputElement</span></Li>
+        </ul>
+        <p> Todo elemento é um HTMLElement, porém dentro do HTMLElement possuimos alguns tipos diferentes com propriedades diferentes.  </p>
+        <h2> Type Literais</h2>
+
+
     </main>
 </body>
 </html>
