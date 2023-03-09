@@ -10,6 +10,10 @@
 <body>
     <main>
         <p><a href="../../index.html">Voltar</a></p>
+        <nav class="navExpress">   
+            <li> <a href="#states"> States & Events </a></li>
+            <li> <a href="#states"> States </a></li>
+    </nav>
         <h1> React JS. </h1>
         <h2> O que é React JS ?</h2>
         <p> React é uma Biblioteca feita em JavaScript criada e mantida pelo Facebook. Vem com o objetivo de deixar as páginas mais "leves". Para começar a compreender, vamos relembrar do DOM. Dom é básicamente todos os elementos que estão na tela do browser. Cada item (botao,etc) é um elemento, e através do DOM conseguimos selecionar um elemento em específico e manipula-lo, adicionar evento, etc. Isso demanda processamento do computador do usuário que está acessando e dependendo do que você fizer, isso pode ser muito custoso.  </p>
@@ -45,7 +49,25 @@
         <h3> Expressões no JSX</h3>
         <p> Uma outra das várias vantagens do JSX é que além de colocarmos código HTML dentro do universo JS, também podemos colocar JS dentro do HTML. Para jogar uma variável dentro do JSX basta colocarmos {}, e tudo que fica ali dentro vira JS, na qual podemos fazer qualquer coisa do universo JS. (contas,etc). Nesse exemplo abaixo, mostro um exemplo do uso de expressões: </p>
         <img src="../../img/reactjs/r4.jpg" alt="">
-        <p> </p>
+        <h2> Usando vários Componentes </h2>
+        <p> Aqui é onde começamos a aprender realmente o fluxo do ReactJS, é a "vida real" dele. O ideal é que separemos cada componente em arquivos diferentes. Todo componente nós utilizamos ele como se fosse uma tag do HTML, abrimos e fechamos nele mesmo. Veja um Exemplo Abaixo:  </p>
+        <img src="../../img/reactjs/r5.jpg" alt="">
+        <p> <span> Mas quando criar um componente ?</span> Sempre que temos um bloco de código grande que precisemos de manutenção, criamos um componente. Sempre que uma parte for reutilizável devemos também criar um componente. </p>
+        <p> Cada componente deve ficar em um arquivo separado, pois imagine um software real onde teremos 200 componentes e todos no mesmo arquivo. Ficaria praticamente impossível localizarmos e darmos manutenção. Então como boa prática, dentro da pasta <span>src</span> criamos uma pasta com o nome de components, e lá colocamos os mesmos (importando e exportando).</p>
+        <h2> Props em Components </h2>
+        <p> Aliado com Components, props também é a base para a criação de aplicações WEB. Imagine que o cabeçalho acima tenha um texto personalizavel por exemplo. Ficaria inviável ficar criando um componente para cada texto que deseja exibir no cabeçalho. Para isso existem as <span>props</span>. Props são os "atributos do HTML". No JSX temos os componentes e as props ( que no html seria a tag e o atributo). Para criarmos uma prop, colocamos por exemplo : </p>
+        <img src="../../img/reactjs/r6.jpg" alt="">
+        <p> Dessa forma você irá perceber que o typescript irá reclamar da palavra TITLE. Isso acontece, pois além de enviarmos as props para algum componente, é necessário que esse componente que irá receber esteja ciente/esperando receber as props. Para isso ele é recebido no parâmetro da função. Como estamos utilizando o TypeScript, é necessário typarmos essas props. Por padrão, criamos um type com o nome prop(como ele está dentro de um ecossistema separado, colocamos o nome de props mesmo). Exemplo abaixo de um componente recebendo props: </p>
+        <img src="../../img/reactjs/r7.jpg" alt="">
+        <p> Para utilizarmos essas props, podemos ou receber no parâmetro a props por inteiro e utilizar <span>{props.atributoPassado}</span>, ou podemos desestruturar somente o que iremos usar e receber {}. </p>
+        <p> Assim como no TS normal, ao typarmos as props no componente que a receberá, podemos colocar <span>?</span> após o seu nome, para que ele passe a ser opcional. name<span>?</span>: string;. Caso não seja colocado esse operador <span>?</span> ele não irá aceitar a chamada do componente em questão sem a prop.</p>
+        <h2> Children & Fragments </h2>
+        <p> Outro conceito de extrema importância da base de React, é o conceito de Children e de Fragments. O conceito de <span>fragment</span> dentro do react é que nós só podemos retornar um único elemento. Não é possível retornar mais de um elemento. Por exemplo: Imagine que tenhamos uma div, e dentro dela um h1 e um p. É possível retornar esses 03 elementos, pois na verdade o que está sendo retornado é apenas uma div. Porém existirá casos no qual não caberá uma div, e você precise retornar apenas o h1 e o p (porexemplo). Nessa hora que entram os fragments. Fragments é uma forma de "envelopar" <span> < > conteúdo < /> </span>, para que consigamos retornar mais de um componente. Resumidamente o fragment serve para burlar a regra do retorno de um único componente. </p>
+        <p> Mas e o Children ? Children é quando temos um componente que não abrimos e fechamos no mesmo item ou seja, abrimos e fechamos de forma separada.   </p>
+        <p style="color: brown;"> FALTA REVER CHILDREN</p>
+
+        <h1 id="states"> States & Events </h1>
+        
         
 
 
