@@ -23,7 +23,16 @@
         <p>Para começarmos, colocamos o comando: <span>npmx create-react-app nomedoprojeto </span> caso queiramos utilizar o React com JS. Já caso queiramos utilizar o React com TS, utilizamos o comando: <span>npmx create-react-app nomedoprojeto --template typescript</span>.</p>
         <p> Para rodar o projeto, abrimos o terminal do VSCODE, e rodar o comando: <span>npm start</span> dessa forma ele já irá abrir o navegador com nosso projeto rodando geralmente na porta 3000.</p>
         <h3> Instalando via Vite </h3>
-        <p> Basicamente o vite é uma biblioteca que nos auxilia a criar projetos entre várias outras coisas. Ele geralmente cria o projeto de forma mais rápido do que o normal. Aqui utilizamos o comando <span> npm init vite nomedoprojeto --template react-js </span> em caso de usar o React com JavaScript. Já caso queira utilizar o React com Typescript, colocamos o comando: <span>npm init vite nomedoprojeto --template react-ts</span></p>
+        <p> Basicamente o vite é uma biblioteca que nos auxilia a criar projetos entre várias outras coisas. Ele geralmente cria o projeto de forma mais rápido do que o normal. Aqui utilizamos o comando <span> npm init vite nomedoprojeto -- --template react-js </span> em caso de usar o React com JavaScript. Já caso queira utilizar o React com Typescript, colocamos o comando: <span>npm init vite nomedoprojeto -- --template react-ts</span></p>
+        <p> Em seguida, utilizamos o comando <span>npm install</span> para instalarmos todas as bibliotecas, e estará configurado/pronto para ser utilizado. Você irá reparar que ele será praticamente igual, seja criado por CRA ou VITE.</p>
+        <p> Aqui para rodarmos o projeto colocamos o comando <span>npm run dev</span>.</p>
+        <h2> Visão Geral de um Projeto Iniciado com React JS </h2>
+        <p> Aqui iremos começar a entender tudo que vem dentro do projeto React criado. Para começar, vale saber que temos algumas diferenças sutís entre o projeto criado com CRA e com VITE (porém minúsculos detalhes). </p>
+        <p> Dentro da CRA, teremos a pasta PUBLIC, onde irá conter o arquivo INDEX HTML. É dentro desse arquivo index, que possui apenas uma div que toda a sua aplicação será renderizada. Já no VITE é um pouco mais limpo, e está fora da pasta public. </p>
+        <p> Em ambos os projetos terão uma pasta SRC, no qual dentro do CRA temos o APP.tsx e dentro do VITE temos o MAIN.TSX. Em sintaxe ambos os arquivos são exatamentes iguais. Em outras palavras, ali é onde está ordenando pegar o projeto inteiro e renderizar dentro da div principal. (Aqui eles pegam e jogam na tela). Agora, o projeto mesmo, está localizado dentro do arquivo <span>APP.TSX </span> (igual em ambos). Ali encontraremos o código da página em si. </p>
+        <span> O código Fonte fica dentro da pasta SRC.</span>
+
+
 
     </main>
 </body>
