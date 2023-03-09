@@ -127,10 +127,24 @@
         <h3> Entendendo o Target </h3>
         <p>Por padrão já vem sempre marcada com o ES5. Aqui ele seleciona a versão do JS que será compilado. Caso usemos dentro do ES5 uma feature do ES6, ele irá "transformar" os recursos novos para recursos que é aceitável dentro do ES5. </p>
         <h3> Libs no TypeScript </h3>
-        <p> Aqui aprenderemos mais sobre a opção lib[], </p>
-
-
-
+        <p> Aqui aprenderemos mais sobre a opção lib[], que por padrão já vem comentada. Nela vem por padrão todas instaladas de acordo com a versão do <span>target</span> acima. Se for o ES5, virá com as respectivas libs, e assim por diante. Você pode descomentar e instalar manualmente as libs que deseja trabalhar. (É graças a uma lib que o node enxerga que ao puxar um elemento existe um document por exemplo, através da lib DOM). </p>
+        <h3> rootDir e outDir </h3>
+        <p> Por padrão, quando usamos o comando tsc, ele irá gerar os arquivos JS na própria parte do código fonte. Através do outDir, podemos colocar o local desejado para colocar os arquivos compilados para JS. </p>
+        <p> Já o rootDir, ele irá informar qual o local da pasta Raiz de onde o typescript irá procurar todos os arquivos TS para serem compilados. Exemplo: </p>
+        <img src="../../img/tpscp/ts9.jpg" alt="">
+        <h3> noComment, noEmit, noEmitOnError </h3>
+        <ul>
+            <li>removeComments - Comentários só interessam para o dev, então ele irá subir para o JS sem eles para deixar o arquivo mais leve. </li>
+            <li>noEmit - É diferente do noEmitOnError, aqui ele básicamente não cria os arquivos finais. Utilizado apenas para quando queremos usar o typescript como forma de melhorar o código. </li>
+            <li>noEmitOnError - Como já vimos acima, ele não permite que nenhum arquivo seja gerado enquanto algum arquivo estiver com erro(ou sobe todos sem nenhum erro, ou não sobe nenhum). Porém essa não vem como padrão, é necessário informar manualmente. Ex:  </li>
+            <img src="../../img/tpscp/ts10.jpg" alt="">
+        </ul>
+        <h3> Qualidade de Código confgs</h3>
+        <p> Aqui veremos mais algumas configurações que valem a pena serem ativadas para melhorar significativamente a qualidade do seu código. </p>
+        <ul>
+            <li>noUnusedLocals - Não permite que o código seja compilado caso haja algum dado no seu código sem estar sendo utilizado(a nível local). Exemplo: Quando voce declara uma variável e nunca a utiliza. Obs: Variável local é aquela dentro de um determinado escopo. Variáveis globais não entram nessa config, pois o arquivo pode ser exportado e utilizado em algum outro lugar. </li>
+            <li> noUnusedParams - Funciona igual a citada acima, porém é quando possui algum parâmetro que não está sendo utilizado. </li>
+        </ul>
     </main>
 </body>
 </html>
