@@ -121,6 +121,18 @@
         <p> Porém quando você começar a estilizar inline, você irá perceber que o código vai ficando completamente ilegível, pois cada linha irá ficando com proporções gigantes. Dito isto, temos outras formas para a estilizações ficar mais legíveis. Devemos usar a inline apenas quando for algo extremamente pontual, ou quando recebermos propriedades dinâmicas. </p>
         <p> Estilizacões inline dinâmica é quando basicamente utilizamos propriedades externas dentro do inline. Por exemplo, ao clicarmos no botão queremos que ele fique azul. Para isso podemos criar um state boolean que começa como false. Ao clicarmos no botão ele flipara para true. Através disso podemos criar uma propriedade dinâmica Inline. Exemplo: if {clicked}, botao vermelho, else botao azul.</p>
         <p> Exemplo abaixo: </p>
+        <img src="../../img/reactjs/r18.jpg" alt="">
+        <h3> Stylesheet </h3>
+        <p> É uma técnica que consiste em utilizar o auxilio do <span> Webpack </span> para nos ajudar em nossas estilizações. De início começamos da mesma forma que antes, criamos um arquivo  styles.css (que será css nomal), e depois importamos ele dentro de onde queremos utilizar. No JSX nós não utilizamos a palavra <span>class</span> igual no css puro. Aqui utilizamos a propriedade <span> className </span>. Dessa forma podemos construir nossos arquivos CSS normal, importamos onde queremos usar, e colocamos as classes. </p>
+        <p> Uma outra possível boa prática, é que podemos criar um arquivo css para cada componente que iremos utilizar. Dessa forma você irá perceber, que agora cada componente tem um arquivo dele e um arquivo de sua estilização. </p>
+        <p> Ainda existe outra forma de organizarmos ainda mais. Pois dentro da pasta componentes, um componente estará com dois aquivos(botao.tsx, botao.css) por exemplo. A medida que formos cosntruindo 30, 40 componentes, teremos o dobro de arquivo e cada vez mais isso vai dificultando nossa leitura. Baseado nisso, podemos criar uma pasta para cada componente, e dentro dele colocar o componente e sua estilização. Como estará tudo separado, podemos nomear o componente de index, e o css de style.  </p>
+        <img src="../../img/reactjs/r19.jpg" alt="">
+        <p> OBS: Quando iremos buildar o projeto, ele irá pegar todos os arquivos CSS e juntar em um só, logo, é de boa prática colocarmos nomes de classes único e não repeti-las para evitar possíveis erros. </p>
+        <h3> CSS Modules </h3>
+        <p> Outra técnica de estilização muito parecida com a vista acima. Criamos um arquivo css nomeado como <span>styles.modules.css</span>, e na hora de importar, importamos nomeando com o nome que quisermos e depois utilizamos da seguinte forma: Supomos que nomeamos de style. basta colocarmos style.nomeDaClasseNoArquivoCss. exemplo: </p>
+        <img src="../../img/reactjs/r20.jpg" alt="">
+        <p> Dessa forma ele exclui alguns problemas que poderiamos ter com o stylesheet, pois ele muda o nome próprio da class no código fonte, logo não teremos o mesmo problema de conflitos de nomes, não precisamos nos preocupar com nomes repetidos. Dentre o StyleSheet e o CssModules, utilize o <span>CSS Modules</span>.</p>
+        <h3> Styled Components </h3>
 
 
 
