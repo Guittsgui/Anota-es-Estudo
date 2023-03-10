@@ -88,6 +88,27 @@
         <p> Aqui abaixo temos um exemplo do uso de useState dentro de um input, onde pegamos o nome digitado e replicamos embaixo.</p>
         <img src="../../img/reactjs/r10.jpg" alt="">
         <h2> Comunicação entre Componentes </h2>
+        <p> Quando a comunicação entre componentes se dá de pai para filho, uma das formas que temos de comunicar é pelas props, vistas nos tópicos acima. Mas e quando precisamos passar de filho para pai ? Vai ser normal em nossa caminhada nos depararmos com cenários na qual iremos precisar ao clicar em algo dentro de um componente, ativar alguma função que esteja do lado de fora dele(em algum outro componente).</p>
+        <p> Por exemplo, dentro do componente app, temos o comopnente botao. Assim que clicarmos no botão, queremos ativar uma função que está dentro do componente App, como resolver? Para solucionar, nós declaramos a função a ser executada normalmente dentro do componente App, e em seguida passamos essa função via PROPS para o componente botão. Não precisa ser o mesmo nome da função declarada. Resumo: No componente App voce cria a função <span> botaoEventAction</span> e la nas props, voce pode passar como <span>clickFn</span>={botaoEventAction} por exemplo. Dessa forma, o componente botao irá receber essa props, e lá ativar o evento onClick={clickFn} . </p>
+        <p> Exemplo em código abaixo: </p>
+        <p> Componente app enviando a função via prop:</p>
+        <img src="../../img/reactjs/r11.jpg" alt="">
+        <p> Componente Botao recebendo a função via prop:</p>
+        <img src="../../img/reactjs/r12.jpg" alt="">
+        <p> Outra coisa que temos que nos atentar, é que é possível enviarmos uma frase por exemplo do filho para o pai via parâmetros. </p>
+        <h2> Renderizando Listas </h2>
+        <p> Constantemente dentro de nossas aplicações iremos nos deparar com a necessidade de renderizar listas por diversos motivos. Então mãos a obra. Supomos que tenhamos uma lista de mercado <span> let lista = ['maca','pera']</span>. Para renderizarmos essa lista no react, iremos necessitar da ajuda do JSX + expressões. No JS cru, temos a função map, que percorre todo um array. Aqui usaremos ela combinado junto com nosso JSX.</p>
+        <img src="../../img/reactjs/r13.jpg" alt="">
+        <p> Dessa simples forma nossa lista estará impressa na nossa aplicação. Porém, dentro do ReactJs, todo filho dentro de uma lista (li), cada child dessa lista precisa ter uma prop chamda key, na qual deve ser única. Dessa forma cada elemento da lista poderá ser reconhecido de forma individual. Mas de onde arrumar um número/chave individual ?  </p>
+        <p> Dentro do método map, nós podemos receber dois parâmetros. o primeiro é o item a ser iterado pelo array, e o segundo é um item chamado index. Ele é básicamente um número que corresponde a posição do item dentro do array. Nesse caso, podemos aproveitar esse index para ele mesmo ser a nosas key do array. </p>
+        <p> Exemplo abaixo: </p>
+        <img src="../../img/reactjs/r14.jpg" alt="">
+        <p> Da mesma forma que na lista acima nós repetimos uma li direta, é possível criarmos um componente , que retorne essa lista, e ao invés de colocarmos o li para repetir, colocar o componente em questão. Porém o x da questão é que ao enviarmos um componente para ser repetido no lugar da li (que é o que voce verá no dia a dia), voltará com o erro da key.</p>
+        <p> Para solucionar isso, pasasmos o index junto com o componente e suas props. Sempre que renderizarmos qualquer coisa dentro de uma lista, é obrigatório no mesmo lugar que está o map enviar a prop <span>key.</span></p>
+        <p> Exemplo:</p>
+        <img src="../../img/reactjs/r15.jpg" alt="">
+
+        <h2> Renderizando Conteúdo Adicional</h2>
 
         
     </main>
