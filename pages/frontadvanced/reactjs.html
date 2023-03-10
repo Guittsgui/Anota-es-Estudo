@@ -113,6 +113,17 @@
         <p> Em seguida usamos uma expressão onde nela mesmo já damos o retorno através do &&. Abaixo temos dois exemplos de renderização condicional (div e do textButton).</p>
         <img src="../../img/reactjs/r16.jpg" alt="">
         <h1 id="estiliza"> Estilizações</h1>
+        <h2> Css no React </h2>
+        <p> O básico do React já vimos, porém agora, e o CSS dele ? Não há limitações de efeitos quando falamos de css. Não existe algo do tipo "Não dá para fazer aquele efeito pois estamos no react". A partir daqui vamos ver todas as formas de estilização, quais as mais recomendadas, pré processadores etc. </p>
+        <h3> Estilização Inline </h3>
+        <p> Funciona de forma parecida com o CSS normal, porém de forma diferente. Aqui no react, a estilização é feita a base de <span>objetos</span>, porém é muito similar ao próprio CSS. Uma das diferenças é que nomes com mais de duas palavras, exemplo : <span>background-color</span> se tornaria <span>backgroundColor</span>. Aqui abaixo temos um exemplo de um botão sendo estilizado inline</p>
+        <img src="../../img/reactjs/r17.jpg" alt="">
+        <p> Porém quando você começar a estilizar inline, você irá perceber que o código vai ficando completamente ilegível, pois cada linha irá ficando com proporções gigantes. Dito isto, temos outras formas para a estilizações ficar mais legíveis. Devemos usar a inline apenas quando for algo extremamente pontual, ou quando recebermos propriedades dinâmicas. </p>
+        <p> Estilizacões inline dinâmica é quando basicamente utilizamos propriedades externas dentro do inline. Por exemplo, ao clicarmos no botão queremos que ele fique azul. Para isso podemos criar um state boolean que começa como false. Ao clicarmos no botão ele flipara para true. Através disso podemos criar uma propriedade dinâmica Inline. Exemplo: if {clicked}, botao vermelho, else botao azul.</p>
+        <p> Exemplo abaixo: </p>
+
+
+
     </main>
 </body>
 </html>
