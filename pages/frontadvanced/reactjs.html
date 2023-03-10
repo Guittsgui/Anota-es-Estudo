@@ -133,8 +133,17 @@
         <img src="../../img/reactjs/r20.jpg" alt="">
         <p> Dessa forma ele exclui alguns problemas que poderiamos ter com o stylesheet, pois ele muda o nome próprio da class no código fonte, logo não teremos o mesmo problema de conflitos de nomes, não precisamos nos preocupar com nomes repetidos. Dentre o StyleSheet e o CssModules, utilize o <span>CSS Modules</span>.</p>
         <h3> Styled Components </h3>
-        <p></p>
-
+        <p>Aqui vemos uma outra alternativa ao que estávamos fazendo. Aqui iremos ver uma biblioteca extremamente utilizada no mercado atual, a chamada <a href="https://styled-components.com/" target="_blank">Styled Components</a>. Aqui a ideia é completamente diferente do que vimos anteriormente, porém ela facilita demais a criação de determinados projetos.</p>
+        <p> Vamos começar instalando a biblioteca: <span>npm install styled-components</span>. E quando estivermos trabalhando com o typeScript, precisamos instalar seus types, como comando: <span>npm install -D @types/styled-components</span>. A partir daqui a biblioteca estará pronta para ser utilizada. </p>
+        <p> Para utilizarmos, primeiramente vamos importar da biblioteca. O segundo passo é criar o nosso 'styled component'. Para isso, vamos criar a constante, e atribuir styled.tagHtmlQueIriaRetornarNormalmente que no nosso exemplo é uma div. A partir daí, basta abrirmos ``, e dentro dela é código css normal. Agora dentro do nosso componente, ao invés de abrirmos e fecharmos uma tag DIV para retornar, abrimos e fechamos o styled component que nomeamos. Abaixo temos um Exemplo para clarear o dito acima: </p>
+        <img src="../../img/reactjs/r21.jpg" alt="">
+        <p> Dando sequência, aqui abaixo mostramos um exemplo de um styled component dentro de outro styled component.</p>
+        <img src="../../img/reactjs/r22.jpg" alt="">
+        <p> Em resumo, a partir daqui toda a estilização fica dentro do seu próprio componente. Dando continuidade, conforme formos criando projetos reais, vamos perceber que fica inviavel todos os styled components ficarem localizados em um só lugar como mostramos no exemplo dois.Com o tempo, teremos projetos com dezenas e até centenas de components, então imagine como ficaria ? </p>
+        <p> Então como você já deve imaginar, nós iremos separa-los . Podemos criar uma pasta chamada components, e coloca-los lá dentro. No nosso arquivo, apenas imoprtamos os compoennts que formos utilizar.</p>
+        <p> Então recapitulando, a primeira forma são todos juntos dentro do mesmo arquivo, a segunda forma é separado cada component em uma pasta component onde depois exportamos e importamos onde iremos utilizar, e temos uma terceira forma.</p>
+        <p> Na terceira forma, basicamente criamos um AppStyles.ts (criaremos para todos os componentes, nesse caso botei o app para exemplo, mas poderia ser NavStyles.ts por exemplo.) e dentro desse arquivo, colocaremos todos os styledComponents que serão utilizados dentro daquele componente. </p>
+        <p> Dito isto, obviamente a primeira forma é a menos aconselhável. O terceiro método é mais aconselhado pois resume muito o número de 'imports'.</p>
 
 
     </main>
