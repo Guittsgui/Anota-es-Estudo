@@ -164,8 +164,13 @@
             <li><a href="#">Tailwind </a> </li>
         </ul>
         <h1 id="cv"> Ciclo de Vida, Req's Hooks Avançados</h1>
-        <p> Aqui iremos </p>
-
+        <p> Aqui iremos aprender um dos principais conceitos do ReactJs que são os seus <span>Ciclos de Vida</span>. É igual o nosso ciclo de vida, nascemos, crescemos e morremos. Um componente do React tem algo extremamente similar a esse conceito, que é o seguinte: Um componente do react(que começa no principal, app), possui seu ciclo de vida. Em cada etapa do ciclo de vida de um componente existe uma ação que é executada , na qual o programador pode interferir colocando códigos dentro desta ação.</p>
+        <p> Primeiro o componente é criado na memória e depois ele é renderizado. Ao ser criado na memória é a sua primeira etapa. Ao ser renderizado ele vai para a segunda etapa. Enquanto ele ficar disponível em tela significa que ele esta "vivo", e a cada alteração de state que já vimos (useState) é uma nova etapa do ciclo de vida, e sua ultima etapa é a sua "morte", quando ele é removido. Dito isto, a cada alteração dessa etapa  podemos colocar um código 'atrelado'. Por exemplo, 'quando esse componente for renderizado em tela, execute esse código' ou então 'Quando determinado componente for encerrado, execute esse código'. E por aí vai. </p>
+        <p> Indo para a prática, aqui começamos a aprender sobre o <span>useEffect</span>. O useEffect serve para intervir o meio de um processo de 'troca de ciclo de vida'. Imagine o cenário que exista um nome em tela (name), e ao apertar um botão chamamos uma função, que altera o estado desse nome para qualquer oturo nome por exemplo. </p>
+        <p> O useEffect recebe dois parâmetros, uma função e um Array. Dentro da função colocamos o trecho de código para ser executado quando o componente for criado ou quando ele for alterado. Se não colocarmos nada dentro do array, ele irá executar a função assim que o componente estiver disponível(for renderizado). Já dentro do Array, colocamos o que o useEffect deve monitorar. Por exemplo: Se não colocarmos a variávem name do exemplo acima, assim que ela for alterada ele também irá executar a função vinda do primeiro parâmetro. Exemplo simples abaixo: </p>
+        <img src="../../img/reactjs/r27.jpg" alt="">
+        <h3> UseEffect na prática </h3>
+        <p>  </p>
 
     </main>
 </body>
