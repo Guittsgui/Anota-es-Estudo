@@ -196,9 +196,25 @@
         <img src="../../img/reactjs/r33.jpg" alt="">
         <p> Quando estamos trabalhando com o Fetch, usamos o <span>.catch((e)=>{})</span></p>
         <img src="../../img/reactjs/r34.jpg" alt="">
-
-
-
+        <h3> Requisições POST </h3>
+        <p> Aqui entraremos em um assunto de extrema importância, pois é através das requisições POSTS que iremos enviar dados do front para o back-end. Ao preenchermos as informações com os dados de um usuário por exemplo, é através da requisição post que esse user é enviado para ser tratado na API do BACK. </p>
+        <p> Para realizar essa requisição, primeiramente pegamos dos campos todos os dados que iremos trabalhar(como já vimos em exemplos acima trabalhando com <span>onChange</span>. Em seguida, começamos a trabalhar com o envio via POST, na qual segue o mesmo princípio porém temos adições de informações. Primeiramente conferimos se os dados existem. Em seguida começamos. O fetch geralmente possui dois parâmetros. Nos exemplos acima, utilizamos apenas o primeiro parâmetro, que é a URL da requisição que enviaremos. Porém em req via POST, usaremos o segundo parâmetro que é um objeto. Nesse objeto teremos: </p>
+        <ul>
+            <li>method: 'POST'</li>
+            <li>body: JSON.stringfy({dados})// </li>
+            <li>headers: {} // Geralmente avisamos o content Type (Json)</li>
+        </ul>
+        <p> Exemplo Abaixo: </p>
+        <img src="../../img/reactjs/r35.jpg" alt="">
+        <h3> Boas Práticas Req's</h3>
+        <p> Da forma que vimos acima está tudo funcionando. Porém pensando em futuras manutenções, fica complicado saber onde existem requisições dentro da sua aplicação. Para solucionar isso, é uma boa prática colocarmos todas as requisições dentro de um só lugar. Dessa forma futuramente quando precisarmos mudar a API, já saberemos em qual lugar do código estará concentrado todas as requisições.</p>
+        <p> Para fazer isso, criamos um OBJETO, com várias funções, cada função será uma requisição. Exemplo abaixo: </p>
+        <img src="../../img/reactjs/r36.jpg" alt="">
+        <img src="../../img/reactjs/r37.jpg" alt="">
+        <p> Dessa forma, o sistema fica mais simples. Se algum dia o link da API mudar, não iremos precisar andar pelo código inteiro procurando onde está sendo feita as requisições pois todas estarão em um lugar específico.</p>
+        <h3> Axios </h3>
+        <p> O Fetch é o processo natural de fazer requisições no JS, porém temos o Axios, que é uma biblioteca que chegará ao mesmo resultado só que caminhando um caminho mais 'fácil'. Primeiramente precisamos instala-la com o comando: <span>npm install axios</span>.</p>
+        <h3> Reducers </h3>
 
 
 
