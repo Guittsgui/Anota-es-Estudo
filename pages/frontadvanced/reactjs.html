@@ -218,13 +218,30 @@
         <img src="../../img/reactjs/r38.jpg" alt="">
         <p> Para mais informações podemos consultar a <a href="https://axios-http.com/docs/intro" target="_blank"> documentação do Axios</a>. </p>
         <h2> Reducers </h2>
-        <p> Reducer são basicamente um complemento do State. Quando queremos salvar uma informação e depois altera-la, utilizamos o já visto <span>useState</span>. O reduce tem o mesmo papel do State, porém ele só é indicado quando temos problemas mais complexos para resolver. Por exemplo, uma lista(na qual temos muitas ações), ou quando temos um objeto na qual temos vários valores, poderemos utilizar o <span>Reduce</span>. </p>
-        
-      
-
-
-
+        <p> Reducer são basicamente um complemento do State. Quando queremos salvar uma informação e depois altera-la, utilizamos o já visto <span>useState</span>. O Reducer tem o mesmo papel do State, porém ele só é indicado quando temos problemas mais complexos para resolver. Quando falamos em complexo, é que na verdade o <span>useState</span> trabalha com uma variável, já o <span>useReducer</span> tem a capacidade de monitorar várias, dessa forma o código fica menor e mais limpo. Com o tempo iremos estudar também o <span>useContext</span> no qual irá funcionar muito bem trabalhando com o reducer.</p>
+        <p> Quando usamos o STATE, temos o nome do state, e o setNomeDoState para atribuir um novo valor. </p>
+        <p> No Reducer, temos a seguinte estrutura:  </p>
+        <p> const <span>[state, dispatch</span> = useReducer <span>(reducer,initialState)</span>.</p>
+        <ul>
+            <li> <span>STATE </span> - É parecido com o useState, é um estado que gerencia vários estados pequenos. A diferença é que aqui eles são gerenciados na mesma funcionalidade. </li>
+            <li> <span>DISPATCH</span> - É a função a ser chamada dentro do JSX, com o argumento do nome da action, para ser executada dentro da função Reducer. </li>
+            <li> <span> REDUCER</span> - É uma função que vai armazenar cada ação que pode ser tomada para alterar os estados. Em um contador por exemplo, pode ter o ADD, REMOVE, RESET. Essa função recebe por padrão dois parâmetros <span>state , action</span>. Geralmente utilizamos <span>SWITCH</span> para escolher.</li>
+            <li> <span>INITIAL STATE </span> - É igual o parâmetro do useState. É o valor inicial de cada estado a ser monitorado pelo reducer. Podendo ser diretamente um 0 por exemplo, porém como estamos usando reducer, geralmente iremos mapear mais de um estado, e para isso colocamos um objeto, com o estado inicial de cada um. </li>
+        </ul>
+        <p> Ou seja, dentro do código, começamos criando um objeto com os estados a serem monitorados (initialState), e em seguida criamos a função reducer, onde receberemos o state, e colocaremos todas as actions possíveis para tal ação. Por exemplo, colocamos um initial state um objeto com um count. { count: 0 }</p>
+        <p> Dentro do nosso JSX, para exibir esse count, utilizamos o state.count. Assim apenas o dispatch estará faltando para o hook estar 100% em uso. Básicamente o dispatch irá disparar uma ação para o reducer. Dentro do evento no jsx, seja ele onCLick, onCHange, onSubmit, ao invés de chamarmos uma função diretamente, nós chamamos : () => dispatch('nomeDaAçãoEscritaNoReducer').</p>
+        <p> Para melhor compreendermos, temos um exemplo com o contador. Toda a função que utilizarmos no useReducer, por padrão ela vem com dois parâmetros (state, action). Através da ação desse action que iremos trabalhar o que fazer. </p>
+        <img src="../../img/reactjs/r39.jpg" alt="">
+        <img src="../../img/reactjs/r40.jpg" alt="">
         <h1 id="rv6"> React Router (v6)</h1>
+        <h2> O que é React Router? </h2>
+        <p> A partir desse momento poderemos começar a trabalhar de forma mais profissional, pois aqui aprenderemos a trabalhar com a paginação do React. Isso tudo será possível através de uma biblioteca chamada <span>ReactRouter V6</span>, e para isso, basta utilizarmos o comando: <span> npm install -react-router-dom</span>. Aqui ela já vem por padrão com suporte para TypeScript. Para o React Router funcionar, precisamos criar um esqueleto, um escopo geral do react router na aplicação. Para isso vamos no main.tsx ou index.tsx, importamos o browser Router, e colocamos nossa aplicação dentro dele. Dessa forma, todas as rotas só funcionarão se estiverem dentro dele. </p>
+        <img src="../../img/reactjs/r41.jpg" alt="">
+        <p> A partir desse momento, estamos prontos para criar nossas rotas de forma simples. Basta importarmos o <span>Routes e o Route </span>.</p>
+        <img src="../../img/reactjs/r42.jpg" alt="">
+        <h3> Grupo de Rotas </h3>
+        <p> </p>
+
         <h1 id="capi"> Context API </h1>
         <h1 id="redux"> Redux </h1>
 
