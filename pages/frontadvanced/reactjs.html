@@ -275,8 +275,11 @@
         <h3> Rotas em Objetos </h3>
         <p> Outra forma de colocarmos nossas rotas da forma acima, podemos utilizar o hook <span>useRoutes</span>, na qual nossas rotas serão criadas utilizando esses Hook. Para isso utilizamos um array de objetos, no qual cada objeto será nossa rota, contendo o seu path, e o seu element. Ficando da seguinte forma:  </p>
         <img src="../../img/reactjs/r51.jpg" alt="">
-
         <h1 id="capi"> Context API </h1>
+        <h2> O que é Context API ?</h2>
+        <p> Até agora criamos projetos projetos com algumas telas, props, dados etc. Acontece que quando começamos a criar aplicações complexas com login, outra tela, a otura tela precisa saber qual usuário está logado, enfim. Existem trocas de informações entre telas constantemente, e se todas essas informações forem feitas através de props, teremos um projeto praticamente ilegível. Para isso foi criado algo chamado <span>State Management</span>, gerenciamento de estado, que irá nos auxiliar a criarmos o que chamos de Contexto.</p>
+        <p> No código o conceito de contexto é muito parecido com a de histórias. Aqui conseguimos criar uma 'bolha', e nessa bolha teremos informações compartilhadas. Ao executar o login por exemplo, não precisaremos passar uma prop com o usuário para que a próxima tela saiba dessa informação, pois essas informações estarão dentro da bolha, e todos os componentes que estiverem terão acesso a ela. É como se fosse um State Global. Antes do <span>Context API</span> era muito utilizado uma ferramenta chamada <span>Redux</span>. O <span>ContextAPI</span> já é nativa do react, já o <span>Redux</span> deveremos instalar por fora.</p>
+
         <h1 id="redux"> Redux </h1>
 
 
