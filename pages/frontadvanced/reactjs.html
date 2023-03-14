@@ -266,15 +266,16 @@
         <p> Sabendo isso podemos definir que uma boa forma de lidar, é nunca tratar uma rota privada na página na qual ela será aberta, mas sim antes disso. E como ? Criamos um novo componente chamado requereAuth.tsx (porexemplo). A partir daí, nossas rotas privadas ficarão embrulhadas dentro do componente requireAuth, ou seja: ele irá renderizar o require auth e o próprio irá decidir se renderiza a sobre ou não. (Como no exemplo abaixo).</p>
         <img src="../../img/reactjs/r48.jpg" alt="">
         <p> A partir daí, o próprio requireAuth verifica o login ou não, que independente da forma que for feito, será a base de um boolean(logado ou não). </p>
-        
-
-
-
-
-
+        <img src="../../img/reactjs/r49.jpg" alt="">
         <h3> Rotas em Componente</h3>
-        <h3>Rotas em Objeto</h3>
+        <p> Aqui iremos aprender a finalmente organizar as nossas rotas de forma 'profissional'. Até aqui estamos colocando tudo dentro da própria página APP, pois estamos trabalhando com recursos extremamente simples. Porém quando começarmos a trabalhar com aplicações completas e profissionais, irá ficar tudo embolado no meio de campo e dificultando a manutenção.</p>
+        <p> Para solucionar isso temos diversas formas de fazer, uma delas é criar o próprio componente com a única função de exportar as rotas. Exemplo:  </p>
+        <img src="../../img/reactjs/r50.jpg" alt="">
+        <p>Após isso, basta importamos o componente dentro do APP e pronto, todas as rotas estarão funcionando normalmente e de fácil manutenção, pois temos um arquivo apeans para rotas. Outra proposta é criarmos uma pasta Routes, e colocar esses componentes la dentro, caso tenhamos divisoes de rotas, como por exemplo mainRoutes, etc.</p>
+        <h3> Rotas em Objetos </h3>
+        <p> Outra forma de colocarmos nossas rotas, </p>
 
+        <h3>Rotas em Objeto</h3>
         <h1 id="capi"> Context API </h1>
         <h1 id="redux"> Redux </h1>
 
