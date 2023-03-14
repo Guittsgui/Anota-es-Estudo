@@ -246,14 +246,31 @@
         <p> Obviamente não iremos navegar pela nossa aplicação digitando os endpoints exatos, e sim através de botões em tela. Podemos imaginar que se colocarmos uma tag A com a rota em especifico. ex: ahref: /sobre/pedro irá funcionar, e na verdade, irá mesmo. Porém  desta forma ele irá recarregar a página inteira de uma vez só, e assim estará descartando todo o poder do react(que é de renderizar apenas o que é alterado). Para solucionar isso, precisamos aprender a forma certa que é ao invés da tag A utilizar o <span>LINK</span> importado do prórpio reactRouter.</p>
         <img src="../../img/reactjs/r44.jpg" alt="">
         <h3> Rotas Valores Dinâmicos </h3>
+        <p> Rotas dinâmicas são de extrema importância, pois imagine que tenhamos uam tela para os dados de cada usuário, e que também tenhamos mil usuários no banco. Não ficaria viável digitar as mil rotas a mão. Para isso entramos nas nossas <span>rotas dinâmicas</span>. Se já estudou os resumos de <a href="../back-end/nodejs.html">NodeJS</a> funciona do mesmo jeito, colocando :identificador. E o próprio componente também se tornará dinâmico, uma página genérica que irá se moldar de acordo com o usuário passado por exemplo. No exemplo abaixo temos uma rota que passamos um parâmetro e os recebemos com a ajuda do hook <span>useParam</span>.</p>
+        <p> const params = <span>useParams()</span></p>
+        <img src="../../img/reactjs/r45.jpg" alt="">
+        <img src="../../img/reactjs/r46.jpg" alt="">
+        <h3> Redirecionamento de Rotas</h3>
+        <p> Redirecionamento de rotas é basicamente quando queremos 'voltar' para a página anterior, ou voltar para a página home. Para realizar essa ação utilizamos outro hook do reactRouter, chamado <span>useNavigate()</span>. </p>
+        <p>const navigate = useNavigate()</p>
+        <p> Através desse hook, podemos voltar para a página aberta anteriormente (-1), e também podemos direcionar para alguma página em específico. Os dois exemplos estão citados abaixo. </p>
+        <img src="../../img/reactjs/r47.jpg" alt="">
+        <p> No segundo exemplo, não estaremos voltando, e sim INDO para uma página específica. E tudo isso é feito baseado na intelogência do ReactRouter. Vale ressaltar, que ele não precisa ser utilizado especificamente sobre ação de botões. Por exemplo, ao verificar um login, caso seja aprovado, voce precisará redirecionar, então, utilize o hook.</p>
+        <h3> Parâmetros de Query</h3>
+        <p> Aqui iremos realizar o processo de leitura de QueryString, e para isso utilizaremos o usode mais um hook, <span>useSearchParams</span>. </p>
+        <a href="https://alunos.b7web.com.br/curso/reactjs/parametros-de-query">VERIFIACR A AULA PAGA </a>
+        <h3> Rotas Privadas</h3>
+        <p> Aqui é um dos passos mais importantes do entendimento do ReactRouter. Por exemplo, em um sistema com login, algumas páginas só serão acessíveis caso o usuário esteja logado, já outras páginas podem ser 'abertas' a todos.  Aqui será mostrado o processo para criar uma rota privada, pois o processo por completo precisaremos dos conhecimentos em <span>back-end</span>. </p>
+        <p> Existe basicamente duas formas para realizar esse processo e aqui abaixo ambas serão apresentadas. Uma será a forma para aprender e a segunda será a forma para ficar 'profissionalizado'.  </p>
+        <p> Uma rota por padrão nunca será uma rota privada, logo, para privar precisamos criar esse recurso. E como podemos fazer isso? Supomos que a rota SOBRE seja privada. Podemos redirecionar para ela, lá verificar, e caso não esteja logado, redirecionamos para outra página. Porém não seria eficiente pois processo de verificação não é instantâneo e seria repetitivo, pois em todas as páginas privadas teremos que repetir o mesmo código. </p>
+        <p> Sabendo isso podemos definir que uma boa forma de lidar, é nunca tratar uma rota privada na página na qual ela será aberta, mas sim antes disso. E como ? Criamos um novo componente chamado requereAuth.tsx (porexemplo). A partir daí, nossas rotas privadas ficarão embrulhadas dentro do componente requireAuth, ou seja: ele irá renderizar o require auth e o próprio irá decidir se renderiza a sobre ou não. (Como no exemplo abaixo).</p>
+        <img src="../../img/reactjs/r48.jpg" alt="">
         
 
 
 
 
-        <h3> Redirecionamento de Rotas</h3>
-        <h3> Parâmetros de Query</h3>
-        <h3> Rotas Privadas</h3>
+
         <h3> Rotas em Componente</h3>
         <h3>Rotas em Objeto</h3>
 
