@@ -265,6 +265,7 @@
         <p> Uma rota por padrão nunca será uma rota privada, logo, para privar precisamos criar esse recurso. E como podemos fazer isso? Supomos que a rota SOBRE seja privada. Podemos redirecionar para ela, lá verificar, e caso não esteja logado, redirecionamos para outra página. Porém não seria eficiente pois processo de verificação não é instantâneo e seria repetitivo, pois em todas as páginas privadas teremos que repetir o mesmo código. </p>
         <p> Sabendo isso podemos definir que uma boa forma de lidar, é nunca tratar uma rota privada na página na qual ela será aberta, mas sim antes disso. E como ? Criamos um novo componente chamado requereAuth.tsx (porexemplo). A partir daí, nossas rotas privadas ficarão embrulhadas dentro do componente requireAuth, ou seja: ele irá renderizar o require auth e o próprio irá decidir se renderiza a sobre ou não. (Como no exemplo abaixo).</p>
         <img src="../../img/reactjs/r48.jpg" alt="">
+        <p> A partir daí, o próprio requireAuth verifica o login ou não, que independente da forma que for feito, será a base de um boolean(logado ou não). </p>
         
 
 
