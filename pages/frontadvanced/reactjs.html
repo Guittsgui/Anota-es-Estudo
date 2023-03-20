@@ -279,8 +279,14 @@
         <h2> O que é Context API ?</h2>
         <p> Até agora criamos projetos projetos com algumas telas, props, dados etc. Acontece que quando começamos a criar aplicações complexas com login, outra tela, a otura tela precisa saber qual usuário está logado, enfim. Existem trocas de informações entre telas constantemente, e se todas essas informações forem feitas através de props, teremos um projeto praticamente ilegível. Para isso foi criado algo chamado <span>State Management</span>, gerenciamento de estado, que irá nos auxiliar a criarmos o que chamos de Contexto.</p>
         <p> No código o conceito de contexto é muito parecido com a de histórias. Aqui conseguimos criar uma 'bolha', e nessa bolha teremos informações compartilhadas. Ao executar o login por exemplo, não precisaremos passar uma prop com o usuário para que a próxima tela saiba dessa informação, pois essas informações estarão dentro da bolha, e todos os componentes que estiverem terão acesso a ela. É como se fosse um State Global. Antes do <span>Context API</span> era muito utilizado uma ferramenta chamada <span>Redux</span>. O <span>ContextAPI</span> já é nativo do react, já o <span>Redux</span> deveremos instalar por fora.</p>
-        <h3> useContext </h3>
         <p> A criação de um contexto pode ser extremamente simples e pode ir se tornando algo extremamente complexo. Por isso, precisamos começar do básico para assim ir progredindo. O <span>useContext</span> é o hook utilizado para consumir um context da ContextAPI. Vamos precisar criar o contexto e o provedor(Provider). O contexto é quem irá consumir e alterar os dados, e o provedor como o nome já diz é quem irá prover, ele diz para quem o contexto estará disponível. </p>
+        <p> É um recurso que facilita o compartilhamento de um estado entre componentes. Ou seja, quando precisamos de dados 'globais' provavelmente utilizaremos o Context. Um exemplo claro e muito utilizado é quando um usuário realiza o login, provavelmente os seus dados serão utilizados em diversos componentes do app. Para isso, o context precisa encapsular os componentes que receberão seus valores, geralmente colocamos no app.js ou index.js. E por padrão os contextos ficarão dentro da pasta context. </p>
+        <h3> Context na Prática </h3>
+        <p> <span>Primeiramente</span> criamos a pasta context dentro do SRC, e em seguida criamos os context's lá dentro que por padrão a comunidade coloca a primeira letra em maiúcula seguido da palavra Context. Exemplo: UserContext. </p>
+        <p><span>Segundamente</span> precisamos criar o Provider, que irá delimitar onde o contexto é utilizado. Para isso, criaremos uma espécie de componente com a prop Children. Este provider deve encapsular os demais componentes em qeu precisamos consultar ou alterar o valor. Geralmente ele fica em App.js ou em index.js. A partir daí poderemos compartilhar o valor do contexto em todos os compomnentes. </p>
+
+        
+
 
         <h1 id="redux"> Redux </h1>
 
