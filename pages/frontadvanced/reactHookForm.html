@@ -33,17 +33,18 @@
         <p> Abaixo uma série de Funcionalidades do ZOD: </p>
         <h3> Primitivos: </h3>
         <p> São os principais tipos de valores que podemos colocar dentro do objeto ZOD. O mais utilizado será a <span>String</span> porém também temos <span>Number, Boolean, Date, Undefined </span>. Esses são os principais. </p>
-        <h3> Primitivos</h3>
         <h3> Opcionais</h3>
+        <p> Quando trabalhamos com o ZOD, precisamos saber que TODOS os fields ali se tornam obrigatórios. Quando quisermos que algo seja opcional, precisa ser informado. <span>.optional()</span>.</p>
         <h3> Literais</h3>
+        <p> Em algum momento, iremos precisar de algum valor literal seja enviado. Por exemplo, podemos precisar que a string a ser enviada seja exatamente 'Gui'. Para isso podemos utilizar o tipo <span>literal()</span>, na qual dentro do parenteses ele aceita qualquer coisa ( string, numero, false). Quando queremos indicar uma string em específico, basta colocarmos dentro do parenteses 'Guigui'.</p>
         <h3> Validando Strings</h3>
-        <h3> Validando Números</h3>
+        <p> Quando colocamos que algo é do tipo <span>String</span> podemos colocar uma série de informações para que possamos molda-las. Lembrando que para todas a seguir precisamos primeiro informar que são do tipo String primeiro. <span>email()</span> o próprio zod já veririfica se a string enviada é do tipo email. <span>max(28)</span> ele irá bloquear todo tipo de string que tiver mais que 28 caracteres.O max quando utilizado em números, será o seu valor máximo. Também temos o <span>min(05)</span> que funciona igual ao max, e também podemos especificar quantos caracteres exatos gostariamos de ter, utilizando o <span>lenght(10)</span>. Podemos usar o <span>url()</span> que o próprio zod irá validar se é uma URL ou não. Também podemos utilizar o <span>default()</span> para que exemplifiquemos um valor padrão, caso nao seja enviado no form.</p>
         <h3> Error Messages</h3>
+        <p> Podemos definir a error message como segundo ou primeiro patrametro dentro de cada especificação que desejamos. Por exemplo: z.string().email('<span> Digite um Email Válido</span>'). Também podemos colocar os tipos de erros padrão de qualquer tipo. </p>
+        <img src="../../img/reactjs/r57.png" alt="">
         <h3> Enum </h3>
-        <h3> Interseção </h3>
-        <h3> Unions </h3>
-        <h3> Promises</h3>
-        <h3> Funcao Transform & Funcao Default</h3>
+        <p> Também poemos colocar enums (lista de opções) para que ele aceita as strings. Ex:</p>
+        <img src="../../img/reactjs/r58.png" alt="">
         <h3> Array</h3>
 
     </main>

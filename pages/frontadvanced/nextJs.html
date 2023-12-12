@@ -12,6 +12,23 @@
         <p><a href="../../index.html">Voltar</a></p>
         <h1> Next JS - A React Framework</h1>
         <p> Para início de conversa, é necessário saber que para iniciar seus estudos em NextJS é necessário que você domine o ReactJS, afinal, NEXTJS é um framework de React. Caso não se sinta apto, volte a nossa aba de <a href="../frontadvanced/reactjs.html">React JS</a>.</p>
+        <p> Nos dias de hoje por padrão da documentação do react, ele já nos ensina a startar um projeto utilizando algum framework, no nosso caso, o <span>NEXTJS</span>. Então o primeiro passo é startar o projeto com a biblioteca: </p>
+        <p> Atualizando: <span>sudo npm update -g create-next-app</span></p>
+        <p> Comando: <span>npx create-next-app</span></p>
+        <h3> Criando Rotas </h3>
+        <p> Para criarmos páginas no next, precisamos seguir determinadas regras de 'nomenclaturas'. Para isso é decidido que por padrão, criamos uma pasta com o nome da página que desejamos, e dentro um arquivo page.tsx.  Outra coisa que precisamos ter claro em nossa mente quando falamos em NEXT, é a diferença entre <span>Layout e Page</span>. O <span>Layout</span> é basicamente como o próprio nome já diz. Temos um Layout que podemos colocar por exemplo um Menu e um Footer. Logo, todas as pages que criarmos no projeto já irão implementar esse layout, e dentro da page focamos apenas na page. </p><p> Também é possível criarmos layouts específicos para uma page, basta criarmos outro arquivo <span>Layout</span> dentro de seu diretório específico. </p>
+        <p> Existe determinadas convenções para organizarmos nossos <span> Grupos de Rotas </span>. Por exemplo, ao criarmos uma pasta entre parenteses, ex: <span>(auth)</span>, ele servirá apenas para agrupar. Supomos que dentro dessa página tenhamos dois arquivos, ex Login e Register. Nós iremos acessar direto /register, e não /auth/register, pois ele serve apenas para agrupar. Também precisamos saber que para excluirmos pastas do mapeamento de rotas, precisamos colocar o prefixo <span>_</span>, por exemplo : <span>_helpers, _components</span>.</p>
+        <p> Outro fator importante é aprender a trabalhar com <span>Rotas Dinâmicas</span>. Aqui é onde provavelmente mais será utilizado dentro de nossos sistemas. Imagine que temos uma page de usuários users, que os lista.  Dentro de seu diretório , podemos criar outra pasta entre chaves ex: <span>[user]</span>. Dessa forma criamos uma rota dinâmica. Qualquer coisa que for colocada depois de users, será aceito. Porém o próximo passo é pegar o qeu o usuário digitou. Por exemplo: </p>
+        <img src="../../img/reactjs/r59.png" alt="">
+        <p> Assim podemos passar um nome, um ID, qualquer coisa via parametro, para que a page que for receber possa trabalhar com essa informação. E assim é criando o sistema de rotas em cascata do <span>Next</span> .</p> 
+        <p> Também pode haver cenários na qual nao sabemos ao certo quantos parametros dinamicos irão ser inseridos.. por exemplo: shop/men/tshirt/sizeM , e por ai vai... Nesses cenários precisamos ter alguma forma de capturar todos os parametros enviados de uma vez.  Para recebe-los, </p>
+        <p> Outro fator importante para trabalharmos com rotas no Next, é configurarmos em cada page que criarmos, os seus dados do <span>Head.</span> Para isso, podemos utilizar a tag a const Meta Ex:.  Caso coloquemos dentro do layout Raíz todas as demais páginas terão o mesmo Title. Caso coloquemos em cada page, cada page terá o title desejado. </p>
+        <img src="../../img/reactjs/r60.png" alt="">
+        <p> Outra forma importante, é que dentro do Layout Raíz, podemos definir um template e um valor default. Que significa que caso dentro de alguma page não possua a exemplificação, será posto o valor default.</p>
+        <img src="../../img/reactjs/r61.png" alt="">
+        <p> Ainda dentro do assunto do <span>Head</span>, também podemos colocar um title dinâmico em nossa aplicação. Por exemplo, ao acessar a matéria c/ o título X , podemos colocar esse X como o title de nossa página. </p>
+        <img src="../../img/reactjs/r62.png" alt="">
+
     </main>
 </body>
 </html>
