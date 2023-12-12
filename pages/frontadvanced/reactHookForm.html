@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RHF + ZOD</title>
+    <link rel="stylesheet" href="../../styles/style.css">
+</head>
+<body>
+    <main>
+        <p><a href="../../index.html">Voltar</a></p>
+        <h1> React Hook Form + ZOD </h1>
+        <h2> ReactHookForm</h2>
+        <p> É uma das principais bibliotecas quando falamos da construção de formulários em React. Uma das principais diferenças é que ele já nos proporciona um ecossistema com uma série de funcionalidades que teriamos que fazer manualmente, como validações, verificações. Em maneira resumida, <span>É uma forma mais prática de criar formulários</span>. </p>
+        <p> Para instalar: <span>npm i react-hook-form</span>. </p>
+        <p> Tendo a biblioteca instalada já podemos começar a fazer os primeiros formulários. A primeira coisa que precisamos entender é que com a biblioteca quase tudo é feito a partir de HOOKS. </p>
+        
+
+        <h2> Intro Schema Validation </h2>
+        <p> Até o ponto anterior, precisamos criar os types para os fields, depois exibir o formulário, depois em cada campo definir suas regras, além de dizer que tem o campo específico, dizer quais as regras do campo específico em oturo local. Quando trabalhamos com <span>Sechema Validations</span> conseguimos colocar isso tudo em apenas um lugar. Nesse local entra o ZOD. Com ele, criamos um esqueleto de um formulário, dados de uma função etc. Básicamente criamos um padrão específico e depois batemos com algum tipo de dado. Também podemos usa-lo para FORMS, no qual criamos tanto um padrão para os fields do form, quanto também para os tipos de dados.</p>
+        <p> Instalar: <span>npm i zod</span>.</p>
+        <p> Para integrar Install: <span>npm i hookform/resolvers</span></p>
+        <img src="../../img/reactjs/r52.png" alt="">
+        <p> Acima podemos ver um type, e comentado quais seriam as regras que iriamos aplicar no react hook form para cada field. Com o ZOD, conseugimos construir tudo isso em apenas um único lugar. Por padrão, todos os campos que criamos são <span>OBRIGATÓRIOS</span>. Logo, qualquer campo que não queiramos que seja obrigatório, precisa ser informado. Abaixo o type acima feito c/ Zod. </p>
+        <img src="../../img/reactjs/r53.png" alt="">
+        <p> Também podemos dentro do prórpio Schema definir as mensagens que serão exibidas quando tivermos algum error: </p>
+        <img src="../../img/reactjs/r56.png" alt="">
+        <p> O próprio zod, também nos permite Testar um objeto, para saber se ele está 'dentro' das especificações, que é o <span>Parse</span>. Na qual ali dentro, jogamos algum objeto, e ele vê se está OK ou não. </p>
+        <img src="../../img/reactjs/r54.png" alt="">
+        <p> Agora que já aprendemos a criar um padrão completo com o ZOD, inclusive com suas regras, ele também nos permite gerar um Type pronto, para que possamos utilizar dentro do <span>React Hook Form</span>, para isso utilizamos um recurso chamado <span>Inferencia</span>. Dessa forma no exemplo abaixo, SignUpObject já estará pronto para ser utilizado como um <span>Type</span> em qualquer lugar de sua aplicação. </p>
+        <img src="../../img/reactjs/r55.png" alt="">
+        <p> Abaixo uma série de Funcionalidades do ZOD: </p>
+        <h3> Primitivos: </h3>
+        <p> São os principais tipos de valores que podemos colocar dentro do objeto ZOD. O mais utilizado será a <span>String</span> porém também temos <span>Number, Boolean, Date, Undefined </span>. Esses são os principais. </p>
+        <h3> Primitivos</h3>
+        <h3> Opcionais</h3>
+        <h3> Literais</h3>
+        <h3> Validando Strings</h3>
+        <h3> Validando Números</h3>
+        <h3> Error Messages</h3>
+        <h3> Enum </h3>
+        <h3> Interseção </h3>
+        <h3> Unions </h3>
+        <h3> Promises</h3>
+        <h3> Funcao Transform & Funcao Default</h3>
+        <h3> Array</h3>
+
+    </main>
+</body>
+</html>
